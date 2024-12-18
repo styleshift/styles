@@ -5,34 +5,24 @@ import isDisabled from '../shared/variants/isDisabled.js';
 import inputSize from '../shared/variants/inputSize.js';
 import flex from '../shared/flex.js';
 import transitions from '../shared/transitions.js';
+import base from '../shared/base.js';
+
 export default {
   base: [
+    ...base,
     ...focusable,
     ...transitions,
     ...flex('center', 'center', 'none', 'inline'),
-
-    'relative',
-    'z-0',
-
-    'min-w-max',
-
-    'border-2',
-
-    'box-border',
-    'overflow-hidden',
-
-    'font-medium',
-    'whitespace-nowrap',
-    'subpixel-antialiased',
-
-    'group',
-    'appearance-none',
-    'outline-none',
-    'select-none',
-    'tap-highlight-transparent',
-
-    'shadow-sm',
     'active:opacity-90',
+    'border-2',
+    'font-medium',
+    'group',
+    'min-w-max',
+    'overflow-hidden',
+    'relative',
+    'tap-highlight-transparent',
+    'whitespace-nowrap',
+    'z-0',
   ],
   variants: {
     radius,
@@ -40,8 +30,8 @@ export default {
     isDisabled,
     size: inputSize,
     surface: {
-      solid: ['shadow-sm', 'border-transparent'],
-      outline: ['bg-transparent', 'shadow-sm', 'hover:text-white', 'active:shadow-inner'],
+      solid: ['border-transparent', 'shadow-sm'],
+      outline: ['active:shadow-inner', 'bg-transparent', 'hover:text-white', 'shadow-sm'],
       soft: ['bg-opacity-15', 'border-transparent', 'hover:bg-opacity-25', 'shadow-sm'],
       ghost: ['bg-transparent', 'border-transparent', 'shadow-none'],
     },
@@ -94,12 +84,12 @@ export default {
       surface: 'solid',
       color: 'primary',
       class: [
+        'active:shadow-inner',
         'bg-primary-600',
-        'text-white',
         'hover:bg-primary-700',
         'hover:shadow',
-        'active:shadow-inner',
         'ring-primary-500',
+        'text-white',
       ],
     },
     {
