@@ -1,3 +1,6 @@
+import { colorVariants } from './colorVariants.js';
+import { collapseAdjacentVariantBorders } from './collapseAdjacentVariantBorders.js';
+
 export default {
   base: [
     'z-0',
