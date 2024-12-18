@@ -1,11 +1,5 @@
-import focusable from '../shared/focusable.js';
-import radius from '../shared/variants/radius.js';
-import isFullWidth from '../shared/variants/isFullWidth.js';
-import isDisabled from '../shared/variants/isDisabled.js';
-import inputSize from '../shared/variants/inputSize.js';
-import flex from '../shared/flex.js';
-import transitions from '../shared/transitions.js';
-import base from '../shared/base.js';
+import { radius, isDisabled, isFullWidth, inputSize } from '../shared/variants';
+import { flex, transitions, base, focusable } from '../shared/base';
 
 export default {
   base: [
