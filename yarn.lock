@@ -2,12 +2,26 @@
 # yarn lockfile v1
 
 
-"@styleshift/support@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@styleshift/support/-/support-0.0.5.tgz#2ecef806ee639337f14679f8617a776f9b70abd4"
-  integrity sha512-ADByYbwYqZe/goFsrOOODdbAlK8ppe8quT7bsImw4CzuKIb0bTKF9pKlATOU9XhZ9ds7o1lqR2vRvE2c9LdMWA==
+"@styleshift/support@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@styleshift/support/-/support-0.0.6.tgz#a9aad334bbe79af98f4638a57532b5b820843cb9"
+  integrity sha512-SGhXvBPBbYJRb1XFQMAn1R6/CG2cZvaPNaF0u8PmFj4ChSzA8De1oevP7qfHWgFgvrmc6XT8L1qReAUec4O4zw==
+  dependencies:
+    tailwind-variants "^0.3.0"
 
 prettier@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.4.2.tgz#a5ce1fb522a588bf2b78ca44c6e6fe5aa5a2b13f"
   integrity sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==
+
+tailwind-merge@^2.5.4:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.5.5.tgz#98167859b856a2a6b8d2baf038ee171b9d814e39"
+  integrity sha512-0LXunzzAZzo0tEPxV3I297ffKZPlKDrjj7NXphC8V5ak9yHC5zRmxnOe2m/Rd/7ivsOMJe3JZ2JVocoDdQTRBA==
+
+tailwind-variants@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tailwind-variants/-/tailwind-variants-0.3.0.tgz#481f53031cd4e91f92e0c078bbfd9fe453162e0b"
+  integrity sha512-ho2k5kn+LB1fT5XdNS3Clb96zieWxbStE9wNLK7D0AV64kdZMaYzAKo0fWl6fXLPY99ffF9oBJnIj5escEl/8A==
+  dependencies:
+    tailwind-merge "^2.5.4"
