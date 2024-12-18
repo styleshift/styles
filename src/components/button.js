@@ -3,23 +3,25 @@ import radius from '../shared/variants/radius.js';
 import isFullWidth from '../shared/variants/isFullWidth.js';
 import isDisabled from '../shared/variants/isDisabled.js';
 import inputSize from '../shared/variants/inputSize.js';
-
+import flex from '../shared/flex.js';
+import transitions from '../shared/transitions.js';
 export default {
   base: [
     ...focusable,
+    ...transitions,
+    ...flex('center', 'center', 'none', 'inline'),
 
     'relative',
     'z-0',
-    'inline-flex',
-    'items-center',
-    'justify-center',
+
     'min-w-max',
 
     'border-2',
+
     'box-border',
     'overflow-hidden',
 
-    'font-normal',
+    'font-medium',
     'whitespace-nowrap',
     'subpixel-antialiased',
 
@@ -31,10 +33,6 @@ export default {
 
     'shadow-sm',
     'active:opacity-90',
-
-    'transition-all',
-    'will-change-transform',
-    'duration-200',
   ],
   variants: {
     radius,
