@@ -1,0 +1,15 @@
+{
+  "name": "@styleshift/styles",
+  "version": "0.0.2",
+  "description": "Styles for StyleShift",
+  "main": "src/index.js",
+  "author": "Jeroen Gerits <jeroen@gerits.email>",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/styleshift/styles.git"
+  }
+}
