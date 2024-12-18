@@ -1,6 +1,7 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "type": "module",
   "description": "Component Styles for StyleShift",
   "main": "src/index.js",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
