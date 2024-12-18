@@ -17,5 +17,8 @@
   },
   "devDependencies": {
     "prettier": "^3.4.2"
+  },
+  "dependencies": {
+    "@styleshift/support": "^0.0.5"
   }
 }
