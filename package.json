@@ -5,6 +5,9 @@
   "description": "Component Styles for StyleShift",
   "main": "src/index.js",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
+  "files": [
+    "src"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
