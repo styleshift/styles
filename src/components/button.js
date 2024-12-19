@@ -16,7 +16,6 @@ export default {
     'group',
     'min-w-max',
     'overflow-hidden',
-    'relative',
     'tap-highlight-transparent',
     'whitespace-nowrap',
     'z-0',
