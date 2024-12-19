@@ -2,7 +2,6 @@ import { radius, isDisabled, isFullWidth, inputSize } from '../shared/variants/i
 import { transitions, generic, focusable } from '../shared/base/index.js';
 import disableAnimation from '../shared/variants/disableAnimation.js';
 
-
 export default {
   base: [
     ...generic,
