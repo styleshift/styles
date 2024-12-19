@@ -1,10 +1,11 @@
 import { radius, isDisabled, isFullWidth, inputSize } from '../shared/variants/index.js';
-import { transitions, base, focusable } from '../shared/base/index.js';
+import { transitions, generic, focusable } from '../shared/base/index.js';
 import disableAnimation from '../shared/variants/disableAnimation.js';
+
 
 export default {
   base: [
-    ...base,
+    ...generic,
     ...focusable,
     ...transitions,
     'inline-flex',

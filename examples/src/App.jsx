@@ -391,10 +391,7 @@ function StateSection({ title, children }) {
 
 function Card({ id, title, children }) {
   return (
-    <section
-      id={id}
-      className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-    >
+    <section id={id} className="bg-white p-6 rounded-2xl   transition-all duration-300 border border-gray-100">
       <h2 className="text-xl font-semibold text-gray-800 mb-6">{title}</h2>
       {children}
     </section>
@@ -432,12 +429,12 @@ function Sidebar({ activeSection }) {
   ];
 
   return (
-    <aside className="w-64 h-screen sticky top-0 bg-white border-r border-gray-200 p-6 shadow-lg">
-      <nav className="space-y-8">
+    <aside className="w-56 h-screen sticky top-0 bg-white border-r border-gray-200 p-4 ">
+      <nav className="space-y-4">
         {sections.map((section) => (
           <div key={section.title}>
-            <h3 className="font-semibold text-gray-900 mb-3 text-base">{section.title}</h3>
-            <ul className="space-y-2">
+            <h3 className="font-medium text-gray-900 mb-1.5 text-base">{section.title}</h3>
+            <ul className="space-y-1">
               {section.items.map((item) => (
                 <li key={item.href}>
                   <a
