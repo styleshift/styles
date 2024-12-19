@@ -1,12 +1,15 @@
-import { radius, isDisabled, isFullWidth, inputSize } from '../shared/variants';
-import { flex, transitions, base, focusable } from '../shared/base';
+import { radius, isDisabled, isFullWidth, inputSize } from '../shared/variants/index.js';
+import { transitions, base, focusable } from '../shared/base/index.js';
+import disableAnimation from '../shared/variants/disableAnimation.js';
 
 export default {
   base: [
     ...base,
     ...focusable,
     ...transitions,
-    ...flex('center', 'center', 'none', 'inline'),
+    'inline-flex',
+    'items-center',
+    'justify-center',
     'active:opacity-90',
     'border-2',
     'font-medium',
@@ -23,6 +26,7 @@ export default {
     isFullWidth,
     isDisabled,
     size: inputSize,
+    disableAnimation,
     surface: {
       solid: ['border-transparent', 'shadow-sm'],
       outline: ['active:shadow-inner', 'bg-transparent', 'hover:text-white', 'shadow-sm'],

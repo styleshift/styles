@@ -1,2 +1,5 @@
 @import 'tailwindcss';
 @import './themes/default-light.css';
+html {
+  scroll-behavior: smooth;
+}
