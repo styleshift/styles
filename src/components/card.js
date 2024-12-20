@@ -1,13 +1,18 @@
 import { generic } from '../shared/base/index.js';
 
 /**
- * StyleShift Card Styles
- * =========================
- * | Variant         | Options                                                    |
+ * Card Component
+ * ==================================================
+ * | Variant         | Options                                                     |
  * |-----------------|-------------------------------------------------------------|
- * | size            | tiny, small, default (default), medium, large, huge        |
- * | noBorder        | boolean (default: false)                                   |
- * =========================
+ * | size            | tiny, small, default*, medium, large, huge                 |
+ * | noBorder        | boolean*                                                   |
+ * ==================================================
+ * * = default value
+ *
+ * A container component with configurable padding and optional borders/shadows.
+ *
+ * @requires {module} shared/base - generic
  */
 export default {
   base: [...generic, 'flex', 'flex-col', 'bg-white', 'border', 'border-neutral-200', 'shadow-xs', 'rounded-md'],

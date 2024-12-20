@@ -4,16 +4,22 @@ import disableAnimation from '../shared/variants/disableAnimation.js';
 import { generic } from '../shared/base/index.js';
 
 /**
- * StyleShift Link Styles
- * =========================
- * | Variant         | Options                                                    |
+ * Link Component
+ * ==================================================
+ * | Variant         | Options                                                     |
  * |-----------------|-------------------------------------------------------------|
- * | isDisabled      | boolean (default: false)                                    |
- * | disableAnimation| boolean (default: false)                                    |
- * | size            | tiny, small, default (default), medium, large, huge         |
- * | color           | primary (default), secondary, success, danger, warning      |
- * | underline       | none, hover (default), always                              |
- * =========================
+ * | isDisabled      | boolean*                                                   |
+ * | disableAnimation| boolean*                                                   |
+ * | size            | tiny, small, default*, medium, large, huge                 |
+ * | color           | primary*, secondary, success, danger, warning              |
+ * | underline       | none, hover*, always                                       |
+ * ==================================================
+ * * = default value
+ *
+ * Interactive text link with configurable styles and states.
+ *
+ * @requires {module} shared/base - focusable, generic
+ * @requires {module} shared/variants - isDisabled, disableAnimation
  */
 export default {
   base: [

@@ -1,11 +1,14 @@
 /**
- * StyleShift Tooltip Styles
- * =========================
- * | Variant         | Options                                                    |
+ * Tooltip Component
+ * ==================================================
+ * | Variant         | Options                                                     |
  * |-----------------|-------------------------------------------------------------|
- * | color           | light (default), dark                                      |
- * =========================
- * Reference: https://base-ui.com/react/components/tooltip
+ * | color           | light*, dark                                               |
+ * ==================================================
+ * * = default value
+ *
+ * Popup tooltip with directional arrows and animation support.
+ * Compatible with Base UI tooltip implementation.
  */
 export default {
   base: [],

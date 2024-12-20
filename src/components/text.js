@@ -1,13 +1,18 @@
 import { generic } from '../shared/base/index.js';
 
 /**
- * StyleShift Text Styles
- * =========================
- * | Variant         | Options                                                    |
+ * Text Component
+ * ==================================================
+ * | Variant         | Options                                                     |
  * |-----------------|-------------------------------------------------------------|
- * | size            | tiny, small, default (default), medium, large, huge        |
- * | weight          | thin, normal (default), medium, semibold, bold            |
- * =========================
+ * | size            | tiny, small, default*, medium, large, huge                 |
+ * | weight          | thin, normal*, medium, semibold, bold                      |
+ * ==================================================
+ * * = default value
+ *
+ * Basic typography component with configurable size and weight.
+ *
+ * @requires {module} shared/base - generic
  */
 export default {
   base: [...generic, 'text-current', 'no-underline'],

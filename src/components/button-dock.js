@@ -1,10 +1,14 @@
 /**
- * StyleShift Button Dock Styles
- * =========================
- * | Variant         | Options                                                    |
+ * ButtonDock Component
+ * ==================================================
+ * | Variant         | Options                                                     |
  * |-----------------|-------------------------------------------------------------|
- * | spacing         | none, tiny, small, default (default), medium, large, huge   |
- * =========================
+ * | spacing         | none, tiny, small, default*, medium, large, huge           |
+ * ==================================================
+ * * = default value
+ *
+ * A vertical button container with configurable spacing between buttons.
+ * Automatically handles full-width alignment and centering.
  */
 export default {
   base: ['flex', 'flex-col', 'justify-center', 'w-full', '*:w-full', 'items-center'],
