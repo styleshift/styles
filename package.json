@@ -23,6 +23,6 @@
     "prettier": "^3.4.2"
   },
   "dependencies": {
-    "@styleshift/support": "^0.0.6"
+    "@styleshift/support": "^0.0.9"
   }
 }
