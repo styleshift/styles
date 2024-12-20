@@ -64,22 +64,22 @@
 
 ### Contextual Navigation
 
-| **Component** | **Description**          | **Styles** | **React** | **Blade** | **CSS** |
-| ------------- | ------------------------ | ---------- | --------- | --------- | ------- |
-| Link          | Hyperlink for navigation | ❌         | ❌        | ❌        | ❌      |
-| Menu          | Context or dropdown menu | ❌         | ❌        | ❌        | ❌      |
+| **Component** | **Description**          | **Styles**                                                                           | **React** | **Blade** | **CSS** |
+| ------------- | ------------------------ | ------------------------------------------------------------------------------------ | --------- | --------- | ------- |
+| Link          | Hyperlink for navigation | [Styles](https://github.com/styleshift/styles/blob/main/src/components/link/link.js) | ❌        | ❌        | ❌      |
+| Menu          | Context or dropdown menu | ❌                                                                                   | ❌        | ❌        | ❌      |
 
 ## Content
 
 ### Static Content
 
-| **Component** | **Description**                        | **Styles** | **React** | **Blade** | **CSS** |
-| ------------- | -------------------------------------- | ---------- | --------- | --------- | ------- |
-| Avatar        | User profile picture or icon           | ❌         | ❌        | ❌        | ❌      |
-| Badge         | Small status or notification indicator | ❌         | ❌        | ❌        | ❌      |
-| Heading       | Text heading component                 | ❌         | ❌        | ❌        | ❌      |
-| Tag           | Label or keyword tag                   | ❌         | ❌        | ❌        | ❌      |
-| Text          | Text styling components                | ❌         | ❌        | ❌        | ❌      |
+| **Component** | **Description**                        | **Styles**                                                                           | **React** | **Blade** | **CSS** |
+| ------------- | -------------------------------------- | ------------------------------------------------------------------------------------ | --------- | --------- | ------- |
+| Avatar        | User profile picture or icon           | ❌                                                                                   | ❌        | ❌        | ❌      |
+| Badge         | Small status or notification indicator | ❌                                                                                   | ❌        | ❌        | ❌      |
+| Heading       | Text heading component                 | ❌                                                                                   | ❌        | ❌        | ❌      |
+| Tag           | Label or keyword tag                   | ❌                                                                                   | ❌        | ❌        | ❌      |
+| Text          | Text styling components                | [Styles](https://github.com/styleshift/styles/blob/main/src/components/text/text.js) | ❌        | ❌        | ❌      |
 
 ### Interactive Content
 
@@ -117,13 +117,13 @@
 
 ## Surfaces
 
-| **Component** | **Description**                      | **Styles** | **React** | **Blade** | **CSS** |
-| ------------- | ------------------------------------ | ---------- | --------- | --------- | ------- |
-| Card          | Visual container for content         | ❌         | ❌        | ❌        | ❌      |
-| Drawer        | Side panel for navigation or content | ❌         | ❌        | ❌        | ❌      |
-| Modal         | Overlaid dialog for interaction      | ❌         | ❌        | ❌        | ❌      |
-| Popover       | Small popup for additional content   | ❌         | ❌        | ❌        | ❌      |
-| Tooltip       | Small content display on hover/focus | ❌         | ❌        | ❌        | ❌      |
+| **Component** | **Description**                      | **Styles**                                                                                 | **React** | **Blade** | **CSS** |
+| ------------- | ------------------------------------ | ------------------------------------------------------------------------------------------ | --------- | --------- | ------- |
+| Card          | Visual container for content         | ❌                                                                                         | ❌        | ❌        | ❌      |
+| Drawer        | Side panel for navigation or content | ❌                                                                                         | ❌        | ❌        | ❌      |
+| Modal         | Overlaid dialog for interaction      | ❌                                                                                         | ❌        | ❌        | ❌      |
+| Popover       | Small popup for additional content   | ❌                                                                                         | ❌        | ❌        | ❌      |
+| Tooltip       | Small content display on hover/focus | [Styles](https://github.com/styleshift/styles/blob/main/src/components/tooltip/tooltip.js) | ❌        | ❌        | ❌      |
 
 ## Tables
 
