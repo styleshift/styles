@@ -4,35 +4,35 @@
 
 ### Single Inputs
 
-| **Component** | **Description**                                | **Styles**                                                                               | **React** | **Blade** | **CSS** |
-| ------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------- | --------- | --------- | ------- |
-| Button        | Standard button                                | [Styles](https://github.com/styleshift/styles/blob/main/src/components/button/button.js) | ❌        | ❌        | ❌      |
-| Checkbox      | A single checkbox for binary input             | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Input         | Standard text input field                      | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Number Field  | Input for numeric values                       | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Radio         | Single-selection input                         | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Select        | Dropdown for selection                         | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Slider        | Range input with draggable thumb               | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Stepper       | Numeric input with increment/decrement buttons | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Switch        | Toggle switch for binary input                 | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Textarea      | Multi-line text input                          | ❌                                                                                       | ❌        | ❌        | ❌      |
-| File Uploader | Upload files with progress indicator           | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Pin Code      | Input for secure PINs                          | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Phone Input   | Input for phone numbers                        | ❌                                                                                       | ❌        | ❌        | ❌      |
-| Payment Card  | Input for credit card details                  | ❌                                                                                       | ❌        | ❌        | ❌      |
+| **Component** | **Description**                                | **Styles**                                                                        | **React** | **Blade** | **CSS** |
+| ------------- | ---------------------------------------------- | --------------------------------------------------------------------------------- | --------- | --------- | ------- |
+| Button        | Standard button                                | [Styles](https://github.com/styleshift/styles/blob/main/src/components/button.js) | ❌        | ❌        | ❌      |
+| Checkbox      | A single checkbox for binary input             | ❌                                                                                | ❌        | ❌        | ❌      |
+| Input         | Standard text input field                      | ❌                                                                                | ❌        | ❌        | ❌      |
+| Number Field  | Input for numeric values                       | ❌                                                                                | ❌        | ❌        | ❌      |
+| Radio         | Single-selection input                         | ❌                                                                                | ❌        | ❌        | ❌      |
+| Select        | Dropdown for selection                         | ❌                                                                                | ❌        | ❌        | ❌      |
+| Slider        | Range input with draggable thumb               | ❌                                                                                | ❌        | ❌        | ❌      |
+| Stepper       | Numeric input with increment/decrement buttons | ❌                                                                                | ❌        | ❌        | ❌      |
+| Switch        | Toggle switch for binary input                 | ❌                                                                                | ❌        | ❌        | ❌      |
+| Textarea      | Multi-line text input                          | ❌                                                                                | ❌        | ❌        | ❌      |
+| File Uploader | Upload files with progress indicator           | ❌                                                                                | ❌        | ❌        | ❌      |
+| Pin Code      | Input for secure PINs                          | ❌                                                                                | ❌        | ❌        | ❌      |
+| Phone Input   | Input for phone numbers                        | ❌                                                                                | ❌        | ❌        | ❌      |
+| Payment Card  | Input for credit card details                  | ❌                                                                                | ❌        | ❌        | ❌      |
 
 ### Composite Inputs
 
-| **Component**     | **Description**                    | **Styles**                                                                                         | **React** | **Blade** | **CSS** |
-| ----------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------- | --------- | --------- | ------- |
-| Button Dock       | Logical grouping of buttons        | [Styles](https://github.com/styleshift/styles/blob/main/src/components/button-dock/button-dock.js) | ❌        | ❌        | ❌      |
-| Button Bar        | Logical grouping of buttons        | ❌                                                                                                 | ❌        | ❌        | ❌      |
-| Checkbox Group    | Group of checkboxes                | ❌                                                                                                 | ❌        | ❌        | ❌      |
-| Combobox          | Combo input for text and selection | ❌                                                                                                 | ❌        | ❌        | ❌      |
-| Datepicker        | Calendar-based date picker         | ❌                                                                                                 | ❌        | ❌        | ❌      |
-| Time Picker       | Clock-based time selector          | ❌                                                                                                 | ❌        | ❌        | ❌      |
-| Timezone Picker   | Selector for timezones             | ❌                                                                                                 | ❌        | ❌        | ❌      |
-| Segmented Control | Toggle-style segmented options     | ❌                                                                                                 | ❌        | ❌        | ❌      |
+| **Component**     | **Description**                    | **Styles**                                                                             | **React** | **Blade** | **CSS** |
+| ----------------- | ---------------------------------- | -------------------------------------------------------------------------------------- | --------- | --------- | ------- |
+| Button Dock       | Logical grouping of buttons        | [Styles](https://github.com/styleshift/styles/blob/main/src/components/button-dock.js) | ❌        | ❌        | ❌      |
+| Button Bar        | Logical grouping of buttons        | ❌                                                                                     | ❌        | ❌        | ❌      |
+| Checkbox Group    | Group of checkboxes                | ❌                                                                                     | ❌        | ❌        | ❌      |
+| Combobox          | Combo input for text and selection | ❌                                                                                     | ❌        | ❌        | ❌      |
+| Datepicker        | Calendar-based date picker         | ❌                                                                                     | ❌        | ❌        | ❌      |
+| Time Picker       | Clock-based time selector          | ❌                                                                                     | ❌        | ❌        | ❌      |
+| Timezone Picker   | Selector for timezones             | ❌                                                                                     | ❌        | ❌        | ❌      |
+| Segmented Control | Toggle-style segmented options     | ❌                                                                                     | ❌        | ❌        | ❌      |
 
 ## Forms
 
@@ -64,22 +64,22 @@
 
 ### Contextual Navigation
 
-| **Component** | **Description**          | **Styles**                                                                           | **React** | **Blade** | **CSS** |
-| ------------- | ------------------------ | ------------------------------------------------------------------------------------ | --------- | --------- | ------- |
-| Link          | Hyperlink for navigation | [Styles](https://github.com/styleshift/styles/blob/main/src/components/link/link.js) | ❌        | ❌        | ❌      |
-| Menu          | Context or dropdown menu | ❌                                                                                   | ❌        | ❌        | ❌      |
+| **Component** | **Description**          | **Styles**                                                                      | **React** | **Blade** | **CSS** |
+| ------------- | ------------------------ | ------------------------------------------------------------------------------- | --------- | --------- | ------- |
+| Link          | Hyperlink for navigation | [Styles](https://github.com/styleshift/styles/blob/main/src/components/link.js) | ❌        | ❌        | ❌      |
+| Menu          | Context or dropdown menu | ❌                                                                              | ❌        | ❌        | ❌      |
 
 ## Content
 
 ### Static Content
 
-| **Component** | **Description**                        | **Styles**                                                                           | **React** | **Blade** | **CSS** |
-| ------------- | -------------------------------------- | ------------------------------------------------------------------------------------ | --------- | --------- | ------- |
-| Avatar        | User profile picture or icon           | ❌                                                                                   | ❌        | ❌        | ❌      |
-| Badge         | Small status or notification indicator | ❌                                                                                   | ❌        | ❌        | ❌      |
-| Heading       | Text heading component                 | ❌                                                                                   | ❌        | ❌        | ❌      |
-| Tag           | Label or keyword tag                   | ❌                                                                                   | ❌        | ❌        | ❌      |
-| Text          | Text styling components                | [Styles](https://github.com/styleshift/styles/blob/main/src/components/text/text.js) | ❌        | ❌        | ❌      |
+| **Component** | **Description**                        | **Styles**                                                                      | **React** | **Blade** | **CSS** |
+| ------------- | -------------------------------------- | ------------------------------------------------------------------------------- | --------- | --------- | ------- |
+| Avatar        | User profile picture or icon           | ❌                                                                              | ❌        | ❌        | ❌      |
+| Badge         | Small status or notification indicator | ❌                                                                              | ❌        | ❌        | ❌      |
+| Heading       | Text heading component                 | ❌                                                                              | ❌        | ❌        | ❌      |
+| Tag           | Label or keyword tag                   | ❌                                                                              | ❌        | ❌        | ❌      |
+| Text          | Text styling components                | [Styles](https://github.com/styleshift/styles/blob/main/src/components/text.js) | ❌        | ❌        | ❌      |
 
 ### Interactive Content
 
@@ -117,13 +117,13 @@
 
 ## Surfaces
 
-| **Component** | **Description**                      | **Styles**                                                                                 | **React** | **Blade** | **CSS** |
-| ------------- | ------------------------------------ | ------------------------------------------------------------------------------------------ | --------- | --------- | ------- |
-| Card          | Visual container for content         | ❌                                                                                         | ❌        | ❌        | ❌      |
-| Drawer        | Side panel for navigation or content | ❌                                                                                         | ❌        | ❌        | ❌      |
-| Modal         | Overlaid dialog for interaction      | ❌                                                                                         | ❌        | ❌        | ❌      |
-| Popover       | Small popup for additional content   | ❌                                                                                         | ❌        | ❌        | ❌      |
-| Tooltip       | Small content display on hover/focus | [Styles](https://github.com/styleshift/styles/blob/main/src/components/tooltip/tooltip.js) | ❌        | ❌        | ❌      |
+| **Component** | **Description**                      | **Styles**                                                                        | **React** | **Blade** | **CSS** |
+| ------------- | ------------------------------------ | --------------------------------------------------------------------------------- | --------- | --------- | ------- |
+| Card          | Visual container for content         | ❌                                                                                | ❌        | ❌        | ❌      |
+| Drawer        | Side panel for navigation or content | ❌                                                                                | ❌        | ❌        | ❌      |
+| Modal         | Overlaid dialog for interaction      | ❌                                                                                | ❌        | ❌        | ❌      |
+| Popover       | Small popup for additional content   | ❌                                                                                | ❌        | ❌        | ❌      |
+| Tooltip       | Small content display on hover/focus | [Styles](https://github.com/styleshift/styles/blob/main/src/component/tooltip.js) | ❌        | ❌        | ❌      |
 
 ## Tables
 
