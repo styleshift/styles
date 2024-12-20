@@ -8,22 +8,24 @@ export const TextGrid = ({ tags }) => {
 
   return (
     <Card id="text" title="Text" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
-      <div onClick={() => setIsCollapsed(!isCollapsed)}>
-        <div className="flex flex-wrap gap-3 p-4 rounded-lg bg-gray-50">
-          <p className={styleshift.text()}></p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam odio alias odit saepe. Nulla enim, magnam alias
-          debitis fuga quidem facere pariatur optio est quo harum ex id earum temporibus.
+      <div>
+        <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
+          <p className={styleshift.text()}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
 
-        {isCollapsed && <div className="mt-4 text-black underline cursor-pointer">Show Variants</div>}
+        {isCollapsed && (
+          <div onClick={() => setIsCollapsed(!isCollapsed)} className="mt-3 text-black underline cursor-pointer">
+            Show Variants
+          </div>
+        )}
       </div>
       {!isCollapsed && (
-        <div className="space-y-8 mt-4">
+        <div className="space-y-4 mt-3">
           <StateSection id="text-sizes" title="Sizes">
-            <div className="space-y-6">
+            <div className="space-y-3">
               {['tiny', 'small', 'default', 'medium', 'large'].map((size) => (
-                <div key={size} className="flex items-center gap-3">
-                  <span className="w-16 text-sm text-gray-500">{size}:</span>
+                <div key={size} className="flex items-center gap-2">
+                  <span className="w-12 text-sm text-gray-500">{size}:</span>
                   <p className={styleshift.text({ size })}>The quick brown fox jumps over the lazy dog</p>
                 </div>
               ))}

@@ -1,6 +1,6 @@
-import focusable from '../../shared/base/focusable.js';
-import { isDisabled } from '../../shared/variants/index.js';
-import disableAnimation from '../../shared/variants/disableAnimation.js';
+import focusable from '../shared/base/focusable.js';
+import { isDisabled } from '../shared/variants/index.js';
+import disableAnimation from '../shared/variants/disableAnimation.js';
 
 /**
  * StyleShift Link Styles

@@ -9,17 +9,21 @@ export const LinkGrid = ({ tags }) => {
 
   return (
     <Card id="link" title="Link" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
-      <div onClick={() => setIsCollapsed(!isCollapsed)}>
-        <div className="flex flex-wrap gap-3 p-4 rounded-lg bg-gray-50">
+      <div>
+        <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           <a href="https://google.com" className={styleshift.link()}>
             Go to Google
           </a>
         </div>
 
-        {isCollapsed && <div className="mt-4 text-black underline cursor-pointer">Show Variants</div>}
+        {isCollapsed && (
+          <div onClick={() => setIsCollapsed(!isCollapsed)} className="mt-3 text-black underline cursor-pointer">
+            Show Variants
+          </div>
+        )}
       </div>
       {!isCollapsed && (
-        <div className="space-y-8 mt-4">
+        <div className="space-y-4 mt-3">
           <CompactLinkVariants />
           <LinkStateVariants />
         </div>
@@ -38,10 +42,9 @@ const CompactLinkVariants = () => {
   const sizes = ['small', 'default', 'large'];
 
   return (
-    <div className="space-y-4">
-      {/* Colors */}
+    <div className="space-y-3">
       <StateSection id="link-colors" title="Colors">
-        <div className="flex flex-wrap gap-4 p-3 rounded-lg bg-gray-50">
+        <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           {colors.map((color) => (
             <a key={color} href="#" className={styleshift.link({ color })}>
               {capitalize(color)}
@@ -50,9 +53,8 @@ const CompactLinkVariants = () => {
         </div>
       </StateSection>
 
-      {/* Underlines */}
       <StateSection id="link-underlines" title="Underlines">
-        <div className="flex flex-wrap gap-4 p-3 rounded-lg bg-gray-50">
+        <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           {underlineStyles.map((style) => (
             <a key={style} href="#" className={styleshift.link({ underline: style })}>
               {capitalize(style)}
@@ -61,9 +63,8 @@ const CompactLinkVariants = () => {
         </div>
       </StateSection>
 
-      {/* Sizes */}
       <StateSection id="link-sizes" title="Sizes">
-        <div className="flex flex-wrap items-baseline gap-4 p-3 rounded-lg bg-gray-50">
+        <div className="flex flex-wrap items-baseline gap-2 p-3 rounded-lg bg-gray-50">
           {sizes.map((size) => (
             <a key={size} href="#" className={styleshift.link({ size })}>
               {capitalize(size)} Size
