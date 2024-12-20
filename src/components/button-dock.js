@@ -1,3 +1,15 @@
+/**
+ * StyleShift Button Dock Styles
+ * =========================
+ * | Variant         | Options                                              |
+ * |-----------------|------------------------------------------------------|
+ * | spacing         | none, tiny, small, default, medium, large, huge      |
+ * =========================
+ * | Variant         | Default Value |
+ * |-----------------|---------------|
+ * | spacing         | default       |
+ * =========================
+ */
 export default {
   base: ['flex', 'flex-col', 'justify-center', 'w-full', '*:w-full', 'items-center'],
   variants: {

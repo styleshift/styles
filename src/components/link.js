@@ -5,6 +5,23 @@ import { generic } from '../shared/base/index.js';
 
 /**
  * StyleShift Link Styles
+ * =========================
+ * | Variant         | Options                                              |
+ * |-----------------|------------------------------------------------------|
+ * | isDisabled      | boolean                                             |
+ * | disableAnimation| boolean                                             |
+ * | size            | tiny, small, default, medium, large, huge           |
+ * | color           | primary, secondary, success, danger, warning        |
+ * | underline       | none, hover, always                                 |
+ * =========================
+ * | Variant         | Default Value |
+ * |-----------------|---------------|
+ * | size            | default       |
+ * | color           | primary       |
+ * | underline       | hover         |
+ * | isDisabled      | false         |
+ * | disableAnimation| false         |
+ * =========================
  */
 export default {
   base: [

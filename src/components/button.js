@@ -4,6 +4,27 @@ import disableAnimation from '../shared/variants/disableAnimation.js';
 
 /**
  * StyleShift Button Styles
+ * =========================
+ * | Variant         | Options                                              |
+ * |-----------------|------------------------------------------------------|
+ * | radius          | tiny, small, medium, large, huge, full               |
+ * | isFullWidth     | boolean                                              |
+ * | isDisabled      | boolean                                              |
+ * | size            | tiny, small, medium, large, huge                     |
+ * | disableAnimation| boolean                                              |
+ * | surface         | solid, outline, soft, ghost                          |
+ * | color           | primary, secondary, positive, negative, warning,     |
+ * |                 | black, white                                         |
+ * =========================
+ * | Variant         | Default Value |
+ * |-----------------|---------------|
+ * | size           | medium        |
+ * | color          | primary       |
+ * | radius         | medium        |
+ * | fullWidth      | false         |
+ * | isDisabled     | false         |
+ * | surface        | solid         |
+ * =========================
  */
 export default {
   base: [

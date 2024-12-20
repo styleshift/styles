@@ -1,6 +1,14 @@
 /**
  * StyleShift Tooltip Styles
- *
+ * =========================
+ * | Variant         | Options                                              |
+ * |-----------------|------------------------------------------------------|
+ * | color           | light, dark                                         |
+ * =========================
+ * | Variant         | Default Value |
+ * |-----------------|---------------|
+ * | color           | light         |
+ * =========================
  * Reference: https://base-ui.com/react/components/tooltip
  */
 export default {

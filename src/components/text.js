@@ -2,6 +2,17 @@ import { generic } from '../shared/base/index.js';
 
 /**
  * StyleShift Text Styles
+ * =========================
+ * | Variant         | Options                                              |
+ * |-----------------|------------------------------------------------------|
+ * | size            | tiny, small, default, medium, large, huge           |
+ * | weight          | thin, normal, medium, semibold, bold                |
+ * =========================
+ * | Variant         | Default Value |
+ * |-----------------|---------------|
+ * | size            | default       |
+ * | weight          | normal        |
+ * =========================
  */
 export default {
   base: [...generic, 'text-current', 'no-underline'],
