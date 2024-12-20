@@ -1,8 +1,8 @@
 import { tv } from '@styleshift/support';
-import button from '../components/button.js';
-import link from '../components/link.js';
-import text from '../components/text.js';
-import tooltip from '../components/tooltip.js';
+import button from '../components/button/button.js';
+import link from '../components/link/link.js';
+import text from '../components/text/text.js';
+import tooltip from '../components/tooltip/tooltip.js';
 
 /**
  * Creates a reusable factory function for any component config
@@ -31,6 +31,3 @@ export const styleshift = {
   // input: createComponentFactory(input),
   // card: createComponentFactory(card),
 };
-
-// You can keep the individual factories if you prefer:
-export const makeButton = styleshift.button;

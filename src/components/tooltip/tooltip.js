@@ -1,3 +1,8 @@
+/**
+ * StyleShift Tooltip Styles
+ *
+ * Reference: https://base-ui.com/react/components/tooltip
+ */
 export default {
   base: [],
   slots: {

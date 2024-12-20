@@ -1,3 +1,6 @@
+/**
+ * StyleShift Text Styles
+ */
 export default {
   base: ['text-current', 'no-underline'],
   variants: {

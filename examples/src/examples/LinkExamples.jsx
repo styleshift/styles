@@ -8,7 +8,7 @@ export const LinkGrid = ({ tags }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <Card id="links" title="Links" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
+    <Card id="link" title="Link" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
       <div onClick={() => setIsCollapsed(!isCollapsed)}>
         <div className="flex flex-wrap gap-3 p-4 rounded-lg bg-gray-50">
           <a href="https://google.com" className={styleshift.link()}>

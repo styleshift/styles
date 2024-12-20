@@ -1,7 +1,10 @@
-import { radius, isDisabled, isFullWidth, inputSize } from '../shared/variants/index.js';
-import { transitions, generic, focusable } from '../shared/base/index.js';
-import disableAnimation from '../shared/variants/disableAnimation.js';
+import { inputSize, isDisabled, isFullWidth, radius } from '../../shared/variants/index.js';
+import { focusable, generic, transitions } from '../../shared/base/index.js';
+import disableAnimation from '../../shared/variants/disableAnimation.js';
 
+/**
+ * StyleShift Button Styles
+ */
 export default {
   base: [
     ...generic,

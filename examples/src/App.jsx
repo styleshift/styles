@@ -3,7 +3,7 @@ import { LinkGrid } from './examples/LinkExamples.jsx';
 import { TooltipExamples } from './examples/TooltipExamples.jsx';
 import { ButtonExamples } from './examples/ButtonExamples.jsx';
 import { TextGrid } from './examples/TextExamples.jsx';
-import { Header, Sidebar } from './components/Documentation.jsx';
+import { Sidebar } from './components/Documentation.jsx';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('');

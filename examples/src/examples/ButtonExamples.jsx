@@ -7,7 +7,7 @@ export const ButtonExamples = ({ tags }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <Card id="buttons" title="Buttons" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
+    <Card id="button" title="Button" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
       <div onClick={() => setIsCollapsed(!isCollapsed)}>
         <div className="flex flex-wrap gap-3 p-4 rounded-lg bg-gray-50">
           <button className={styleshift.button()}>Click Me!</button>

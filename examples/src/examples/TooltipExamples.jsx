@@ -51,7 +51,7 @@ export const TooltipExamples = ({ tags }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <Card id="tooltips" title="Tooltips" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
+    <Card id="tooltip" title="Tooltip" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
       <div onClick={() => setIsCollapsed(!isCollapsed)}>
         <div className="flex flex-wrap gap-3 p-4 rounded-lg bg-gray-50">
           <TooltipExample label="Hover me!" tooltip="Hello, this is a tooltip!" />
