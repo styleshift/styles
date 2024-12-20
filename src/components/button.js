@@ -11,7 +11,7 @@ export default {
     'items-center',
     'justify-center',
     'active:opacity-90',
-    'border-2',
+    'border',
     'font-medium',
     'group',
     'min-w-max',
@@ -159,27 +159,27 @@ export default {
     {
       surface: 'outline',
       color: 'primary',
-      class: ['border-primary-500', 'text-primary-700', 'hover:bg-primary-50', 'hover:text-primary-800'],
+      class: ['border-primary-500', 'text-primary-700', 'hover:bg-primary-25', 'hover:text-primary-800'],
     },
     {
       surface: 'outline',
       color: 'secondary',
-      class: ['border-secondary-500', 'text-secondary-700', 'hover:bg-secondary-50', 'hover:text-secondary-800'],
+      class: ['border-secondary-500', 'text-secondary-700', 'hover:bg-secondary-25', 'hover:text-secondary-800'],
     },
     {
       surface: 'outline',
       color: 'positive',
-      class: ['border-positive-500', 'text-positive-700', 'hover:bg-positive-50', 'hover:text-positive-800'],
+      class: ['border-positive-500', 'text-positive-700', 'hover:bg-positive-25', 'hover:text-positive-800'],
     },
     {
       surface: 'outline',
       color: 'negative',
-      class: ['border-negative-500', 'text-negative-700', 'hover:bg-negative-50', 'hover:text-negative-800'],
+      class: ['border-negative-500', 'text-negative-700', 'hover:bg-negative-25', 'hover:text-negative-800'],
     },
     {
       surface: 'outline',
       color: 'warning',
-      class: ['border-warning-500', 'text-warning-700', 'hover:bg-warning-50', 'hover:text-warning-800'],
+      class: ['border-warning-500', 'text-warning-700', 'hover:bg-warning-25', 'hover:text-warning-800'],
     },
     {
       surface: 'outline',
@@ -229,32 +229,32 @@ export default {
     {
       surface: 'ghost',
       color: 'primary',
-      class: ['text-primary-600', 'hover:bg-primary-50/50', 'active:bg-primary-100'],
+      class: ['text-primary-600', 'hover:bg-primary-25', 'active:bg-primary-100'],
     },
     {
       surface: 'ghost',
       color: 'secondary',
-      class: ['text-secondary-600', 'hover:bg-secondary-50/50', 'active:bg-secondary-100'],
+      class: ['text-secondary-600', 'hover:bg-secondary-25', 'active:bg-secondary-100'],
     },
     {
       surface: 'ghost',
       color: 'positive',
-      class: ['text-positive-600', 'hover:bg-positive-50/50', 'active:bg-positive-100'],
+      class: ['text-positive-600', 'hover:bg-positive-25', 'active:bg-positive-100'],
     },
     {
       surface: 'ghost',
       color: 'negative',
-      class: ['text-negative-600', 'hover:bg-negative-50/50', 'active:bg-negative-100'],
+      class: ['text-negative-600', 'hover:bg-negative-25', 'active:bg-negative-100'],
     },
     {
       surface: 'ghost',
       color: 'warning',
-      class: ['text-warning-600', 'hover:bg-warning-50/50', 'active:bg-warning-100'],
+      class: ['text-warning-600', 'hover:bg-warning-25', 'active:bg-warning-100'],
     },
     {
       surface: 'ghost',
       color: 'black',
-      class: ['text-neutral-800', 'hover:bg-neutral-50/50', 'active:bg-neutral-100'],
+      class: ['text-neutral-800', 'hover:bg-neutral-25', 'active:bg-neutral-100'],
     },
     {
       surface: 'ghost',
