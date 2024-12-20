@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { LinkGrid } from './examples/LinkExamples.jsx';
+import { LinkExamples } from './examples/LinkExamples.jsx';
 import { TooltipExamples } from './examples/TooltipExamples.jsx';
 import { ButtonExamples } from './examples/ButtonExamples.jsx';
-import { TextGrid } from './examples/TextExamples.jsx';
+import { ButtonDockExamples } from './examples/ButtonDockExamples.jsx';
+import { TextExamples } from './examples/TextExamples.jsx';
 import { Sidebar } from './components/Documentation.jsx';
+import CardExamples from './examples/CardExamples.jsx';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -50,8 +52,10 @@ const App = () => {
             {/* <Header /> */}
             <div className="space-y-12">
               <ButtonExamples tags={['button', 'input']} />
-              <LinkGrid tags={['link', 'navigation']} />
-              <TextGrid tags={['text', 'typography', 'content']} />
+              <ButtonDockExamples tags={['button', 'input']} />
+              <CardExamples tags={['card', 'layout']} />
+              <LinkExamples tags={['link', 'navigation']} />
+              <TextExamples tags={['text', 'typography', 'content']} />
               <TooltipExamples tags={['tooltip', 'content']} />
             </div>
           </div>

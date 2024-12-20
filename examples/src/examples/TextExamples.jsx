@@ -1,13 +1,13 @@
-import { styleshift } from '../../../src/utils/factories.js';
-import { Card, StateSection } from '../components/Documentation.jsx';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { styleshift } from '../../../src/index.js';
+import { StateSection, Preview } from '../components/Documentation.jsx';
 
-export const TextGrid = ({ tags }) => {
+export const TextExamples = ({ tags }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <Card id="text" title="Text" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
+    <Preview id="text" title="Text" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
       <div>
         <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           <p className={styleshift.text()}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -21,7 +21,7 @@ export const TextGrid = ({ tags }) => {
       </div>
       {!isCollapsed && (
         <div className="space-y-4 mt-3">
-          <StateSection id="text-sizes" title="Sizes">
+          <StateSection id="text-sizes" title="Text Sizes">
             <div className="space-y-3">
               {['tiny', 'small', 'default', 'medium', 'large'].map((size) => (
                 <div key={size} className="flex items-center gap-2">
@@ -33,10 +33,10 @@ export const TextGrid = ({ tags }) => {
           </StateSection>
         </div>
       )}
-    </Card>
+    </Preview>
   );
 };
 
-TextGrid.propTypes = {
+TextExamples.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
 };

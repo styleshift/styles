@@ -23,15 +23,16 @@
 
 ### Composite Inputs
 
-| **Component**     | **Description**                    | **Styles** | **React** | **Blade** | **CSS** |
-| ----------------- | ---------------------------------- | ---------- | --------- | --------- | ------- |
-| Button Group      | Logical grouping of buttons        | ❌         | ❌        | ❌        | ❌      |
-| Checkbox Group    | Group of checkboxes                | ❌         | ❌        | ❌        | ❌      |
-| Combobox          | Combo input for text and selection | ❌         | ❌        | ❌        | ❌      |
-| Datepicker        | Calendar-based date picker         | ❌         | ❌        | ❌        | ❌      |
-| Time Picker       | Clock-based time selector          | ❌         | ❌        | ❌        | ❌      |
-| Timezone Picker   | Selector for timezones             | ❌         | ❌        | ❌        | ❌      |
-| Segmented Control | Toggle-style segmented options     | ❌         | ❌        | ❌        | ❌      |
+| **Component**     | **Description**                    | **Styles**                                                                                         | **React** | **Blade** | **CSS** |
+| ----------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------- | --------- | --------- | ------- |
+| Button Dock       | Logical grouping of buttons        | [Styles](https://github.com/styleshift/styles/blob/main/src/components/button-dock/button-dock.js) | ❌        | ❌        | ❌      |
+| Button Bar        | Logical grouping of buttons        | ❌                                                                                                 | ❌        | ❌        | ❌      |
+| Checkbox Group    | Group of checkboxes                | ❌                                                                                                 | ❌        | ❌        | ❌      |
+| Combobox          | Combo input for text and selection | ❌                                                                                                 | ❌        | ❌        | ❌      |
+| Datepicker        | Calendar-based date picker         | ❌                                                                                                 | ❌        | ❌        | ❌      |
+| Time Picker       | Clock-based time selector          | ❌                                                                                                 | ❌        | ❌        | ❌      |
+| Timezone Picker   | Selector for timezones             | ❌                                                                                                 | ❌        | ❌        | ❌      |
+| Segmented Control | Toggle-style segmented options     | ❌                                                                                                 | ❌        | ❌        | ❌      |
 
 ## Forms
 

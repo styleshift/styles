@@ -21,6 +21,7 @@ export default {
     'overflow-hidden',
     'tap-highlight-transparent',
     'whitespace-nowrap',
+    'min-w-fit',
     'z-0',
   ],
   variants: {

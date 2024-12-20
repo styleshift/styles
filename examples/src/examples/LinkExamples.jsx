@@ -1,14 +1,14 @@
-import { styleshift } from '../../../src/utils/factories.js';
-import { Card, StateSection } from '../components/Documentation.jsx';
+import { StateSection } from '../components/Documentation.jsx';
 import { capitalize } from '../utils/capitalize.js';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-
-export const LinkGrid = ({ tags }) => {
+import { styleshift } from '../../../src/index.js';
+import { Preview } from '../components/Documentation.jsx';
+export const LinkExamples = ({ tags }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <Card id="link" title="Link" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
+    <Preview id="link" title="Link" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
       <div>
         <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           <a href="https://google.com" className={styleshift.link()}>
@@ -28,11 +28,11 @@ export const LinkGrid = ({ tags }) => {
           <LinkStateVariants />
         </div>
       )}
-    </Card>
+    </Preview>
   );
 };
 
-LinkGrid.propTypes = {
+LinkExamples.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
 };
 
@@ -43,7 +43,7 @@ const CompactLinkVariants = () => {
 
   return (
     <div className="space-y-3">
-      <StateSection id="link-colors" title="Colors">
+      <StateSection id="link-colors" title="Link Colors">
         <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           {colors.map((color) => (
             <a key={color} href="#" className={styleshift.link({ color })}>
@@ -53,7 +53,7 @@ const CompactLinkVariants = () => {
         </div>
       </StateSection>
 
-      <StateSection id="link-underlines" title="Underlines">
+      <StateSection id="link-underlines" title="Link Underlines">
         <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           {underlineStyles.map((style) => (
             <a key={style} href="#" className={styleshift.link({ underline: style })}>
@@ -63,7 +63,7 @@ const CompactLinkVariants = () => {
         </div>
       </StateSection>
 
-      <StateSection id="link-sizes" title="Sizes">
+      <StateSection id="link-sizes" title="Link Sizes">
         <div className="flex flex-wrap items-baseline gap-2 p-3 rounded-lg bg-gray-50">
           {sizes.map((size) => (
             <a key={size} href="#" className={styleshift.link({ size })}>
@@ -81,7 +81,7 @@ const LinkStateVariants = () => {
 
   return (
     <div className="space-y-6">
-      <StateSection id="link-disabled" title="Disabled States">
+      <StateSection id="link-disabled" title="Link Disabled States">
         <div className="flex flex-wrap gap-6 p-4 rounded-lg bg-gray-50">
           {colors.map((color) => (
             <a key={color} href="#" className={styleshift.link({ isDisabled: true, color })} aria-disabled="true">
@@ -91,7 +91,7 @@ const LinkStateVariants = () => {
         </div>
       </StateSection>
 
-      <StateSection id="link-icons" title="With Icons">
+      <StateSection id="link-icons" title="Link With Icons">
         <div className="flex flex-wrap gap-6 p-4 rounded-lg bg-gray-50">
           <a href="#" className={styleshift.link()}>
             Link with Icon →

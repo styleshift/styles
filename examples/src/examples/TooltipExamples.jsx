@@ -1,8 +1,8 @@
-import { styleshift } from '../../../src/utils/factories.js';
 import { Tooltip } from '@base-ui-components/react/tooltip';
-import { Card, StateSection } from '../components/Documentation.jsx';
+import { StateSection, Preview } from '../components/Documentation.jsx';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { styleshift } from '../../../src/index.js';
 
 const SvgArrow = () => (
   <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
@@ -51,7 +51,7 @@ export const TooltipExamples = ({ tags }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <Card id="tooltip" title="Tooltip" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
+    <Preview id="tooltip" title="Tooltip" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
       <div>
         <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           <TooltipExample label="Hover me!" tooltip="Hello, this is a tooltip!" />
@@ -65,7 +65,7 @@ export const TooltipExamples = ({ tags }) => {
       </div>
       {!isCollapsed && (
         <div className="space-y-4 mt-3">
-          <StateSection id="tooltip-examples" title="Examples">
+          <StateSection id="tooltip-examples" title="Tooltip Examples">
             <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
               <TooltipExample label="Hover me!" tooltip="Hello, this is a tooltip!" />
               <TooltipExample
@@ -77,7 +77,7 @@ export const TooltipExamples = ({ tags }) => {
           </StateSection>
         </div>
       )}
-    </Card>
+    </Preview>
   );
 };
 

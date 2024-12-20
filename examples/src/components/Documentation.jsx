@@ -23,25 +23,15 @@ export const StateSection = ({ id, title, children }) => {
   );
 };
 
-export const Card = ({ id, title, children, tags }) => {
+export const Preview = ({ id, title, children }) => {
   return (
-    <section id={id} className="bg-white p-6 rounded-lg transition-all duration-300">
-      <div className="flex items-center justify-between gap-4 mb-6">
-        <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
-        {tags && tags.length > 0 && (
-          <div className="flex gap-2">
-            {tags.map((tag) => (
-              <span key={tag} className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
+    <div id={id}>
+      <h3 className="text-lg font-medium text-gray-700 mb-3">{title}</h3>
       {children}
-    </section>
+    </div>
   );
 };
+
 export const Sidebar = ({ activeSection, visibleSections }) => {
   const [statusFilter, setStatusFilter] = useState('done');
   const [searchQuery, setSearchQuery] = useState('');
@@ -114,6 +104,7 @@ export const Sidebar = ({ activeSection, visibleSections }) => {
           title: 'Composite Inputs',
           id: 'composite-inputs',
           items: [
+            { title: 'Button Dock', id: 'button-dock', tags: ['input'], status: 'done' },
             { title: 'Button Group', id: 'button-group', tags: ['input'], status: 'todo' },
             { title: 'Checkbox Group', id: 'checkbox-group', tags: ['input'], status: 'todo' },
             { title: 'Combobox', id: 'combobox', tags: ['input'], status: 'todo' },
@@ -226,7 +217,7 @@ export const Sidebar = ({ activeSection, visibleSections }) => {
       title: 'Surfaces',
       id: 'surfaces',
       items: [
-        { title: 'Card', id: 'card', tags: ['surface'], status: 'todo' },
+        { title: 'Card', id: 'card', tags: ['surface'], status: 'done' },
         { title: 'Drawer', id: 'drawer', tags: ['surface'], status: 'todo' },
         { title: 'Modal', id: 'modal', tags: ['surface'], status: 'todo' },
         { title: 'Popover', id: 'popover', tags: ['surface'], status: 'todo' },
