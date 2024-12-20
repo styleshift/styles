@@ -52,17 +52,21 @@ export const TooltipExamples = ({ tags }) => {
 
   return (
     <Card id="tooltip" title="Tooltip" tags={tags} isCollapsible={true} isCollapsed={isCollapsed}>
-      <div onClick={() => setIsCollapsed(!isCollapsed)}>
-        <div className="flex flex-wrap gap-3 p-4 rounded-lg bg-gray-50">
+      <div>
+        <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
           <TooltipExample label="Hover me!" tooltip="Hello, this is a tooltip!" />
         </div>
 
-        {isCollapsed && <div className="mt-4 text-black underline cursor-pointer">Show Variants</div>}
+        {isCollapsed && (
+          <div onClick={() => setIsCollapsed(!isCollapsed)} className="mt-3 text-black underline cursor-pointer">
+            Show Variants
+          </div>
+        )}
       </div>
       {!isCollapsed && (
-        <div className="space-y-8 mt-4">
+        <div className="space-y-4 mt-3">
           <StateSection id="tooltip-examples" title="Examples">
-            <div className="flex flex-wrap gap-4 p-4 rounded-lg bg-gray-50">
+            <div className="flex flex-wrap gap-2 p-3 rounded-lg bg-gray-50">
               <TooltipExample label="Hover me!" tooltip="Hello, this is a tooltip!" />
               <TooltipExample
                 label="With long content"

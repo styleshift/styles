@@ -1,6 +1,6 @@
-import { inputSize, isDisabled, isFullWidth, radius } from '../../shared/variants/index.js';
-import { focusable, generic, transitions } from '../../shared/base/index.js';
-import disableAnimation from '../../shared/variants/disableAnimation.js';
+import { inputSize, isDisabled, isFullWidth, radius } from '../shared/variants/index.js';
+import { focusable, generic, transitions } from '../shared/base/index.js';
+import disableAnimation from '../shared/variants/disableAnimation.js';
 
 /**
  * StyleShift Button Styles
@@ -30,10 +30,10 @@ export default {
     size: inputSize,
     disableAnimation,
     surface: {
-      solid: ['border-transparent', 'shadow-sm'],
-      outline: ['active:shadow-inner', 'bg-transparent', 'hover:text-white', 'shadow-sm'],
-      soft: ['bg-opacity-15', 'border-transparent', 'hover:bg-opacity-25', 'shadow-sm'],
-      ghost: ['bg-transparent', 'border-transparent', 'shadow-none'],
+      solid: ['border-transparent'],
+      outline: ['active:shadow-inner', 'bg-transparent', 'hover:text-white'],
+      soft: ['bg-opacity-15', 'border-transparent', 'hover:bg-opacity-25'],
+      ghost: ['bg-transparent', 'border-transparent'],
     },
     color: {
       primary: [],

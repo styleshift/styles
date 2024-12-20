@@ -48,7 +48,7 @@ const App = () => {
         <main className="flex-1 min-w-0">
           <div className="mx-auto max-w-7xl px-8 pt-8 pb-96">
             {/* <Header /> */}
-            <div className="space-y-4">
+            <div className="space-y-12">
               <ButtonExamples tags={['button', 'input']} />
               <LinkGrid tags={['link', 'navigation']} />
               <TextGrid tags={['text', 'typography', 'content']} />
