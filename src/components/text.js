@@ -1,8 +1,10 @@
+import { generic } from '../shared/base/index.js';
+
 /**
  * StyleShift Text Styles
  */
 export default {
-  base: ['text-current', 'no-underline'],
+  base: [...generic, 'text-current', 'no-underline'],
   variants: {
     size: {
       tiny: 'text-xs',

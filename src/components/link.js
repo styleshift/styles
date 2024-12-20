@@ -1,12 +1,15 @@
 import focusable from '../shared/base/focusable.js';
 import { isDisabled } from '../shared/variants/index.js';
 import disableAnimation from '../shared/variants/disableAnimation.js';
+import { generic } from '../shared/base/index.js';
 
 /**
  * StyleShift Link Styles
  */
 export default {
   base: [
+    ...generic,
+    ...focusable,
     'cursor-pointer',
     'inline-flex',
     'items-center',
