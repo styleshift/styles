@@ -3,15 +3,10 @@ import { generic } from '../shared/base/index.js';
 /**
  * StyleShift Card Styles
  * =========================
- * | Variant         | Options                                              |
- * |-----------------|------------------------------------------------------|
- * | size            | tiny, small, default, medium, large, huge           |
- * | noBorder        | boolean                                             |
- * =========================
- * | Variant         | Default Value |
- * |-----------------|---------------|
- * | size            | default       |
- * | noBorder        | false         |
+ * | Variant         | Options                                                    |
+ * |-----------------|-------------------------------------------------------------|
+ * | size            | tiny, small, default (default), medium, large, huge        |
+ * | noBorder        | boolean (default: false)                                   |
  * =========================
  */
 export default {

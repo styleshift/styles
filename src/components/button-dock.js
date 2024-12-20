@@ -1,13 +1,9 @@
 /**
  * StyleShift Button Dock Styles
  * =========================
- * | Variant         | Options                                              |
- * |-----------------|------------------------------------------------------|
- * | spacing         | none, tiny, small, default, medium, large, huge      |
- * =========================
- * | Variant         | Default Value |
- * |-----------------|---------------|
- * | spacing         | default       |
+ * | Variant         | Options                                                    |
+ * |-----------------|-------------------------------------------------------------|
+ * | spacing         | none, tiny, small, default (default), medium, large, huge   |
  * =========================
  */
 export default {

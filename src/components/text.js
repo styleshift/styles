@@ -3,15 +3,10 @@ import { generic } from '../shared/base/index.js';
 /**
  * StyleShift Text Styles
  * =========================
- * | Variant         | Options                                              |
- * |-----------------|------------------------------------------------------|
- * | size            | tiny, small, default, medium, large, huge           |
- * | weight          | thin, normal, medium, semibold, bold                |
- * =========================
- * | Variant         | Default Value |
- * |-----------------|---------------|
- * | size            | default       |
- * | weight          | normal        |
+ * | Variant         | Options                                                    |
+ * |-----------------|-------------------------------------------------------------|
+ * | size            | tiny, small, default (default), medium, large, huge        |
+ * | weight          | thin, normal (default), medium, semibold, bold            |
  * =========================
  */
 export default {
