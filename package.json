@@ -1,8 +1,8 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "type": "module",
-  "description": "Component Styles for StyleShift",
+  "description": "StyleShift Styles",
   "main": "src/index.js",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
   "files": [
@@ -12,17 +12,8 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "scripts": {
-    "format": "prettier . --write"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/styleshift/styles.git"
-  },
-  "devDependencies": {
-    "prettier": "^3.4.2"
-  },
-  "dependencies": {
-    "@styleshift/support": "^0.0.10"
   }
 }
