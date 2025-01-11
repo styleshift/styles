@@ -2,9 +2,8 @@
 
 A plain and simple UI library for Tailwind CSS using Class Variance Authority
 
-- 🎨 Pre-built CVA style variants without JSX components
-- 🔌 Plug-and-play with Tailwind CSS
-- 🎯 Framework agnostic
+- 🎨 Pre-built Tailwind CSS classes using CVA
+- 🎯 Framework agnostic (just the classes)
 
 ## Installation
 
