@@ -1,6 +1,6 @@
 # StyleShift Style
 
-A minimalist styling library built with Tailwind CSS and Class Variance Authority (CVA).
+A plain and simple UI library for Tailwind CSS using Class Variance Authority
 
 - 🎨 Pre-built CVA style variants without JSX components
 - 🔌 Plug-and-play with Tailwind CSS
