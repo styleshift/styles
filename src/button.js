@@ -5,11 +5,6 @@ const rootDefaultVariants = {
   size: 'md',
 };
 
-const rootVariants = {
-  surface: rootSurfaces,
-  size: rootSizes,
-};
-
 const rootBase = [
   'inline-flex',
   'items-center',
@@ -38,6 +33,11 @@ const rootSizes = {
   sm: 'text-sm h-8 px-4',
   md: 'text-base h-10 px-4',
   lg: 'text-lg h-12 px-4',
+};
+
+const rootVariants = {
+  surface: rootSurfaces,
+  size: rootSizes,
 };
 
 const root = cva(rootBase, {
