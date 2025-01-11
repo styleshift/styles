@@ -11,10 +11,14 @@ A plain and simple UI library for Tailwind CSS using Class Variance Authority
 pnpm add @styleshift/styles
 ```
 
+## Usage
+
+```js
+import { button } from '@styleshift/styles';
+button.root({ variant: 'outline', size: 'sm' });
+// outputs all the classes for the button
+```
+
 ## Components
 
 - [Button](src/components/button.js) - A simple button component
-
-```js
-button.root({ variant: 'outline', size: 'sm' });
-```
