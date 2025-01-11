@@ -1,5 +1,31 @@
 import { cva } from 'class-variance-authority';
 
+/**
+ * Button style variants using class-variance-authority
+ * 
+ * @typedef {Object} ButtonVariants
+ * @property {'solid' | 'ghost' | 'outline' | 'soft'} [surface='solid'] - Visual style of the button
+ * @property {'sm' | 'md' | 'lg'} [size='md'] - Size variant controlling height and padding
+ * 
+ * Surface Variants:
+ * - solid: Primary action, high emphasis (slate-800 background)
+ * - ghost: Secondary action, low emphasis (transparent background)
+ * - outline: Secondary action, medium emphasis (bordered)
+ * - soft: Tertiary action, subtle emphasis (slate-100 background)
+ * 
+ * Size Variants:
+ * - sm: h-8, text-sm (32px height)
+ * - md: h-10, text-base (40px height)
+ * - lg: h-12, text-lg (48px height)
+ * 
+ * @example
+ * ```tsx
+ * <button className={button.root({ variant: 'outline', size: 'sm' })}>
+ *   Click me
+ * </button>
+ * ```
+ */
+
 const rootDefaultVariants = {
   surface: 'solid',
   size: 'md',
