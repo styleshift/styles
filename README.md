@@ -14,4 +14,4 @@ pnpm add @styleshift/styles
 
 ## Components
 
-- [Button](src/button.js)
+- [Button](src/components/button.js)
