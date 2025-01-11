@@ -13,5 +13,8 @@ pnpm add @styleshift/styles
 
 ## Components
 
-- [Button](src/components/button.js) - `button.root({ variant: 'outline', size: 'sm' })`
--
+- [Button](src/components/button.js) - A simple button component
+
+```js
+button.root({ variant: 'outline', size: 'sm' });
+```
