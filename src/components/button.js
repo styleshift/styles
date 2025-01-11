@@ -8,15 +8,15 @@ import { cva } from 'class-variance-authority';
  * @property {'sm' | 'md' | 'lg'} [size='md'] - Size variant controlling height and padding
  *
  * Surface Variants:
- * - solid: Primary action, high emphasis (slate-800 background)
- * - ghost: Secondary action, low emphasis (transparent background)
- * - outline: Secondary action, medium emphasis (bordered)
- * - soft: Tertiary action, subtle emphasis (slate-100 background)
+ * - solid: Primary action, high emphasis
+ * - ghost: Secondary action, low emphasis
+ * - outline: Secondary action, medium emphasis
+ * - soft: Tertiary action, subtle emphasis
  *
  * Size Variants:
- * - sm: h-8, text-sm (32px height)
- * - md: h-10, text-base (40px height)
- * - lg: h-12, text-lg (48px height)
+ * - sm: h-8, text-sm
+ * - md: h-10, text-base
+ * - lg: h-12, text-lg
  *
  * @example
  * ```tsx
