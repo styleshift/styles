@@ -1,6 +1,6 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "type": "module",
   "description": "StyleShift Styles",
   "main": "index.js",
@@ -9,6 +9,9 @@
   "files": [
     "src"
   ],
+  "dependencies": {
+    "class-variance-authority": "^0.7.1"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
