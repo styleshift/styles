@@ -15,4 +15,3 @@ pnpm add @styleshift/styles
 ## Components
 
 - [Button](src/button.js)
-
