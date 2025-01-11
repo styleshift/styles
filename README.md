@@ -6,14 +6,13 @@ A minimalist styling library built with Tailwind CSS and Class Variance Authorit
 - 🔌 Plug-and-play with Tailwind CSS
 - 🎯 Framework agnostic
 
-## Usage
+## Installation
 
 ```bash
 pnpm add @styleshift/styles
 ```
 
-```tsx
-import { button } from '@styleshift/styles';
+## Components
 
-<button className={button.root({ variant: 'outline', size: 'sm' })}>Click me</button>;
-```
+- [Button](src/button.js)
+
