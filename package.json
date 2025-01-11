@@ -1,10 +1,9 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "type": "module",
   "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
   "main": "index.js",
-  "types": "src/button.d.ts",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
   "files": [
     "src",
