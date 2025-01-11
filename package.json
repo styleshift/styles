@@ -1,6 +1,6 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "type": "module",
   "description": "StyleShift Styles",
   "main": "index.js",
