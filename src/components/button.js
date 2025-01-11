@@ -14,9 +14,9 @@ import { cva } from 'class-variance-authority';
  * - soft: Tertiary action, subtle emphasis
  *
  * Size Variants:
- * - sm: h-8, text-sm
- * - md: h-10, text-base
- * - lg: h-12, text-lg
+ * - sm: Small text, small height
+ * - md: Medium text, medium height
+ * - lg: Large text, large height
  *
  * @example
  * ```tsx
