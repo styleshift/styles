@@ -15,5 +15,5 @@ pnpm add @styleshift/styles
 ```tsx
 import { button } from '@styleshift/styles';
 
-<button className={button({ variant: 'outline', size: 'sm' })}>Click me</button>;
+<button className={button.root({ variant: 'outline', size: 'sm' })}>Click me</button>;
 ```
