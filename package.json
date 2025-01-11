@@ -1,13 +1,22 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "type": "module",
-  "description": "StyleShift Styles",
+  "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
   "main": "index.js",
   "types": "src/button.d.ts",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
   "files": [
-    "src"
+    "src",
+    "index.js"
+  ],
+  "keywords": [
+    "ui",
+    "components",
+    "styling",
+    "buttons",
+    "tailwind",
+    "cva"
   ],
   "dependencies": {
     "class-variance-authority": "^0.7.1"
@@ -20,5 +29,5 @@
     "type": "git",
     "url": "https://github.com/styleshift/styles.git"
   },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+  "packageManager": "pnpm@9.15.3"
 }
