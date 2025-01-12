@@ -21,4 +21,10 @@ button.root({ variant: 'outline', size: 'sm' });
 
 ## Components
 
-- [Button](src/components/button.js) - A simple button component
+### Button
+
+| Property   | Type                             | Default |
+| ---------- | -------------------------------- | ------- |
+| variant    | `solid` `ghost` `outline` `soft` | `solid` |
+| size       | `sm` `md` `lg`                   | `md`    |
+| isDisabled | `boolean`                        | `false` |
