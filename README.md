@@ -15,10 +15,10 @@ pnpm add @styleshift/styles
 
 ## Components
 
-- [Button](#button---source)
+- [Button](#button)
 - ...
 
-### Button - [Source](src/components/button.js)
+### Button
 
 #### Root
 
