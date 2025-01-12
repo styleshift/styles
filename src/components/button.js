@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority';
-import { focus } from '../shared.js';
+import { focus } from '../shared';
 
 const rootDefaultVariants = {
   surface: 'solid',
