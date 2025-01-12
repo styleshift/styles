@@ -19,7 +19,8 @@
     "prepublishOnly": "pnpm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "dependencies": {
     "class-variance-authority": "^0.7.1"
