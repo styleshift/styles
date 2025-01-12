@@ -23,8 +23,8 @@ button.root({ variant: 'outline', size: 'sm' });
 
 ### Button
 
-| Property   | Type                             | Default |
+| Variant    | Type                             | Default |
 | ---------- | -------------------------------- | ------- |
-| variant    | `solid` `ghost` `outline` `soft` | `solid` |
+| surface    | `solid` `ghost` `outline` `soft` | `solid` |
 | size       | `sm` `md` `lg`                   | `md`    |
 | isDisabled | `boolean`                        | `false` |
