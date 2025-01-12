@@ -23,6 +23,7 @@ pnpm add @styleshift/styles
 #### Root
 
 ```js
+import { button } from '@styleshift/styles';
 button.root({ variant: 'outline', size: 'sm' });
 ```
 
