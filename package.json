@@ -1,12 +1,12 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "type": "module",
   "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
   "main": "index.js",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
   "scripts": {
-    "format": "prettier . --write"
+    "format": "prettier . --write",
   },
   "files": [
     "src",
