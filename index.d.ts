@@ -5,4 +5,4 @@ export declare const button: (props?: {
   size?: 'sm' | 'md' | 'lg';
 }) => string;
 
-export type ButtonVariants = VariantProps<typeof button>; 
+export type ButtonVariants = VariantProps<typeof button>;

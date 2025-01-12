@@ -6,16 +6,13 @@ export default {
   output: [
     {
       file: 'dist/index.cjs',
-      format: 'cjs'
+      format: 'cjs',
     },
     {
       file: 'dist/index.js',
-      format: 'es'
-    }
+      format: 'es',
+    },
   ],
   external: ['class-variance-authority'],
-  plugins: [
-    resolve(),
-    commonjs()
-  ]
-}; 
+  plugins: [resolve(), commonjs()],
+};
