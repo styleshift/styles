@@ -1,4 +1,4 @@
-import { cva } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority';
 import { focus } from '../shared';
 
 /**
@@ -10,7 +10,8 @@ import { focus } from '../shared';
 const rootDefaultVariants = {
   surface: 'solid',
   size: 'md',
-};
+  isDisabled: false,
+} as const;
 
 const rootBase = [
   ...focus,
@@ -41,9 +42,18 @@ const rootSizes = {
 };
 
 const rootVariants = {
-  surface: rootSurfaces,
-  size: rootSizes,
-};
+  surface: {
+    solid: rootSurfaces.solid,
+    outline: rootSurfaces.outline,
+    ghost: rootSurfaces.ghost,
+    soft: rootSurfaces.soft,
+  },
+  size: {
+    sm: rootSizes.sm,
+    md: rootSizes.md,
+    lg: rootSizes.lg,
+  },
+} as const;
 
 /**
  * Button component styles
@@ -54,3 +64,5 @@ export const button = cva(rootBase, {
   variants: rootVariants,
   defaultVariants: rootDefaultVariants,
 });
+
+export type ButtonVariants = VariantProps<typeof button>;
