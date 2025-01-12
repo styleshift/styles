@@ -20,8 +20,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "dependencies": {
     "class-variance-authority": "^0.7.1"
