@@ -11,7 +11,8 @@
   },
   "files": [
     "src",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "dependencies": {
     "class-variance-authority": "^0.7.1"
