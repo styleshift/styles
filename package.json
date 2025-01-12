@@ -6,7 +6,7 @@
   "main": "index.js",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
   "scripts": {
-    "format": "prettier . --write",
+    "format": "prettier . --write"
   },
   "files": [
     "src",
