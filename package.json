@@ -12,14 +12,6 @@
     "src",
     "index.js"
   ],
-  "keywords": [
-    "ui",
-    "components",
-    "styling",
-    "buttons",
-    "tailwind",
-    "cva"
-  ],
   "dependencies": {
     "class-variance-authority": "^0.7.1"
   },
