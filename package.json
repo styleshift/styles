@@ -1,9 +1,10 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "type": "module",
   "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
   "main": "index.js",
+  "types": "index.d.ts",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
   "scripts": {
     "format": "prettier . --write"

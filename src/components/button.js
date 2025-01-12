@@ -1,6 +1,12 @@
 import { cva } from 'class-variance-authority';
 import { focus } from '../shared';
 
+/**
+ * @typedef {Object} ButtonVariants
+ * @property {'solid' | 'outline' | 'ghost' | 'soft'} [surface]
+ * @property {'sm' | 'md' | 'lg'} [size]
+ */
+
 const rootDefaultVariants = {
   surface: 'solid',
   size: 'md',
@@ -39,9 +45,12 @@ const rootVariants = {
   size: rootSizes,
 };
 
-const root = cva(rootBase, {
+/**
+ * Button component styles
+ * @param {ButtonVariants} props
+ * @returns {string}
+ */
+export const button = cva(rootBase, {
   variants: rootVariants,
   defaultVariants: rootDefaultVariants,
 });
-
-export default { root };
