@@ -5,6 +5,9 @@
   "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
   "main": "index.js",
   "author": "Jeroen Gerits <jeroen@gerits.email>",
+  "scripts": {
+    "format": "prettier . --write"
+  },
   "files": [
     "src",
     "index.js"
@@ -29,5 +32,8 @@
     "url": "https://github.com/styleshift/styles.git"
   },
   "homepage": "https://www.npmjs.com/package/@styleshift/styles",
-  "packageManager": "pnpm@9.15.3"
+  "packageManager": "pnpm@9.15.3",
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
 }
