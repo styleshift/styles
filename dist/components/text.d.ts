@@ -1,6 +1,6 @@
 export declare const text: {
     root: (props?: ({
-        size?: "base" | "sm" | "md" | "lg" | "default" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | undefined;
+        size?: "sm" | "base" | "md" | "lg" | "default" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | undefined;
         align?: "left" | "center" | "right" | "justify" | "start" | "end" | undefined;
         strike?: "none" | "under" | "over" | "through" | undefined;
         weight?: "default" | "thin" | "extralight" | "light" | "normal" | "medium" | "semibold" | "bold" | "extrabold" | "black" | undefined;

@@ -1,80 +1,29 @@
 import { cva } from '../shared';
 
-const rootBase = ['transition-all border'] as const;
-
-const headBase = ['border-b'] as const;
-const bodyBase = [''] as const;
-const footBase = ['border-t'] as const;
-
-const rootShadow = {
-  true: 'shadow',
-  false: '',
-} as const;
-
-const rootBorder = {
-  true: 'border-slate-200',
-  false: 'border-transparent',
-} as const;
-
-const rootRounded = {
-  true: 'rounded-md',
-  false: '',
-} as const;
-
-const HeadBorder = {
-  true: 'border-slate-200',
-  false: 'border-transparent',
-} as const;
-
-const FootBorder = {
-  true: 'border-slate-200',
-  false: 'border-transparent',
-} as const;
-
-const rootSpaces = {
-  default: '',
-  xs: 'p-2',
-  sm: 'p-4',
-  md: 'p-8',
-  lg: 'p-16',
-  xl: 'p-24',
-} as const;
-
-const headSpaces = {
-  default: '',
-  xs: 'px-2 pt-2',
-  sm: 'px-4 pt-4',
-  md: 'px-8 pt-8',
-  lg: 'px-16 pt-16',
-  xl: 'px-24 pt-24',
-} as const;
-
-const bodySpaces = {
-  default: '',
-  xs: 'p-2',
-  sm: 'p-4',
-  md: 'p-8',
-  lg: 'p-16',
-  xl: 'p-24',
-} as const;
-
-const footSpaces = {
-  default: '',
-  xs: 'px-2 pb-2',
-  sm: 'px-4 pb-4',
-  md: 'px-8 pb-8',
-  lg: 'px-16 pb-16',
-  xl: 'px-24 pb-24',
-} as const;
-
 export const card = {
   root: cva({
-    base: rootBase,
+    base: ['transition-all border'],
     variants: {
-      shadow: rootShadow,
-      border: rootBorder,
-      rounded: rootRounded,
-      space: rootSpaces,
+      shadow: {
+        true: 'shadow',
+        false: '',
+      },
+      border: {
+        true: 'border-slate-200',
+        false: 'border-transparent',
+      },
+      rounded: {
+        true: 'rounded-md',
+        false: '',
+      },
+      space: {
+        default: '',
+        xs: 'p-2',
+        sm: 'p-4',
+        md: 'p-8',
+        lg: 'p-16',
+        xl: 'p-24',
+      },
     },
     defaultVariants: {
       shadow: true,
@@ -84,10 +33,20 @@ export const card = {
     },
   }),
   head: cva({
-    base: headBase,
+    base: ['border-b'],
     variants: {
-      space: headSpaces,
-      border: HeadBorder,
+      space: {
+        default: '',
+        xs: 'px-2 pt-2',
+        sm: 'px-4 pt-4',
+        md: 'px-8 pt-8',
+        lg: 'px-16 pt-16',
+        xl: 'px-24 pt-24',
+      },
+      border: {
+        true: 'border-slate-200',
+        false: 'border-transparent',
+      },
     },
     defaultVariants: {
       space: 'sm',
@@ -122,19 +81,36 @@ export const card = {
     ],
   }),
   body: cva({
-    base: bodyBase,
+    base: [''],
     variants: {
-      space: bodySpaces,
+      space: {
+        default: '',
+        xs: 'p-2',
+        sm: 'p-4',
+        md: 'p-8',
+        lg: 'p-16',
+        xl: 'p-24',
+      },
     },
     defaultVariants: {
       space: 'sm',
     },
   }),
   foot: cva({
-    base: footBase,
+    base: ['border-t'],
     variants: {
-      space: footSpaces,
-      border: FootBorder,
+      space: {
+        default: '',
+        xs: 'px-2 pb-2',
+        sm: 'px-4 pb-4',
+        md: 'px-8 pb-8',
+        lg: 'px-16 pb-16',
+        xl: 'px-24 pb-24',
+      },
+      border: {
+        true: 'border-slate-200',
+        false: 'border-transparent',
+      },
     },
     defaultVariants: {
       space: 'sm',

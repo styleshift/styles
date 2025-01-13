@@ -55,7 +55,7 @@ export declare const button: {
         } | null | undefined;
     }) | undefined) => string> & import("cva").VariantProps<(props?: ({
         surface?: "solid" | "outline" | "ghost" | "soft" | undefined;
-        size?: "base" | "sm" | "md" | "lg" | undefined;
+        size?: "sm" | "base" | "md" | "lg" | undefined;
     } & ({
         class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
             [x: string]: any;
