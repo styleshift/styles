@@ -19,7 +19,8 @@
     "format": "prettier . --write",
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
-    "docs": "typedoc --out docs src/index.ts"
+    "docs:build": "typedoc --out docs src/index.ts",
+    "docs:deplo y": "gh-pages -d docs"
   },
   "files": [
     "dist",

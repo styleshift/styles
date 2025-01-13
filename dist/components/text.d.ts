@@ -1,85 +1,121 @@
 /**
- * Configurable typography utility for consistent text styling
+ * Text - A comprehensive typography component with extensive styling options
+ * for consistent text formatting across the application.
  *
- * @param {object} options - Style configuration
- * @returns {string} Tailwind CSS classes
+ * @typedef {Object} TextProps
+ * @property {('default'|'xs'|'sm'|'base'|'md'|'lg'|'xl'|'2xl'|'3xl'|'4xl'|'5xl'|'6xl')} [size] - Text size scale
+ * @property {('left'|'center'|'right'|'justify'|'start'|'end')} [align] - Text alignment
+ * @property {('none'|'under'|'over'|'through')} [strike] - Text decoration style
+ * @property {('default'|'thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} [weight] - Font weight
+ * @property {('default'|'upper'|'lower'|'caps'|'normal')} [case] - Text transform
+ * @property {('default'|'wrap'|'nowrap'|'balance'|'pretty')} [wrap] - Text wrapping behavior
+ * @property {('default'|'normal'|'nowrap'|'pre'|'preline'|'prewrap'|'break')} [whitespace] - Whitespace handling
+ * @property {('default'|'none'|'tight'|'snug'|'normal'|'relaxed'|'loose')} [leading] - Line height
+ * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} [tracking] - Letter spacing
+ * @property {boolean} [truncate] - Enable text truncation
+ * @property {boolean} [dimmed] - Apply reduced opacity
+ * @property {React.HTMLAttributes<HTMLElement>} [props] - HTML element props
  *
  * @example
  * ```tsx
- * // Basic usage
- * <p className={text.root({ size: "lg" })}>
- *   Large text
+ * // Basic text
+ * <p className={text.root()}>
+ *   Default paragraph text
  * </p>
  *
- * // Complex styling
+ * // Responsive heading
  * <h1 className={text.root({
- *   size: "2xl",
+ *   size: {
+ *     base: "xl",
+ *     md: "2xl",
+ *     lg: "4xl"
+ *   },
  *   weight: "bold",
- *   tracking: "wide",
- *   align: "center"
+ *   tracking: "tight"
  * })}>
- *   Heading Text
+ *   Responsive Heading
  * </h1>
+ *
+ * // Common pattern: Article text
+ * <article className={text.root({
+ *   size: "lg",
+ *   leading: "relaxed"
+ * })}>
+ *   Long-form content with comfortable reading
+ * </article>
+ *
+ * // Common pattern: Meta text
+ * <span className={text.root({
+ *   size: "sm",
+ *   dimmed: true,
+ *   weight: "medium"
+ * })}>
+ *   Posted 2 days ago
+ * </span>
  * ```
  *
- * Variants:
- * - size: xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
- * - align: left | center | right | justify | start | end
- * - strike: none | under | over | through
- * - weight: thin | extralight | light | normal | medium | semibold | bold | extrabold | black
- * - case: upper | lower | caps | normal
- * - wrap: wrap | nowrap | balance | pretty
- * - whitespace: normal | nowrap | pre | preline | prewrap | break
- * - leading: none | tight | snug | normal | relaxed | loose
- * - tracking: tighter | tight | normal | wide | wider | widest
- * - truncate: boolean
- * - dimmed: boolean
+ * @variant size
+ * - xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl {'size'} - Text size scale
+ *
+ * @variant align
+ * - left | center | right | justify | start | end {'align'} - Text alignment
+ *
+ * @variant strike
+ * - none | under | over | through {'strike'} - Text decoration style
+ *
+ * @variant weight
+ * - thin | extralight | light | normal | medium | semibold | bold | extrabold | black {'weight'} - Font weight
+ *
+ * @variant case
+ * - upper | lower | caps | normal {'case'} - Text transform
+ *
+ * @variant wrap
+ * - wrap | nowrap | balance | pretty {'wrap'} - Text wrapping behavior
+ *
+ * @variant whitespace
+ * - normal | nowrap | pre | preline | prewrap | break {'whitespace'} - Whitespace handling
+ *
+ * @variant leading
+ * - none | tight | snug | normal | relaxed | loose {'leading'} - Line height
+ *
+ * @variant tracking
+ * - tighter | tight | normal | wide | wider | widest {'tracking'} - Letter spacing
+ *
+ * @variant truncate
+ * - true | false {boolean} - Enable text truncation
+ *
+ * @variant dimmed
+ * - true | false {boolean} - Apply reduced opacity
+ *
+ * @default
+ * - size: "default"
+ * - align: "left"
+ * - strike: "none"
+ * - weight: "default"
+ * - case: "default"
+ * - wrap: "default"
+ * - whitespace: "default"
+ * - leading: "default"
+ * - tracking: "default"
+ * - truncate: false
+ * - dimmed: false
+ *
+ * @interface TextVariants
+ * @property {('default'|'xs'|'sm'|'base'|'md'|'lg'|'xl'|'2xl'|'3xl'|'4xl'|'5xl'|'6xl')} [size] - Text size scale
+ * @property {('left'|'center'|'right'|'justify'|'start'|'end')} [align] - Text alignment
+ * @property {('none'|'under'|'over'|'through')} [strike] - Text decoration style
+ * @property {('default'|'thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} [weight] - Font weight
+ * @property {('default'|'upper'|'lower'|'caps'|'normal')} [case] - Text transform
+ * @property {('default'|'wrap'|'nowrap'|'balance'|'pretty')} [wrap] - Text wrapping behavior
+ * @property {('default'|'normal'|'nowrap'|'pre'|'preline'|'prewrap'|'break')} [whitespace] - Whitespace handling
+ * @property {('default'|'none'|'tight'|'snug'|'normal'|'relaxed'|'loose')} [leading] - Line height
+ * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} [tracking] - Letter spacing
+ * @property {boolean} [truncate] - Enable text truncation
+ * @property {boolean} [dimmed] - Apply reduced opacity
+ *
+ * @type {import('../styleshift').StyleshiftComponent<TextVariants>}
  */
 export declare const text: {
-    /**
-     * Root styles for text elements with extensive customization options
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'base'|'md'|'lg'|'xl'|'2xl'|'3xl'|'4xl'|'5xl'|'6xl')} variants.size - Text size
-     * @property {('left'|'center'|'right'|'justify'|'start'|'end')} variants.align - Text alignment
-     * @property {('none'|'under'|'over'|'through')} variants.strike - Text decoration
-     * @property {('default'|'thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} variants.weight - Font weight
-     * @property {('default'|'upper'|'lower'|'caps'|'normal')} variants.case - Text transform
-     * @property {('default'|'wrap'|'nowrap'|'balance'|'pretty')} variants.wrap - Text wrapping
-     * @property {('default'|'normal'|'nowrap'|'pre'|'preline'|'prewrap'|'break')} variants.whitespace - Whitespace handling
-     * @property {('default'|'none'|'tight'|'snug'|'normal'|'relaxed'|'loose')} variants.leading - Line height
-     * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} variants.tracking - Letter spacing
-     * @property {boolean} variants.truncate - Enable text truncation
-     * @property {boolean} variants.dimmed - Apply reduced opacity
-     *
-     * @example
-     * ```tsx
-     * // Basic paragraph
-     * <p className={text.root()}>
-     *   Default text
-     * </p>
-     *
-     * // Styled heading
-     * <h2 className={text.root({
-     *   size: "xl",
-     *   weight: "bold",
-     *   leading: "tight"
-     * })}>
-     *   Bold Heading
-     * </h2>
-     *
-     * // Truncated text
-     * <p className={text.root({
-     *   truncate: true,
-     *   size: "sm",
-     *   dimmed: true
-     * })}>
-     *   This is a very long text that will be truncated...
-     * </p>
-     * ```
-     *
-     * @returns {string} Combined Tailwind CSS classes
-     */
     root: (props?: ({
         size?: "sm" | "base" | "md" | "lg" | "default" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | undefined;
         align?: "left" | "center" | "right" | "justify" | "start" | "end" | undefined;

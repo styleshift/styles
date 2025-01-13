@@ -5,6 +5,10 @@ A plain UI library for Tailwind CSS using Class Variance Authority
 - 🎨 Tailwind CSS Component library — _written in CVA_
 - 🎯 Framework agnostic — _just the classes_
 
+## Documentation
+
+- [JS Docs](https://styleshift.github.io/styles/)
+
 ## Installation
 
 ```bash

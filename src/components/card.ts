@@ -1,12 +1,49 @@
 import styleshift from '../styleshift';
 
 /**
- * A flexible card component with customizable styling variants.
+ * Card - A flexible container component with header, body, and footer sections
+ * supporting multiple styling variants and spacing options.
+ *
+ * @typedef {Object} CardRootProps
+ * @property {boolean} [shadow] - Enables box shadow for elevation
+ * @property {boolean} [border] - Shows border around card
+ * @property {boolean} [rounded] - Applies medium border radius
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
+ *
+ * @typedef {Object} CardHeadProps
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows bottom border
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
+ *
+ * @typedef {Object} CardBodyProps
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
+ *
+ * @typedef {Object} CardFootProps
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows top border
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
  *
  * @example
  * ```tsx
- * // Basic card with all sections
+ * // Basic card
  * <div className={card.root()}>
+ *   <div className={card.body()}>
+ *     Basic content
+ *   </div>
+ * </div>
+ *
+ * // Responsive card with all sections
+ * <div className={card.root({
+ *   shadow: true,
+ *   rounded: true,
+ *   space: {
+ *     base: "sm",
+ *     md: "md",
+ *     lg: "lg"
+ *   }
+ * })}>
  *   <div className={card.head()}>
  *     <h3>Card Title</h3>
  *     <button>Close</button>
@@ -20,21 +57,33 @@ import styleshift from '../styleshift';
  *   </div>
  * </div>
  *
- * // Custom styled card
+ * // Common pattern: Simple content card
  * <div className={card.root({
  *   shadow: true,
- *   rounded: true,
- *   space: "lg"
+ *   rounded: true
  * })}>
  *   <div className={card.body({ space: "md" })}>
- *     Simplified card with custom spacing
+ *     Content with padding
+ *   </div>
+ * </div>
+ *
+ * // Common pattern: Panel card
+ * <div className={card.root({
+ *   border: true,
+ *   space: "sm"
+ * })}>
+ *   <div className={card.head({ border: true })}>
+ *     Panel Header
+ *   </div>
+ *   <div className={card.body()}>
+ *     Panel content
  *   </div>
  * </div>
  * ```
  *
  * @variant root
- * - shadow {boolean} - Enables box shadow
- * - border {boolean} - Shows border
+ * - shadow {boolean} - Enables box shadow for elevation
+ * - border {boolean} - Shows border around card
  * - rounded {boolean} - Applies medium border radius
  * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
@@ -48,6 +97,35 @@ import styleshift from '../styleshift';
  * @variant foot
  * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  * - border {boolean} - Shows top border
+ *
+ * @default
+ * - shadow: true
+ * - border: true
+ * - rounded: true
+ * - space: "default"
+ *
+ * @interface CardRootVariants
+ * @property {boolean} [shadow] - Enables box shadow for elevation
+ * @property {boolean} [border] - Shows border around card
+ * @property {boolean} [rounded] - Applies medium border radius
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ *
+ * @interface CardHeadVariants
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows bottom border
+ *
+ * @interface CardBodyVariants
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ *
+ * @interface CardFootVariants
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows top border
+ *
+ * @type {import('../styleshift').StyleshiftComponent<CardRootVariants> & {
+ *   head: import('../styleshift').StyleshiftComponent<CardHeadVariants>,
+ *   body: import('../styleshift').StyleshiftComponent<CardBodyVariants>,
+ *   foot: import('../styleshift').StyleshiftComponent<CardFootVariants>
+ * }}
  */
 export const card = {
   /**

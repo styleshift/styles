@@ -2,11 +2,12 @@ import styleshift from '../styleshift';
 import { canFocus } from './partials/canFocus';
 
 /**
- * Configurable link component with focus management and styling options
+ * Link - A flexible link component with focus management and styling options
+ * for creating accessible and interactive navigation elements.
  *
- * @param {Object} options
- * @param {boolean} [options.underline=true] - Controls text decoration
- * @returns {string} Tailwind CSS class string
+ * @typedef {Object} LinkProps
+ * @property {boolean} [underline] - Controls text decoration
+ * @property {React.HTMLAttributes<HTMLAnchorElement>} [props] - HTML anchor element props
  *
  * @example
  * ```tsx
@@ -15,15 +16,42 @@ import { canFocus } from './partials/canFocus';
  *   Learn more
  * </a>
  *
- * // Link without underline and icon
- * <a href="#" className={link.root({ underline: false })}>
+ * // Responsive link with icon
+ * <a href="#" className={link.root({
+ *   underline: {
+ *     base: false,
+ *     hover: true
+ *   }
+ * })}>
  *   Documentation <Icon name="external-link" />
+ * </a>
+ *
+ * // Common pattern: Navigation link
+ * <a href="/about" className={link.root()}>
+ *   About us
+ * </a>
+ *
+ * // Common pattern: Action link
+ * <a href="/settings" className={link.root({
+ *   underline: false
+ * })}>
+ *   Settings <Icon name="gear" />
  * </a>
  * ```
  *
  * @variant underline
- * - true: Adds underline decoration
- * - false: Removes underline decoration
+ * - true {boolean} - Adds underline decoration
+ * - false {boolean} - Removes underline decoration
+ *
+ * @default
+ * - underline: true
+ *
+ * @see canFocus - Adds focus ring styles
+ *
+ * @interface LinkVariants
+ * @property {boolean} [underline] - Controls text decoration
+ *
+ * @type {import('../styleshift').StyleshiftComponent<LinkVariants>}
  */
 export const link = {
   /**

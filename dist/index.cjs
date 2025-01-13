@@ -114,9 +114,13 @@ const canDisable = styleshift.define({
 });
 
 /**
- * Configurable button component with surface and size variants.
+ * Button - A flexible button component supporting multiple surfaces and sizes
+ * with built-in focus and disabled states.
  *
- * @type {import('../styleshift').StyleshiftComponent}
+ * @typedef {Object} ButtonProps
+ * @property {('solid' | 'outline' | 'ghost' | 'soft')} [surface] - Button surface style
+ * @property {('sm' | 'base' | 'md' | 'lg')} [size] - Button size variant
+ * @property {React.ButtonHTMLAttributes<HTMLButtonElement>} [props] - HTML button element props
  *
  * @example
  * ```tsx
@@ -125,35 +129,77 @@ const canDisable = styleshift.define({
  *   Click me
  * </button>
  *
- * // Large outline button with icon
- * <button className={button.root({ size: "lg", surface: "outline" })}>
- *   <Icon name="save" />
+ * // Responsive button that changes size
+ * <button className={button.root({
+ *   size: {
+ *     base: "sm",
+ *     md: "base",
+ *     lg: "lg"
+ *   }
+ * })}>
+ *   Responsive Button
+ * </button>
+ *
+ * // Common pattern: Primary action button
+ * <button className={button.root({
+ *   surface: "solid",
+ *   size: "lg"
+ * })}>
  *   Save Changes
  * </button>
  *
- * // Small ghost button
- * <button className={button.root({ size: "sm", surface: "ghost" })}>
+ * // Common pattern: Secondary action button
+ * <button className={button.root({
+ *   surface: "outline",
+ *   size: "base"
+ * })}>
  *   Cancel
+ * </button>
+ *
+ * // Common pattern: Subtle action button
+ * <button className={button.root({
+ *   surface: "ghost",
+ *   size: "sm"
+ * })}>
+ *   Learn More
  * </button>
  * ```
  *
  * @variant surface
- * - solid: White text on background with hover state
- * - outline: Border and text with hover state
- * - ghost: Transparent with hover background
- * - soft: Light background with darker text and hover state
+ * - solid {'solid'} - High emphasis button with solid background
+ * - outline {'outline'} - Medium emphasis button with border
+ * - ghost {'ghost'} - Low emphasis button with hover effect
+ * - soft {'soft'} - Subtle button with light background
  *
  * @variant size
- * - sm: Small
- * - base: Default
- * - md: Medium
- * - lg: Large
+ * - sm {'sm'} - Compact size (h-8, text-sm)
+ * - base {'base'} - Default size (h-10, text-base)
+ * - md {'md'} - Medium size (h-12, text-md)
+ * - lg {'lg'} - Large size (h-14, text-lg)
  *
  * @default
  * - surface: "solid"
  * - size: "base"
+ *
+ * @see canFocus - Adds focus ring styles
+ * @see canDisable - Handles disabled state styles
+ *
+ * @interface ButtonVariants
+ * @property {('solid' | 'outline' | 'ghost' | 'soft')} [surface] - Button surface style
+ * @property {('sm' | 'base' | 'md' | 'lg')} [size] - Button size variant
+ *
+ * @type {import('../styleshift').StyleshiftComponent<ButtonVariants>}
  */
 const button = {
+    /**
+     * Root styles for the button component
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {('solid' | 'outline' | 'ghost' | 'soft')} variants.surface - Button surface style
+     * @property {('sm' | 'base' | 'md' | 'lg')} variants.size - Button size variant
+     *
+     * @returns {string} Combined Tailwind CSS classes
+     */
     root: styleshift.compose(canFocus, canDisable, styleshift.define({
         base: [
             'inline-flex',
@@ -188,12 +234,49 @@ const button = {
 };
 
 /**
- * A flexible card component with customizable styling variants.
+ * Card - A flexible container component with header, body, and footer sections
+ * supporting multiple styling variants and spacing options.
+ *
+ * @typedef {Object} CardRootProps
+ * @property {boolean} [shadow] - Enables box shadow for elevation
+ * @property {boolean} [border] - Shows border around card
+ * @property {boolean} [rounded] - Applies medium border radius
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
+ *
+ * @typedef {Object} CardHeadProps
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows bottom border
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
+ *
+ * @typedef {Object} CardBodyProps
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
+ *
+ * @typedef {Object} CardFootProps
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows top border
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
  *
  * @example
  * ```tsx
- * // Basic card with all sections
+ * // Basic card
  * <div className={card.root()}>
+ *   <div className={card.body()}>
+ *     Basic content
+ *   </div>
+ * </div>
+ *
+ * // Responsive card with all sections
+ * <div className={card.root({
+ *   shadow: true,
+ *   rounded: true,
+ *   space: {
+ *     base: "sm",
+ *     md: "md",
+ *     lg: "lg"
+ *   }
+ * })}>
  *   <div className={card.head()}>
  *     <h3>Card Title</h3>
  *     <button>Close</button>
@@ -207,21 +290,33 @@ const button = {
  *   </div>
  * </div>
  *
- * // Custom styled card
+ * // Common pattern: Simple content card
  * <div className={card.root({
  *   shadow: true,
- *   rounded: true,
- *   space: "lg"
+ *   rounded: true
  * })}>
  *   <div className={card.body({ space: "md" })}>
- *     Simplified card with custom spacing
+ *     Content with padding
+ *   </div>
+ * </div>
+ *
+ * // Common pattern: Panel card
+ * <div className={card.root({
+ *   border: true,
+ *   space: "sm"
+ * })}>
+ *   <div className={card.head({ border: true })}>
+ *     Panel Header
+ *   </div>
+ *   <div className={card.body()}>
+ *     Panel content
  *   </div>
  * </div>
  * ```
  *
  * @variant root
- * - shadow {boolean} - Enables box shadow
- * - border {boolean} - Shows border
+ * - shadow {boolean} - Enables box shadow for elevation
+ * - border {boolean} - Shows border around card
  * - rounded {boolean} - Applies medium border radius
  * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
@@ -235,6 +330,35 @@ const button = {
  * @variant foot
  * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  * - border {boolean} - Shows top border
+ *
+ * @default
+ * - shadow: true
+ * - border: true
+ * - rounded: true
+ * - space: "default"
+ *
+ * @interface CardRootVariants
+ * @property {boolean} [shadow] - Enables box shadow for elevation
+ * @property {boolean} [border] - Shows border around card
+ * @property {boolean} [rounded] - Applies medium border radius
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ *
+ * @interface CardHeadVariants
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows bottom border
+ *
+ * @interface CardBodyVariants
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ *
+ * @interface CardFootVariants
+ * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [space] - Controls padding
+ * @property {boolean} [border] - Shows top border
+ *
+ * @type {import('../styleshift').StyleshiftComponent<CardRootVariants> & {
+ *   head: import('../styleshift').StyleshiftComponent<CardHeadVariants>,
+ *   body: import('../styleshift').StyleshiftComponent<CardBodyVariants>,
+ *   foot: import('../styleshift').StyleshiftComponent<CardFootVariants>
+ * }}
  */
 const card = {
     /**
@@ -486,11 +610,12 @@ const card = {
 };
 
 /**
- * Configurable link component with focus management and styling options
+ * Link - A flexible link component with focus management and styling options
+ * for creating accessible and interactive navigation elements.
  *
- * @param {Object} options
- * @param {boolean} [options.underline=true] - Controls text decoration
- * @returns {string} Tailwind CSS class string
+ * @typedef {Object} LinkProps
+ * @property {boolean} [underline] - Controls text decoration
+ * @property {React.HTMLAttributes<HTMLAnchorElement>} [props] - HTML anchor element props
  *
  * @example
  * ```tsx
@@ -499,15 +624,42 @@ const card = {
  *   Learn more
  * </a>
  *
- * // Link without underline and icon
- * <a href="#" className={link.root({ underline: false })}>
+ * // Responsive link with icon
+ * <a href="#" className={link.root({
+ *   underline: {
+ *     base: false,
+ *     hover: true
+ *   }
+ * })}>
  *   Documentation <Icon name="external-link" />
+ * </a>
+ *
+ * // Common pattern: Navigation link
+ * <a href="/about" className={link.root()}>
+ *   About us
+ * </a>
+ *
+ * // Common pattern: Action link
+ * <a href="/settings" className={link.root({
+ *   underline: false
+ * })}>
+ *   Settings <Icon name="gear" />
  * </a>
  * ```
  *
  * @variant underline
- * - true: Adds underline decoration
- * - false: Removes underline decoration
+ * - true {boolean} - Adds underline decoration
+ * - false {boolean} - Removes underline decoration
+ *
+ * @default
+ * - underline: true
+ *
+ * @see canFocus - Adds focus ring styles
+ *
+ * @interface LinkVariants
+ * @property {boolean} [underline] - Controls text decoration
+ *
+ * @type {import('../styleshift').StyleshiftComponent<LinkVariants>}
  */
 const link = {
     /**
@@ -555,87 +707,123 @@ const link = {
 };
 
 /**
- * Configurable typography utility for consistent text styling
+ * Text - A comprehensive typography component with extensive styling options
+ * for consistent text formatting across the application.
  *
- * @param {object} options - Style configuration
- * @returns {string} Tailwind CSS classes
+ * @typedef {Object} TextProps
+ * @property {('default'|'xs'|'sm'|'base'|'md'|'lg'|'xl'|'2xl'|'3xl'|'4xl'|'5xl'|'6xl')} [size] - Text size scale
+ * @property {('left'|'center'|'right'|'justify'|'start'|'end')} [align] - Text alignment
+ * @property {('none'|'under'|'over'|'through')} [strike] - Text decoration style
+ * @property {('default'|'thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} [weight] - Font weight
+ * @property {('default'|'upper'|'lower'|'caps'|'normal')} [case] - Text transform
+ * @property {('default'|'wrap'|'nowrap'|'balance'|'pretty')} [wrap] - Text wrapping behavior
+ * @property {('default'|'normal'|'nowrap'|'pre'|'preline'|'prewrap'|'break')} [whitespace] - Whitespace handling
+ * @property {('default'|'none'|'tight'|'snug'|'normal'|'relaxed'|'loose')} [leading] - Line height
+ * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} [tracking] - Letter spacing
+ * @property {boolean} [truncate] - Enable text truncation
+ * @property {boolean} [dimmed] - Apply reduced opacity
+ * @property {React.HTMLAttributes<HTMLElement>} [props] - HTML element props
  *
  * @example
  * ```tsx
- * // Basic usage
- * <p className={text.root({ size: "lg" })}>
- *   Large text
+ * // Basic text
+ * <p className={text.root()}>
+ *   Default paragraph text
  * </p>
  *
- * // Complex styling
+ * // Responsive heading
  * <h1 className={text.root({
- *   size: "2xl",
+ *   size: {
+ *     base: "xl",
+ *     md: "2xl",
+ *     lg: "4xl"
+ *   },
  *   weight: "bold",
- *   tracking: "wide",
- *   align: "center"
+ *   tracking: "tight"
  * })}>
- *   Heading Text
+ *   Responsive Heading
  * </h1>
+ *
+ * // Common pattern: Article text
+ * <article className={text.root({
+ *   size: "lg",
+ *   leading: "relaxed"
+ * })}>
+ *   Long-form content with comfortable reading
+ * </article>
+ *
+ * // Common pattern: Meta text
+ * <span className={text.root({
+ *   size: "sm",
+ *   dimmed: true,
+ *   weight: "medium"
+ * })}>
+ *   Posted 2 days ago
+ * </span>
  * ```
  *
- * Variants:
- * - size: xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
- * - align: left | center | right | justify | start | end
- * - strike: none | under | over | through
- * - weight: thin | extralight | light | normal | medium | semibold | bold | extrabold | black
- * - case: upper | lower | caps | normal
- * - wrap: wrap | nowrap | balance | pretty
- * - whitespace: normal | nowrap | pre | preline | prewrap | break
- * - leading: none | tight | snug | normal | relaxed | loose
- * - tracking: tighter | tight | normal | wide | wider | widest
- * - truncate: boolean
- * - dimmed: boolean
+ * @variant size
+ * - xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl {'size'} - Text size scale
+ *
+ * @variant align
+ * - left | center | right | justify | start | end {'align'} - Text alignment
+ *
+ * @variant strike
+ * - none | under | over | through {'strike'} - Text decoration style
+ *
+ * @variant weight
+ * - thin | extralight | light | normal | medium | semibold | bold | extrabold | black {'weight'} - Font weight
+ *
+ * @variant case
+ * - upper | lower | caps | normal {'case'} - Text transform
+ *
+ * @variant wrap
+ * - wrap | nowrap | balance | pretty {'wrap'} - Text wrapping behavior
+ *
+ * @variant whitespace
+ * - normal | nowrap | pre | preline | prewrap | break {'whitespace'} - Whitespace handling
+ *
+ * @variant leading
+ * - none | tight | snug | normal | relaxed | loose {'leading'} - Line height
+ *
+ * @variant tracking
+ * - tighter | tight | normal | wide | wider | widest {'tracking'} - Letter spacing
+ *
+ * @variant truncate
+ * - true | false {boolean} - Enable text truncation
+ *
+ * @variant dimmed
+ * - true | false {boolean} - Apply reduced opacity
+ *
+ * @default
+ * - size: "default"
+ * - align: "left"
+ * - strike: "none"
+ * - weight: "default"
+ * - case: "default"
+ * - wrap: "default"
+ * - whitespace: "default"
+ * - leading: "default"
+ * - tracking: "default"
+ * - truncate: false
+ * - dimmed: false
+ *
+ * @interface TextVariants
+ * @property {('default'|'xs'|'sm'|'base'|'md'|'lg'|'xl'|'2xl'|'3xl'|'4xl'|'5xl'|'6xl')} [size] - Text size scale
+ * @property {('left'|'center'|'right'|'justify'|'start'|'end')} [align] - Text alignment
+ * @property {('none'|'under'|'over'|'through')} [strike] - Text decoration style
+ * @property {('default'|'thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} [weight] - Font weight
+ * @property {('default'|'upper'|'lower'|'caps'|'normal')} [case] - Text transform
+ * @property {('default'|'wrap'|'nowrap'|'balance'|'pretty')} [wrap] - Text wrapping behavior
+ * @property {('default'|'normal'|'nowrap'|'pre'|'preline'|'prewrap'|'break')} [whitespace] - Whitespace handling
+ * @property {('default'|'none'|'tight'|'snug'|'normal'|'relaxed'|'loose')} [leading] - Line height
+ * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} [tracking] - Letter spacing
+ * @property {boolean} [truncate] - Enable text truncation
+ * @property {boolean} [dimmed] - Apply reduced opacity
+ *
+ * @type {import('../styleshift').StyleshiftComponent<TextVariants>}
  */
 const text = {
-    /**
-     * Root styles for text elements with extensive customization options
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'base'|'md'|'lg'|'xl'|'2xl'|'3xl'|'4xl'|'5xl'|'6xl')} variants.size - Text size
-     * @property {('left'|'center'|'right'|'justify'|'start'|'end')} variants.align - Text alignment
-     * @property {('none'|'under'|'over'|'through')} variants.strike - Text decoration
-     * @property {('default'|'thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} variants.weight - Font weight
-     * @property {('default'|'upper'|'lower'|'caps'|'normal')} variants.case - Text transform
-     * @property {('default'|'wrap'|'nowrap'|'balance'|'pretty')} variants.wrap - Text wrapping
-     * @property {('default'|'normal'|'nowrap'|'pre'|'preline'|'prewrap'|'break')} variants.whitespace - Whitespace handling
-     * @property {('default'|'none'|'tight'|'snug'|'normal'|'relaxed'|'loose')} variants.leading - Line height
-     * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} variants.tracking - Letter spacing
-     * @property {boolean} variants.truncate - Enable text truncation
-     * @property {boolean} variants.dimmed - Apply reduced opacity
-     *
-     * @example
-     * ```tsx
-     * // Basic paragraph
-     * <p className={text.root()}>
-     *   Default text
-     * </p>
-     *
-     * // Styled heading
-     * <h2 className={text.root({
-     *   size: "xl",
-     *   weight: "bold",
-     *   leading: "tight"
-     * })}>
-     *   Bold Heading
-     * </h2>
-     *
-     * // Truncated text
-     * <p className={text.root({
-     *   truncate: true,
-     *   size: "sm",
-     *   dimmed: true
-     * })}>
-     *   This is a very long text that will be truncated...
-     * </p>
-     * ```
-     *
-     * @returns {string} Combined Tailwind CSS classes
-     */
     root: styleshift.define({
         base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
         variants: {
@@ -746,25 +934,49 @@ const text = {
 };
 
 /**
- * A separator component for visually dividing content.
+ * Separator - A flexible divider component for visually separating content
+ * with support for horizontal and vertical orientations.
  *
- * @type {import('../styleshift').StyleshiftComponent}
+ * @typedef {Object} SeparatorProps
+ * @property {('horizontal'|'vertical')} [orientation] - Controls the separator's orientation
+ * @property {React.HTMLAttributes<HTMLDivElement>} [props] - HTML div element props
  *
  * @example
  * ```tsx
- * // Horizontal separator (default)
+ * // Basic horizontal separator
  * <div className={separator.root()} />
  *
- * // Vertical separator
- * <div className={separator.root({ orientation: "vertical" })} />
+ * // Vertical separator for layout
+ * <div className={separator.root({
+ *   orientation: "vertical"
+ * })} />
+ *
+ * // Common pattern: Content divider
+ * <section>
+ *   <h2>Section 1</h2>
+ *   <div className={separator.root()} />
+ *   <p>Content below</p>
+ * </section>
+ *
+ * // Common pattern: Vertical divider in flex layout
+ * <div className="flex h-8">
+ *   <span>Left</span>
+ *   <div className={separator.root({ orientation: "vertical" })} />
+ *   <span>Right</span>
+ * </div>
  * ```
  *
  * @variant orientation
- * - horizontal: Horizontal line (default)
- * - vertical: Vertical line
+ * - horizontal {'horizontal'} - Creates a horizontal dividing line (default)
+ * - vertical {'vertical'} - Creates a vertical dividing line
  *
  * @default
  * - orientation: "horizontal"
+ *
+ * @interface SeparatorVariants
+ * @property {('horizontal'|'vertical')} [orientation] - Controls the separator's orientation
+ *
+ * @type {import('../styleshift').StyleshiftComponent<SeparatorVariants>}
  */
 const separator = {
     root: styleshift.define({

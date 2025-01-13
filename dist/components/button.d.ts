@@ -1,7 +1,11 @@
 /**
- * Configurable button component with surface and size variants.
+ * Button - A flexible button component supporting multiple surfaces and sizes
+ * with built-in focus and disabled states.
  *
- * @type {import('../styleshift').StyleshiftComponent}
+ * @typedef {Object} ButtonProps
+ * @property {('solid' | 'outline' | 'ghost' | 'soft')} [surface] - Button surface style
+ * @property {('sm' | 'base' | 'md' | 'lg')} [size] - Button size variant
+ * @property {React.ButtonHTMLAttributes<HTMLButtonElement>} [props] - HTML button element props
  *
  * @example
  * ```tsx
@@ -10,35 +14,77 @@
  *   Click me
  * </button>
  *
- * // Large outline button with icon
- * <button className={button.root({ size: "lg", surface: "outline" })}>
- *   <Icon name="save" />
+ * // Responsive button that changes size
+ * <button className={button.root({
+ *   size: {
+ *     base: "sm",
+ *     md: "base",
+ *     lg: "lg"
+ *   }
+ * })}>
+ *   Responsive Button
+ * </button>
+ *
+ * // Common pattern: Primary action button
+ * <button className={button.root({
+ *   surface: "solid",
+ *   size: "lg"
+ * })}>
  *   Save Changes
  * </button>
  *
- * // Small ghost button
- * <button className={button.root({ size: "sm", surface: "ghost" })}>
+ * // Common pattern: Secondary action button
+ * <button className={button.root({
+ *   surface: "outline",
+ *   size: "base"
+ * })}>
  *   Cancel
+ * </button>
+ *
+ * // Common pattern: Subtle action button
+ * <button className={button.root({
+ *   surface: "ghost",
+ *   size: "sm"
+ * })}>
+ *   Learn More
  * </button>
  * ```
  *
  * @variant surface
- * - solid: White text on background with hover state
- * - outline: Border and text with hover state
- * - ghost: Transparent with hover background
- * - soft: Light background with darker text and hover state
+ * - solid {'solid'} - High emphasis button with solid background
+ * - outline {'outline'} - Medium emphasis button with border
+ * - ghost {'ghost'} - Low emphasis button with hover effect
+ * - soft {'soft'} - Subtle button with light background
  *
  * @variant size
- * - sm: Small
- * - base: Default
- * - md: Medium
- * - lg: Large
+ * - sm {'sm'} - Compact size (h-8, text-sm)
+ * - base {'base'} - Default size (h-10, text-base)
+ * - md {'md'} - Medium size (h-12, text-md)
+ * - lg {'lg'} - Large size (h-14, text-lg)
  *
  * @default
  * - surface: "solid"
  * - size: "base"
+ *
+ * @see canFocus - Adds focus ring styles
+ * @see canDisable - Handles disabled state styles
+ *
+ * @interface ButtonVariants
+ * @property {('solid' | 'outline' | 'ghost' | 'soft')} [surface] - Button surface style
+ * @property {('sm' | 'base' | 'md' | 'lg')} [size] - Button size variant
+ *
+ * @type {import('../styleshift').StyleshiftComponent<ButtonVariants>}
  */
 export declare const button: {
+    /**
+     * Root styles for the button component
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {('solid' | 'outline' | 'ghost' | 'soft')} variants.surface - Button surface style
+     * @property {('sm' | 'base' | 'md' | 'lg')} variants.size - Button size variant
+     *
+     * @returns {string} Combined Tailwind CSS classes
+     */
     root: (props?: (((import("cva").VariantProps<(props?: ({
         class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
