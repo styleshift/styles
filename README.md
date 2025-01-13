@@ -42,8 +42,8 @@ import { button } from '@styleshift/styles';
 
 ### Button
 
-```js
-button.root({ surface: 'outline' });
+```jsx
+<button className={button.root()}>Button</button>
 ```
 
 | Root    | Type                             | Default   |
@@ -53,12 +53,12 @@ button.root({ surface: 'outline' });
 
 ### Card
 
-```js
-card.root({ rounded: false' });
-card.head({ space: 'md' });
-card.body({ space: 'lg' });
-card.foot({ space: 'md' });
-
+```jsx
+<div className={card.root()}>
+  <div className={card.head()}>Head</div>
+  <div className={card.body()}>Body</div>
+  <div className={card.foot()}>Foot</div>
+</div>
 ```
 
 | Root    | Type                               | Default   |
@@ -101,8 +101,10 @@ card.foot({ space: 'md' });
 
 ### Link
 
-```js
-link.root({ underline: false });
+```jsx
+<a href="#" className={link.root()}>
+  Text
+</a>
 ```
 
 | Root      | Type           | Default |
@@ -111,8 +113,8 @@ link.root({ underline: false });
 
 ### Text
 
-```js
-text.root({ align: 'center' });
+```jsx
+<p className={text.root()}>Text</p>
 ```
 
 | Root       | Type                                                                                          | Default   |
