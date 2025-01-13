@@ -28,22 +28,15 @@ const rootSizes = {
   lg: 'text-lg h-14 px-5',
 } as const;
 
-const rootDisabled = {
-  true: [],
-  false: [],
-};
-
 export const button = {
   root: cva(rootBase, {
     variants: {
       surface: rootSurfaces,
       size: rootSizes,
-      isDisabled: rootDisabled,
     },
     defaultVariants: {
       surface: 'solid',
       size: 'base',
-      isDisabled: false,
     },
   }),
 };

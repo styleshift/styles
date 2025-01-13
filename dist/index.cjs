@@ -56,21 +56,15 @@ const rootSizes$2 = {
     md: 'text-md h-12 px-5',
     lg: 'text-lg h-14 px-5',
 };
-const rootDisabled = {
-    true: [],
-    false: [],
-};
 const button = {
     root: cva(rootBase$2, {
         variants: {
             surface: rootSurfaces,
             size: rootSizes$2,
-            isDisabled: rootDisabled,
         },
         defaultVariants: {
             surface: 'solid',
             size: 'base',
-            isDisabled: false,
         },
     }),
 };

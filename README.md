@@ -46,11 +46,10 @@ import { button } from '@styleshift/styles';
 button.root({ surface: 'outline' });
 ```
 
-| Root       | Type                             | Default   |
-| ---------- | -------------------------------- | --------- |
-| surface    | `solid` `ghost` `outline` `soft` | `solid`   |
-| size       | `default` `sm` `base` `md` `lg`  | `default` |
-| isDisabled | `true` `false`                   | `false`   |
+| Root    | Type                             | Default   |
+| ------- | -------------------------------- | --------- |
+| surface | `solid` `ghost` `outline` `soft` | `solid`   |
+| size    | `default` `sm` `base` `md` `lg`  | `default` |
 
 ### Card
 
