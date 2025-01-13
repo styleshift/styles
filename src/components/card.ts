@@ -9,7 +9,7 @@ export const card = {
         false: '',
       },
       border: {
-        true: 'border-slate-200',
+        true: 'border-slate-300',
         false: 'border-transparent',
       },
       rounded: {
@@ -45,7 +45,7 @@ export const card = {
         xl: 'px-24 pt-16',
       },
       border: {
-        true: 'border-slate-200',
+        true: 'border-slate-300',
         false: 'border-transparent',
       },
     },
@@ -116,7 +116,7 @@ export const card = {
         xl: 'px-24 pb-16',
       },
       border: {
-        true: 'border-slate-200',
+        true: 'border-slate-300',
         false: 'border-transparent',
       },
     },
