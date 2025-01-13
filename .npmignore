@@ -1,0 +1,38 @@
+# Development files
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__
+__mocks__
+
+# Source maps
+*.map
+
+# TypeScript source files (if you're publishing compiled JS)
+*.ts
+*.tsx
+!*.d.ts
+
+# Build/Development tools
+tsconfig.json
+jest.config.js
+.eslintrc*
+.prettierrc*
+
+# Development directories
+node_modules
+coverage
+.coverage
+.nyc_output
+
+# IDE/Editor files
+.vscode
+.idea
+*.swp
+*.swo
+
+# Misc
+.DS_Store
+*.log
+.env*
