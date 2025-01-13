@@ -1,4 +1,4 @@
-import { cva, compose } from '../shared';
+import { styleshift } from '../shared';
 import { canFocus } from './partials/canFocus';
 
 /**
@@ -13,9 +13,9 @@ export const link = {
    * @property {Object} variants.underline - Controls text decoration
    * @property {boolean} defaultVariants.underline - Default is underlined (true)
    */
-  root: compose(
+  root: styleshift.compose(
     canFocus,
-    cva({
+    styleshift.define({
       base: [
         'text-blue-700',
         'hover:text-blue-800',

@@ -67,10 +67,16 @@ const defineConfig = (options)=>{
         cx
     };
 };
-const { compose: compose$1, cva: cva$1, cx } = defineConfig();
+const { compose: compose$1, cva: cva$1, cx: cx$1 } = defineConfig();
 
 const cva = cva$1;
+const cx = cx$1;
 const compose = compose$1;
+const styleshift = {
+    define: cva,
+    compose: compose,
+    merge: cx,
+};
 
 const canFocus = cva({
     base: ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'],
@@ -89,7 +95,7 @@ const button = {
      * Root styles for the button component
      * Composes focus and disable states with core button styles
      */
-    root: compose(canFocus, canDisable, cva({
+    root: styleshift.compose(canFocus, canDisable, styleshift.define({
         /**
          * Base styles applied to all button variants
          */
@@ -153,7 +159,7 @@ const card = {
      * @property {boolean} rounded - Controls border radius
      * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
      */
-    root: cva({
+    root: styleshift.define({
         base: ['transition-all border'],
         variants: {
             shadow: {
@@ -189,7 +195,7 @@ const card = {
      * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
      * @property {boolean} border - Controls bottom border visibility
      */
-    head: cva({
+    head: styleshift.define({
         base: ['border-b'],
         variants: {
             space: {
@@ -241,7 +247,7 @@ const card = {
      * Card body styles
      * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
      */
-    body: cva({
+    body: styleshift.define({
         base: [''],
         variants: {
             space: {
@@ -262,7 +268,7 @@ const card = {
      * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
      * @property {boolean} border - Controls top border visibility
      */
-    foot: cva({
+    foot: styleshift.define({
         base: ['border-t'],
         variants: {
             space: {
@@ -324,7 +330,7 @@ const link = {
      * @property {Object} variants.underline - Controls text decoration
      * @property {boolean} defaultVariants.underline - Default is underlined (true)
      */
-    root: compose(canFocus, cva({
+    root: styleshift.compose(canFocus, styleshift.define({
         base: [
             'text-blue-700',
             'hover:text-blue-800',
@@ -356,7 +362,7 @@ const text = {
      * The root style configuration for text elements.
      * It includes base styles and various variants for customization.
      */
-    root: cva({
+    root: styleshift.define({
         base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
         variants: {
             /**

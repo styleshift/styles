@@ -1,4 +1,4 @@
-import { cva } from '../shared';
+import { styleshift } from '../shared';
 
 /**
  * The `text` object provides a set of utility classes for styling text elements.
@@ -9,7 +9,7 @@ export const text = {
    * The root style configuration for text elements.
    * It includes base styles and various variants for customization.
    */
-  root: cva({
+  root: styleshift.define({
     base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
     variants: {
       /**

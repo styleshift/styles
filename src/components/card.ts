@@ -1,4 +1,4 @@
-import { cva } from '../shared';
+import { cva, styleshift } from '../shared';
 
 /**
  * Card component styling configuration using CVA (Class Variance Authority)
@@ -12,7 +12,7 @@ export const card = {
    * @property {boolean} rounded - Controls border radius
    * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
    */
-  root: cva({
+  root: styleshift.define({
     base: ['transition-all border'],
     variants: {
       shadow: {
@@ -48,7 +48,7 @@ export const card = {
    * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
    * @property {boolean} border - Controls bottom border visibility
    */
-  head: cva({
+  head: styleshift.define({
     base: ['border-b'],
     variants: {
       space: {
@@ -100,7 +100,7 @@ export const card = {
    * Card body styles
    * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
    */
-  body: cva({
+  body: styleshift.define({
     base: [''],
     variants: {
       space: {
@@ -121,7 +121,7 @@ export const card = {
    * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
    * @property {boolean} border - Controls top border visibility
    */
-  foot: cva({
+  foot: styleshift.define({
     base: ['border-t'],
     variants: {
       space: {

@@ -1,4 +1,4 @@
-import { cva, compose } from '../shared';
+import { styleshift } from '../shared';
 import { canFocus } from './partials/canFocus';
 import { canDisable } from './partials/canDisable';
 
@@ -11,10 +11,10 @@ export const button = {
    * Root styles for the button component
    * Composes focus and disable states with core button styles
    */
-  root: compose(
+  root: styleshift.compose(
     canFocus,
     canDisable,
-    cva({
+    styleshift.define({
       /**
        * Base styles applied to all button variants
        */
