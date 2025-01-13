@@ -156,6 +156,24 @@ const rootWhitespaces = {
     prewrap: 'whitespace-pre-wrap',
     break: 'whitespace-break-spaces',
 };
+const rootLeading = {
+    default: '',
+    none: 'leading-none',
+    tight: 'leading-tight',
+    snug: 'leading-snug',
+    normal: 'leading-normal',
+    relaxed: 'leading-relaxed',
+    loose: 'leading-loose',
+};
+const rootTracking = {
+    default: '',
+    tighter: 'tracking-tighter',
+    tight: 'tracking-tight',
+    normal: 'tracking-normal',
+    wide: 'tracking-wide',
+    wider: 'tracking-wider',
+    widest: 'tracking-widest',
+};
 const text = {
     root: cva(rootBase, {
         variants: {
@@ -166,6 +184,8 @@ const text = {
             case: rootCases,
             wrap: rootWraps,
             whitespace: rootWhitespaces,
+            leading: rootLeading,
+            tracking: rootTracking,
             truncate: {
                 true: ['truncate'],
                 false: [''],
@@ -179,6 +199,8 @@ const text = {
             case: 'default',
             wrap: 'default',
             whitespace: 'default',
+            leading: 'default',
+            tracking: 'default',
             truncate: false,
         },
     }),

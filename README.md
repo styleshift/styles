@@ -91,9 +91,11 @@ text.root({ align: 'center' });
 | ---------- | --------------------------------------------------------------------------------------------- | --------- |
 | align      | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
 | case       | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
+| leading    | `default` `none` `tight` `snug` `normal` `relaxed` `loose`                                    | `default` |
 | size       | `default` `sm` `base` `md` `lg`                                                               | `default` |
 | strike     | `none` `under` `over` `through`                                                               | `none`    |
+| tracking   | `default` `tighter` `tight` `normal` `wide` `wider` `widest`                                  | `default` |
 | truncate   | `true` `false`                                                                                | `false`   |
 | weight     | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
-| wrap       | `default` `wrap` `nowrap` `balance` `pretty`                                                  | `default` |
 | whitespace | `default` `normal` `nowrap` `pre` `preline` `prewrap` `break`                                 | `default` |
+| wrap       | `default` `wrap` `nowrap` `balance` `pretty`                                                  | `default` |

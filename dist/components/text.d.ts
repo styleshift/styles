@@ -8,6 +8,8 @@ export declare const text: {
         case?: "default" | "normal" | "upper" | "lower" | "caps" | null | undefined;
         wrap?: "default" | "wrap" | "nowrap" | "balance" | "pretty" | null | undefined;
         whitespace?: "default" | "normal" | "nowrap" | "pre" | "preline" | "prewrap" | "break" | null | undefined;
+        leading?: "default" | "none" | "normal" | "tight" | "snug" | "relaxed" | "loose" | null | undefined;
+        tracking?: "default" | "normal" | "tight" | "tighter" | "wide" | "wider" | "widest" | null | undefined;
         truncate?: boolean | null | undefined;
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
 };
