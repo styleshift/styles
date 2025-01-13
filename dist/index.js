@@ -36,11 +36,6 @@ const rootVariants = {
     surface: rootSurfaces,
     size: rootSizes,
 };
-/**
- * Button component styles
- * @param {ButtonVariants} props
- * @returns {string}
- */
 const button = cva(rootBase, {
     variants: rootVariants,
     defaultVariants: rootDefaultVariants,

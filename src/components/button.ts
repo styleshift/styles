@@ -40,11 +40,6 @@ const rootVariants = {
   size: rootSizes,
 } as const;
 
-/**
- * Button component styles
- * @param {ButtonVariants} props
- * @returns {string}
- */
 export const button = cva(rootBase, {
   variants: rootVariants,
   defaultVariants: rootDefaultVariants,
