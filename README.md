@@ -26,7 +26,6 @@ import { button } from '@styleshift/styles';
 - [x] [Button](src/components/button.ts)
 - [x] [Card](src/components/card.ts)
 - [ ] Checkbox
-- [ ] Header
 - [ ] Input
 - [x] [Link](src/components/link.ts)
 - [x] [Separator](src/components/separator.ts)
