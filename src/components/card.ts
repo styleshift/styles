@@ -68,7 +68,8 @@ const footSpaces = {
 } as const;
 
 export const card = {
-  root: cva(rootBase, {
+  root: cva({
+    base: rootBase,
     variants: {
       shadow: rootShadow,
       border: rootBorder,
@@ -82,7 +83,8 @@ export const card = {
       space: 'default',
     },
   }),
-  head: cva(headBase, {
+  head: cva({
+    base: headBase,
     variants: {
       space: headSpaces,
       border: HeadBorder,
@@ -119,7 +121,8 @@ export const card = {
       },
     ],
   }),
-  body: cva(bodyBase, {
+  body: cva({
+    base: bodyBase,
     variants: {
       space: bodySpaces,
     },
@@ -127,7 +130,8 @@ export const card = {
       space: 'sm',
     },
   }),
-  foot: cva(footBase, {
+  foot: cva({
+    base: footBase,
     variants: {
       space: footSpaces,
       border: FootBorder,

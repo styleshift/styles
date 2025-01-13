@@ -1,17 +1,71 @@
 import { type VariantProps } from '../shared';
 export declare const text: {
     root: (props?: ({
-        size?: "default" | "base" | "sm" | "md" | "lg" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | null | undefined;
-        align?: "left" | "center" | "right" | "justify" | "start" | "end" | null | undefined;
-        strike?: "none" | "under" | "over" | "through" | null | undefined;
-        weight?: "default" | "thin" | "extralight" | "light" | "normal" | "medium" | "semibold" | "bold" | "extrabold" | "black" | null | undefined;
-        case?: "default" | "normal" | "upper" | "lower" | "caps" | null | undefined;
-        wrap?: "default" | "wrap" | "nowrap" | "balance" | "pretty" | null | undefined;
-        whitespace?: "default" | "normal" | "nowrap" | "pre" | "preline" | "prewrap" | "break" | null | undefined;
-        leading?: "default" | "none" | "normal" | "tight" | "snug" | "relaxed" | "loose" | null | undefined;
-        tracking?: "default" | "normal" | "tight" | "tighter" | "wide" | "wider" | "widest" | null | undefined;
-        truncate?: boolean | null | undefined;
-        dimmed?: boolean | null | undefined;
-    } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
+        size?: "base" | "sm" | "md" | "lg" | "default" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | undefined;
+        align?: "left" | "center" | "right" | "justify" | "start" | "end" | undefined;
+        strike?: "none" | "under" | "over" | "through" | undefined;
+        weight?: "default" | "thin" | "extralight" | "light" | "normal" | "medium" | "semibold" | "bold" | "extrabold" | "black" | undefined;
+        case?: "default" | "normal" | "upper" | "lower" | "caps" | undefined;
+        wrap?: "default" | "wrap" | "nowrap" | "balance" | "pretty" | undefined;
+        whitespace?: "default" | "normal" | "nowrap" | "pre" | "preline" | "prewrap" | "break" | undefined;
+        leading?: "default" | "none" | "normal" | "tight" | "snug" | "relaxed" | "loose" | undefined;
+        tracking?: "default" | "normal" | "tight" | "tighter" | "wide" | "wider" | "widest" | undefined;
+        truncate?: boolean | undefined;
+        dimmed?: boolean | undefined;
+    } & ({
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+        className?: never;
+    } | {
+        class?: never;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+    })) | undefined) => string;
 };
 export type TextRootVariants = VariantProps<typeof text.root>;

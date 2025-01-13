@@ -1,4 +1,4 @@
-import * as classVarianceAuthority from 'class-variance-authority';
+import * as classVarianceAuthority from 'cva';
 
 /**
  * Shared styles

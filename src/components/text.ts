@@ -103,7 +103,8 @@ const rootTruncate = {
 };
 
 export const text = {
-  root: cva(rootBase, {
+  root: cva({
+    base: rootBase,
     variants: {
       size: rootSizes,
       align: rootAligns,

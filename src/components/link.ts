@@ -18,7 +18,8 @@ const rootUnderline = {
 } as const;
 
 export const link = {
-  root: cva(rootBase, {
+  root: cva({
+    base: rootBase,
     variants: {
       underline: rootUnderline,
     },

@@ -1,4 +1,71 @@
-import * as classVarianceAuthority from 'class-variance-authority';
+function r(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e)){var o=e.length;for(t=0;t<o;t++)e[t]&&(f=r(e[t]))&&(n&&(n+=" "),n+=f);}else for(f in e)e[f]&&(n&&(n+=" "),n+=f);return n}function clsx(){for(var e,t,f=0,n="",o=arguments.length;f<o;f++)(e=arguments[f])&&(t=r(e))&&(n&&(n+=" "),n+=t);return n}
+
+/* Exports
+  ============================================ */ const falsyToString = (value)=>typeof value === "boolean" ? `${value}` : value === 0 ? "0" : value;
+const defineConfig = (options)=>{
+    const cx = function() {
+        for(var _len = arguments.length, inputs = new Array(_len), _key = 0; _key < _len; _key++){
+            inputs[_key] = arguments[_key];
+        }
+        return clsx(inputs);
+    };
+    const cva = (config)=>(props)=>{
+            var _config_compoundVariants;
+            if ((config === null || config === undefined ? undefined : config.variants) == null) return cx(config === null || config === undefined ? undefined : config.base, props === null || props === undefined ? undefined : props.class, props === null || props === undefined ? undefined : props.className);
+            const { variants, defaultVariants } = config;
+            const getVariantClassNames = Object.keys(variants).map((variant)=>{
+                const variantProp = props === null || props === undefined ? undefined : props[variant];
+                const defaultVariantProp = defaultVariants === null || defaultVariants === undefined ? undefined : defaultVariants[variant];
+                const variantKey = falsyToString(variantProp) || falsyToString(defaultVariantProp);
+                return variants[variant][variantKey];
+            });
+            const defaultsAndProps = {
+                ...defaultVariants,
+                // remove `undefined` props
+                ...props && Object.entries(props).reduce((acc, param)=>{
+                    let [key, value] = param;
+                    return typeof value === "undefined" ? acc : {
+                        ...acc,
+                        [key]: value
+                    };
+                }, {})
+            };
+            const getCompoundVariantClassNames = config === null || config === undefined ? undefined : (_config_compoundVariants = config.compoundVariants) === null || _config_compoundVariants === undefined ? undefined : _config_compoundVariants.reduce((acc, param)=>{
+                let { class: cvClass, className: cvClassName, ...cvConfig } = param;
+                return Object.entries(cvConfig).every((param)=>{
+                    let [cvKey, cvSelector] = param;
+                    const selector = defaultsAndProps[cvKey];
+                    return Array.isArray(cvSelector) ? cvSelector.includes(selector) : selector === cvSelector;
+                }) ? [
+                    ...acc,
+                    cvClass,
+                    cvClassName
+                ] : acc;
+            }, []);
+            return cx(config === null || config === undefined ? undefined : config.base, getVariantClassNames, getCompoundVariantClassNames, props === null || props === undefined ? undefined : props.class, props === null || props === undefined ? undefined : props.className);
+        };
+    const compose = function() {
+        for(var _len = arguments.length, components = new Array(_len), _key = 0; _key < _len; _key++){
+            components[_key] = arguments[_key];
+        }
+        return (props)=>{
+            const propsWithoutClass = Object.fromEntries(Object.entries(props || {}).filter((param)=>{
+                let [key] = param;
+                return ![
+                    "class",
+                    "className"
+                ].includes(key);
+            }));
+            return cx(components.map((component)=>component(propsWithoutClass)), props === null || props === undefined ? undefined : props.class, props === null || props === undefined ? undefined : props.className);
+        };
+    };
+    return {
+        compose,
+        cva,
+        cx
+    };
+};
+const { compose, cva: cva$1, cx } = defineConfig();
 
 /**
  * Shared styles
@@ -8,7 +75,7 @@ const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disable
 /**
  * Helpers
  */
-const cva = classVarianceAuthority.cva;
+const cva = cva$1;
 
 const rootBase$3 = [
     ...focus,
@@ -36,7 +103,8 @@ const rootSizes$1 = {
     lg: 'text-lg h-14 px-5',
 };
 const button = {
-    root: cva(rootBase$3, {
+    root: cva({
+        base: rootBase$3,
         variants: {
             surface: rootSurfaces,
             size: rootSizes$1,
@@ -105,7 +173,8 @@ const footSpaces = {
     xl: 'px-24 pb-24',
 };
 const card = {
-    root: cva(rootBase$2, {
+    root: cva({
+        base: rootBase$2,
         variants: {
             shadow: rootShadow,
             border: rootBorder,
@@ -119,7 +188,8 @@ const card = {
             space: 'default',
         },
     }),
-    head: cva(headBase, {
+    head: cva({
+        base: headBase,
         variants: {
             space: headSpaces,
             border: HeadBorder,
@@ -156,7 +226,8 @@ const card = {
             },
         ],
     }),
-    body: cva(bodyBase, {
+    body: cva({
+        base: bodyBase,
         variants: {
             space: bodySpaces,
         },
@@ -164,7 +235,8 @@ const card = {
             space: 'sm',
         },
     }),
-    foot: cva(footBase, {
+    foot: cva({
+        base: footBase,
         variants: {
             space: footSpaces,
             border: FootBorder,
@@ -219,7 +291,8 @@ const rootUnderline = {
     false: 'no-underline',
 };
 const link = {
-    root: cva(rootBase$1, {
+    root: cva({
+        base: rootBase$1,
         variants: {
             underline: rootUnderline,
         },
@@ -320,7 +393,8 @@ const rootTruncate = {
     false: [''],
 };
 const text = {
-    root: cva(rootBase, {
+    root: cva({
+        base: rootBase,
         variants: {
             size: rootSizes,
             align: rootAligns,

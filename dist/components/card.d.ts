@@ -1,22 +1,238 @@
 import { type VariantProps } from '../shared';
 export declare const card: {
     root: (props?: ({
-        shadow?: boolean | null | undefined;
-        border?: boolean | null | undefined;
-        rounded?: boolean | null | undefined;
-        space?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
-    } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
+        shadow?: boolean | undefined;
+        border?: boolean | undefined;
+        rounded?: boolean | undefined;
+        space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
+    } & ({
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+        className?: never;
+    } | {
+        class?: never;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+    })) | undefined) => string;
     head: (props?: ({
-        space?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
-        border?: boolean | null | undefined;
-    } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
+        space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
+        border?: boolean | undefined;
+    } & ({
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+        className?: never;
+    } | {
+        class?: never;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+    })) | undefined) => string;
     body: (props?: ({
-        space?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
-    } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
+        space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
+    } & ({
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+        className?: never;
+    } | {
+        class?: never;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+    })) | undefined) => string;
     foot: (props?: ({
-        space?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
-        border?: boolean | null | undefined;
-    } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
+        space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
+        border?: boolean | undefined;
+    } & ({
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+        className?: never;
+    } | {
+        class?: never;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined)[] | {
+            [x: string]: any;
+        } | null | undefined;
+    })) | undefined) => string;
 };
 export type CardRootVariants = VariantProps<typeof card.root>;
 export type CardHeadVariants = VariantProps<typeof card.head>;

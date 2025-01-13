@@ -29,7 +29,8 @@ const rootSizes = {
 } as const;
 
 export const button = {
-  root: cva(rootBase, {
+  root: cva({
+    base: rootBase,
     variants: {
       surface: rootSurfaces,
       size: rootSizes,
