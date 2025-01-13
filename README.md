@@ -21,7 +21,7 @@ import { button } from '@styleshift/styles';
 
 ## Components
 
-- [ ] Alert
+- [x] [Alert](src/components/alert.ts)
 - [ ] Avatar
 - [x] [Button](src/components/button.ts)
 - [x] [Card](src/components/card.ts)
