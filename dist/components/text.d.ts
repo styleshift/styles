@@ -6,6 +6,8 @@ export declare const text: {
         strike?: "none" | "under" | "over" | "through" | null | undefined;
         weight?: "default" | "thin" | "extralight" | "light" | "normal" | "medium" | "semibold" | "bold" | "extrabold" | "black" | null | undefined;
         case?: "default" | "normal" | "upper" | "lower" | "caps" | null | undefined;
+        wrap?: "default" | "wrap" | "nowrap" | "balance" | "pretty" | null | undefined;
+        whitespace?: "default" | "normal" | "nowrap" | "pre" | "preline" | "prewrap" | "break" | null | undefined;
         truncate?: boolean | null | undefined;
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
 };

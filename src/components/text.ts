@@ -10,7 +10,7 @@ const rootSizes = {
   lg: 'text-lg',
 } as const;
 
-const rootAlign = {
+const rootAligns = {
   left: 'text-left',
   center: 'text-center',
   right: 'text-right',
@@ -47,14 +47,34 @@ const rootCases = {
   normal: 'normal-case',
 } as const;
 
+const rootWraps = {
+  default: '',
+  wrap: 'text-wrap',
+  nowrap: 'text-nowrap',
+  balance: 'text-balance',
+  pretty: 'text-pretty',
+} as const;
+
+const rootWhitespaces = {
+  default: '',
+  normal: 'whitespace-normal',
+  nowrap: 'whitespace-nowrap',
+  pre: 'whitespace-pre',
+  preline: 'whitespace-pre-line',
+  prewrap: 'whitespace-pre-wrap',
+  break: 'whitespace-break-spaces',
+} as const;
+
 export const text = {
   root: cva(rootBase, {
     variants: {
       size: rootSizes,
-      align: rootAlign,
+      align: rootAligns,
       strike: rootStrikes,
       weight: rootWeights,
       case: rootCases,
+      wrap: rootWraps,
+      whitespace: rootWhitespaces,
       truncate: {
         true: ['truncate'],
         false: [''],
@@ -66,6 +86,8 @@ export const text = {
       strike: 'none',
       weight: 'default',
       case: 'default',
+      wrap: 'default',
+      whitespace: 'default',
       truncate: false,
     },
   }),

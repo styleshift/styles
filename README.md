@@ -87,11 +87,13 @@ link.root({ size: 'sm' });
 text.root({ align: 'center' });
 ```
 
-| Root     | Type                                                                                          | Default   |
-| -------- | --------------------------------------------------------------------------------------------- | --------- |
-| align    | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
-| case     | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
-| size     | `default` `sm` `base` `md` `lg`                                                               | `default` |
-| strike   | `none` `under` `over` `through`                                                               | `none`    |
-| truncate | `true` `false`                                                                                | `false`   |
-| weight   | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
+| Root       | Type                                                                                          | Default   |
+| ---------- | --------------------------------------------------------------------------------------------- | --------- |
+| align      | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
+| case       | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
+| size       | `default` `sm` `base` `md` `lg`                                                               | `default` |
+| strike     | `none` `under` `over` `through`                                                               | `none`    |
+| truncate   | `true` `false`                                                                                | `false`   |
+| weight     | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
+| wrap       | `default` `wrap` `nowrap` `balance` `pretty`                                                  | `default` |
+| whitespace | `default` `normal` `nowrap` `pre` `preline` `prewrap` `break`                                 | `default` |
