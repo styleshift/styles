@@ -154,7 +154,7 @@ const rootTracking = {
     widest: 'tracking-widest',
 };
 const rootDimmed = {
-    true: ['opacity-70'],
+    true: ['opacity-65'],
     false: ['opacity-100'],
 };
 const rootTruncate = {

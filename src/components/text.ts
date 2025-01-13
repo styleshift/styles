@@ -86,7 +86,7 @@ const rootTracking = {
 } as const;
 
 const rootDimmed = {
-  true: ['opacity-70'],
+  true: ['opacity-65'],
   false: ['opacity-100'],
 };
 
