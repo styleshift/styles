@@ -11,6 +11,7 @@ export declare const text: {
         leading?: "default" | "none" | "normal" | "tight" | "snug" | "relaxed" | "loose" | null | undefined;
         tracking?: "default" | "normal" | "tight" | "tighter" | "wide" | "wider" | "widest" | null | undefined;
         truncate?: boolean | null | undefined;
+        dimmed?: boolean | null | undefined;
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
 };
 export type TextRootVariants = VariantProps<typeof text.root>;

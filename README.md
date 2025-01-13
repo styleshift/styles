@@ -91,6 +91,7 @@ text.root({ align: 'center' });
 | ---------- | --------------------------------------------------------------------------------------------- | --------- |
 | align      | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
 | case       | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
+| dimmed     | `true` `false`                                                                                | `false`   |
 | leading    | `default` `none` `tight` `snug` `normal` `relaxed` `loose`                                    | `default` |
 | size       | `default` `sm` `base` `md` `lg`                                                               | `default` |
 | strike     | `none` `under` `over` `through`                                                               | `none`    |

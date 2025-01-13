@@ -153,6 +153,14 @@ const rootTracking = {
     wider: 'tracking-wider',
     widest: 'tracking-widest',
 };
+const rootDimmed = {
+    true: ['opacity-70'],
+    false: ['opacity-100'],
+};
+const rootTruncate = {
+    true: ['truncate'],
+    false: [''],
+};
 const text = {
     root: cva(rootBase, {
         variants: {
@@ -165,10 +173,8 @@ const text = {
             whitespace: rootWhitespaces,
             leading: rootLeading,
             tracking: rootTracking,
-            truncate: {
-                true: ['truncate'],
-                false: [''],
-            },
+            truncate: rootTruncate,
+            dimmed: rootDimmed,
         },
         defaultVariants: {
             size: 'default',
@@ -181,6 +187,7 @@ const text = {
             leading: 'default',
             tracking: 'default',
             truncate: false,
+            dimmed: false,
         },
     }),
 };
