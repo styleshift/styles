@@ -41,8 +41,6 @@ button.root({ variant: 'outline', size: 'sm' });
 
 ### Button
 
-#### Root
-
 ```js
 button.root({ surface: 'outline' });
 ```
@@ -75,8 +73,6 @@ button.root({ surface: 'outline' });
 
 ### Link
 
-#### Root
-
 ```js
 link.root({ size: 'sm' });
 ```
@@ -86,8 +82,6 @@ link.root({ size: 'sm' });
 | size | `default` `sm` `base` `md` `lg` | `default` |
 
 ### Text
-
-#### Root
 
 ```js
 text.root({ align: 'center' });
