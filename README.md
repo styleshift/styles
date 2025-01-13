@@ -2,8 +2,8 @@
 
 A plain user interface component library for Tailwind CSS using Class Variance Authority
 
-- 🎨 Tailwind CSS Component library — _written in CVA_
-- 🎯 Framework agnostic — _just the classes_
+- 🎨 UI Component Library — _written in CVA Tailwind CSS_
+- 🎯 Javascript Framework Agnostic — _just the classes_
 
 ## Installation
 
