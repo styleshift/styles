@@ -148,6 +148,10 @@ const text = {
             strike: rootStrikes,
             weight: rootWeights,
             case: rootCases,
+            truncate: {
+                true: ['truncate'],
+                false: [''],
+            },
         },
         defaultVariants: {
             size: 'default',
@@ -155,6 +159,7 @@ const text = {
             strike: 'none',
             weight: 'default',
             case: 'default',
+            truncate: false,
         },
     }),
 };

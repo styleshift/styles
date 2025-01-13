@@ -48,8 +48,8 @@ button.root({ surface: 'outline' });
 
 | Root    | Type                             | Default   |
 | ------- | -------------------------------- | --------- |
-| surface | `solid` `ghost` `outline` `soft` | `solid`   |
 | size    | `default` `sm` `base` `md` `lg`  | `default` |
+| surface | `solid` `ghost` `outline` `soft` | `solid`   |
 
 ### Card
 
@@ -87,10 +87,11 @@ link.root({ size: 'sm' });
 text.root({ align: 'center' });
 ```
 
-| Root   | Type                                                                                          | Default   |
-| ------ | --------------------------------------------------------------------------------------------- | --------- |
-| size   | `default` `sm` `base` `md` `lg`                                                               | `default` |
-| align  | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
-| strike | `none` `under` `over` `through`                                                               | `none`    |
-| weight | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
-| case   | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
+| Root     | Type                                                                                          | Default   |
+| -------- | --------------------------------------------------------------------------------------------- | --------- |
+| align    | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
+| case     | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
+| size     | `default` `sm` `base` `md` `lg`                                                               | `default` |
+| strike   | `none` `under` `over` `through`                                                               | `none`    |
+| truncate | `true` `false`                                                                                | `false`   |
+| weight   | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
