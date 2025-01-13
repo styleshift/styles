@@ -31,5 +31,3 @@ export const link = {
     }),
   ),
 };
-
-export type LinkRootVariants = VariantProps<typeof link.root>;

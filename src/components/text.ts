@@ -133,5 +133,3 @@ export const text = {
     },
   }),
 };
-
-export type TextRootVariants = VariantProps<typeof text.root>;

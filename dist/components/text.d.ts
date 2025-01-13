@@ -1,4 +1,3 @@
-import { type VariantProps } from '../shared';
 export declare const text: {
     root: (props?: ({
         size?: "base" | "sm" | "md" | "lg" | "default" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | undefined;
@@ -68,4 +67,3 @@ export declare const text: {
         } | null | undefined;
     })) | undefined) => string;
 };
-export type TextRootVariants = VariantProps<typeof text.root>;

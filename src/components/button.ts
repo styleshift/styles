@@ -45,5 +45,3 @@ export const button = {
     }),
   ),
 };
-
-export type ButtonRootVariants = VariantProps<typeof button.root>;

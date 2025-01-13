@@ -1,4 +1,3 @@
-import { type VariantProps } from '../../shared';
 export declare const canDisable: (props?: ({
     class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
         [x: string]: any;
@@ -54,4 +53,3 @@ export declare const canDisable: (props?: ({
         [x: string]: any;
     } | null | undefined;
 }) | undefined) => string;
-export type CanDisableVariants = VariantProps<typeof canDisable>;

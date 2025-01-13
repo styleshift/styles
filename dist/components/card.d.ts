@@ -1,4 +1,3 @@
-import { type VariantProps } from '../shared';
 export declare const card: {
     root: (props?: ({
         shadow?: boolean | undefined;
@@ -234,7 +233,3 @@ export declare const card: {
         } | null | undefined;
     })) | undefined) => string;
 };
-export type CardRootVariants = VariantProps<typeof card.root>;
-export type CardHeadVariants = VariantProps<typeof card.head>;
-export type CardBodyVariants = VariantProps<typeof card.body>;
-export type CardFootVariants = VariantProps<typeof card.foot>;

@@ -1,4 +1,3 @@
-import { type VariantProps } from '../shared';
 export declare const button: {
     root: (props?: (((import("cva").VariantProps<(props?: ({
         class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
@@ -167,4 +166,3 @@ export declare const button: {
         } | null | undefined;
     })) | undefined) => string;
 };
-export type ButtonRootVariants = VariantProps<typeof button.root>;

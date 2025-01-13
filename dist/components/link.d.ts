@@ -1,4 +1,3 @@
-import { type VariantProps } from '../shared';
 export declare const link: {
     root: (props?: (((import("cva").VariantProps<(props?: ({
         class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
@@ -166,4 +165,3 @@ export declare const link: {
         } | null | undefined;
     })) | undefined) => string;
 };
-export type LinkRootVariants = VariantProps<typeof link.root>;

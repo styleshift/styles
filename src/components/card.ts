@@ -169,8 +169,3 @@ export const card = {
     ],
   }),
 };
-
-export type CardRootVariants = VariantProps<typeof card.root>;
-export type CardHeadVariants = VariantProps<typeof card.head>;
-export type CardBodyVariants = VariantProps<typeof card.body>;
-export type CardFootVariants = VariantProps<typeof card.foot>;
