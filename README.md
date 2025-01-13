@@ -27,11 +27,11 @@ import { button } from '@styleshift/styles';
 
 - [ ] Alert
 - [ ] Avatar
-- [x] [Button](#button)
-- [x] [Card](#card)
+- [x] [Button](src/components/button.ts)
+- [x] [Card](src/components/card.ts)
 - [ ] Checkbox
 - [ ] Header
 - [ ] Input
-- [x] [Link](#link)
-- [x] [Separator](#separator)
-- [x] [Text](#text)
+- [x] [Link](src/components/link.ts)
+- [x] [Separator](src/components/separator.ts)
+- [x] [Text](src/components/text.ts)
