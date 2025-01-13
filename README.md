@@ -118,7 +118,7 @@ text.root({ align: 'center' });
 | case       | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
 | dimmed     | `true` `false`                                                                                | `false`   |
 | leading    | `default` `none` `tight` `snug` `normal` `relaxed` `loose`                                    | `default` |
-| size       | `default` `sm` `base` `md` `lg`                                                               | `default` |
+| size       | `default` `xs` `sm` `base` `md` `lg` `xl` `2xl` `3xl` `4xl` `5xl` `6xl`                       | `default` |
 | strike     | `none` `under` `over` `through`                                                               | `none`    |
 | tracking   | `default` `tighter` `tight` `normal` `wide` `wider` `widest`                                  | `default` |
 | truncate   | `true` `false`                                                                                | `false`   |

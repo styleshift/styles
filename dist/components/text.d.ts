@@ -1,7 +1,7 @@
 import { type VariantProps } from '../shared';
 export declare const text: {
     root: (props?: ({
-        size?: "default" | "base" | "sm" | "md" | "lg" | null | undefined;
+        size?: "default" | "base" | "sm" | "md" | "lg" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | null | undefined;
         align?: "left" | "center" | "right" | "justify" | "start" | "end" | null | undefined;
         strike?: "none" | "under" | "over" | "through" | null | undefined;
         weight?: "default" | "thin" | "extralight" | "light" | "normal" | "medium" | "semibold" | "bold" | "extrabold" | "black" | null | undefined;
