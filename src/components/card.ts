@@ -28,12 +28,12 @@ export const card = {
         false: '',
       },
       space: {
-        default: '',
-        xs: 'p-2',
-        sm: 'p-4',
-        md: 'p-8',
-        lg: 'p-16',
-        xl: 'p-24',
+        default: 'p-0',
+        xs: 'p-1',
+        sm: 'p-2',
+        md: 'p-4',
+        lg: 'p-8',
+        xl: 'p-16',
       },
     },
     defaultVariants: {
@@ -53,11 +53,11 @@ export const card = {
     variants: {
       space: {
         default: '',
-        xs: 'px-2 pt-2',
-        sm: 'px-4 pt-4',
-        md: 'px-8 pt-8',
-        lg: 'px-16 pt-16',
-        xl: 'px-24 pt-24',
+        xs: 'px-2 pt-1',
+        sm: 'px-4 pt-2',
+        md: 'px-8 pt-4',
+        lg: 'px-16 pt-8',
+        xl: 'px-24 pt-16',
       },
       border: {
         true: 'border-slate-200',
@@ -77,22 +77,27 @@ export const card = {
       {
         border: true,
         space: 'xs',
-        class: 'pb-2',
+        class: 'pb-1',
       },
       {
         border: true,
         space: 'sm',
+        class: 'pb-2',
+      },
+      {
+        border: true,
+        space: 'md',
         class: 'pb-4',
       },
       {
         border: true,
         space: 'lg',
-        class: 'pb-16',
+        class: 'pb-8',
       },
       {
         border: true,
         space: 'xl',
-        class: 'pb-24',
+        class: 'pb-16',
       },
     ],
   }),
@@ -108,8 +113,8 @@ export const card = {
         xs: 'p-2',
         sm: 'p-4',
         md: 'p-8',
-        lg: 'p-16',
-        xl: 'p-24',
+        lg: 'p-1',
+        xl: 'p-2',
       },
     },
     defaultVariants: {
@@ -126,11 +131,11 @@ export const card = {
     variants: {
       space: {
         default: '',
-        xs: 'px-2 pb-2',
-        sm: 'px-4 pb-4',
-        md: 'px-8 pb-8',
-        lg: 'px-16 pb-16',
-        xl: 'px-24 pb-24',
+        xs: 'px-2 pb-1',
+        sm: 'px-4 pb-2',
+        md: 'px-8 pb-4',
+        lg: 'px-16 pb-8',
+        xl: 'px-24 pb-16',
       },
       border: {
         true: 'border-slate-200',
@@ -145,27 +150,32 @@ export const card = {
       {
         border: true,
         space: 'default',
-        class: '',
+        class: '  ',
       },
       {
         border: true,
         space: 'xs',
-        class: 'pt-2',
+        class: 'pt-1',
       },
       {
         border: true,
         space: 'sm',
+        class: 'pt-2',
+      },
+      {
+        border: true,
+        space: 'md',
         class: 'pt-4',
       },
       {
         border: true,
         space: 'lg',
-        class: 'pt-16',
+        class: 'pt-8',
       },
       {
         border: true,
         space: 'xl',
-        class: 'pt-24',
+        class: 'pt-16',
       },
     ],
   }),
