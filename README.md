@@ -56,7 +56,7 @@ link.root({ size: 'sm' });
 ### Text
 
 ```js
-import { Text } from '@styleshift/styles';
+import { text } from '@styleshift/styles';
 ```
 
 #### Root
