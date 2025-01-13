@@ -54,7 +54,7 @@ button.root({ surface: 'outline' });
 ### Card
 
 ```js
-card.root({ shadow: false });
+card.root({ size: 'md' });
 ```
 
 | Root    | Type                               | Default   |

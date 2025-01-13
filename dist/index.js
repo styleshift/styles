@@ -81,7 +81,7 @@ const card = {
             shadow: true,
             border: true,
             rounded: true,
-            size: 'default',
+            size: 'sm',
         },
     }),
 };
