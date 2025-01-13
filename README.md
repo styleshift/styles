@@ -1,6 +1,6 @@
 # StyleShift Style
 
-A plain UI library for Tailwind CSS using Class Variance Authority
+A plain user interface component library for Tailwind CSS using Class Variance Authority
 
 - 🎨 Tailwind CSS Component library — _written in CVA_
 - 🎯 Framework agnostic — _just the classes_
