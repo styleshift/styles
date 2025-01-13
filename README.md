@@ -68,17 +68,20 @@ card.foot({ space: 'md' });
 | shadow  | `true` `false`                     | `true`    |
 | space   | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
-| Head  | Type                               | Default   |
-| ----- | ---------------------------------- | --------- |
-| space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
+| Head   | Type                               | Default   |
+| ------ | ---------------------------------- | --------- |
+| border | `true` `false`                     | `true`    |
+| space  | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
-| Body  | Type                               | Default   |
-| ----- | ---------------------------------- | --------- |
-| space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
+| Body   | Type                               | Default   |
+| ------ | ---------------------------------- | --------- |
+| border | `true` `false`                     | `true`    |
+| space  | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
-| Foot  | Type                               | Default   |
-| ----- | ---------------------------------- | --------- |
-| space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
+| Foot   | Type                               | Default   |
+| ------ | ---------------------------------- | --------- |
+| border | `true` `false`                     | `true`    |
+| space  | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
 ### Checkbox
 
