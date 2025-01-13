@@ -20,7 +20,8 @@
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
     "docs:build": "typedoc --out docs src/index.ts",
-    "docs:deploy": "gh-pages -d docs"
+    "docs:deploy": "gh-pages -d docs",
+    "docs:publish": "npm run docs:build && npm run docs:deploy"
   },
   "files": [
     "dist",
