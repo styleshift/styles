@@ -21,7 +21,7 @@
     "publish": "npx prettier . --write && npm run build && git add -A && git commit -am 'wip publish' && git push && npm run docs:publish && npm publish",
     "prepublishOnly": "npm run build",
     "docs:build": "typedoc --out docs src/index.ts",
-    "docs:deploy": "gh-pages -d docs",
+    "docs:deploy": "npm run docs:build && gh-pages -d docs",
     "docs:publish": "npm run docs:build && npm run docs:deploy"
   },
   "files": [
