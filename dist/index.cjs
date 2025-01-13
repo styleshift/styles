@@ -50,7 +50,7 @@ const rootSurfaces = {
     ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
     soft: ['border-transparent', 'bg-slate-100', 'text-slate-800', 'hover:bg-slate-200'],
 };
-const rootSizes$2 = {
+const rootSizes$1 = {
     sm: 'text-sm h-8 px-4',
     base: 'text-base h-10 px-4',
     md: 'text-md h-12 px-5',
@@ -60,7 +60,7 @@ const button = {
     root: cva(rootBase$3, {
         variants: {
             surface: rootSurfaces,
-            size: rootSizes$2,
+            size: rootSizes$1,
         },
         defaultVariants: {
             surface: 'solid',
@@ -138,7 +138,6 @@ const rootBase$1 = [
     ...focus,
     'text-blue-700',
     'hover:text-blue-800',
-    'underline',
     'inline-flex',
     'items-center',
     'justify-center',
@@ -146,20 +145,17 @@ const rootBase$1 = [
     'rounded',
     'transition-all',
 ];
-const rootSizes$1 = {
-    default: '',
-    sm: 'text-sm',
-    base: 'text-base',
-    md: 'text-md',
-    lg: 'text-lg',
+const rootUnderline = {
+    true: 'underline',
+    false: 'no-underline',
 };
 const link = {
     root: cva(rootBase$1, {
         variants: {
-            size: rootSizes$1,
+            underline: rootUnderline,
         },
         defaultVariants: {
-            size: 'default',
+            underline: true,
         },
     }),
 };

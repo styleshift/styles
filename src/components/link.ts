@@ -4,7 +4,6 @@ const rootBase = [
   ...focus,
   'text-blue-700',
   'hover:text-blue-800',
-  'underline',
   'inline-flex',
   'items-center',
   'justify-center',
@@ -13,21 +12,18 @@ const rootBase = [
   'transition-all',
 ] as const;
 
-const rootSizes = {
-  default: '',
-  sm: 'text-sm',
-  base: 'text-base',
-  md: 'text-md',
-  lg: 'text-lg',
+const rootUnderline = {
+  true: 'underline',
+  false: 'no-underline',
 } as const;
 
 export const link = {
   root: cva(rootBase, {
     variants: {
-      size: rootSizes,
+      underline: rootUnderline,
     },
     defaultVariants: {
-      size: 'default',
+      underline: true,
     },
   }),
 };

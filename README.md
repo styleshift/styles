@@ -99,12 +99,12 @@ card.foot({ space: 'md' });
 ### Link
 
 ```js
-link.root({ size: 'sm' });
+link.root({ underline: false });
 ```
 
-| Root | Type                            | Default   |
-| ---- | ------------------------------- | --------- |
-| size | `default` `sm` `base` `md` `lg` | `default` |
+| Root      | Type           | Default |
+| --------- | -------------- | ------- |
+| underline | `true` `false` | `true`  |
 
 ### Text
 
