@@ -65,21 +65,20 @@ const defineConfig = (options)=>{
         cx
     };
 };
-const { compose, cva: cva$1, cx } = defineConfig();
+const { compose: compose$1, cva: cva$1, cx } = defineConfig();
 
-/**
- * Shared styles
- */
-const focus = ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'];
-const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'];
-/**
- * Helpers
- */
 const cva = cva$1;
+const compose = compose$1;
+
+const canFocus = cva({
+    base: ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'],
+});
+
+const canDisable = cva({
+    base: ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'],
+});
 
 const rootBase$3 = [
-    ...focus,
-    ...disabled,
     'inline-flex',
     'items-center',
     'justify-center',
@@ -103,7 +102,7 @@ const rootSizes$1 = {
     lg: 'text-lg h-14 px-5',
 };
 const button = {
-    root: cva({
+    root: compose(canFocus, canDisable, cva({
         base: rootBase$3,
         variants: {
             surface: rootSurfaces,
@@ -113,7 +112,7 @@ const button = {
             surface: 'solid',
             size: 'base',
         },
-    }),
+    })),
 };
 
 const rootBase$2 = ['transition-all border'];
@@ -276,7 +275,6 @@ const card = {
 };
 
 const rootBase$1 = [
-    ...focus,
     'text-blue-700',
     'hover:text-blue-800',
     'inline-flex',
@@ -291,7 +289,7 @@ const rootUnderline = {
     false: 'no-underline',
 };
 const link = {
-    root: cva({
+    root: compose(canFocus, cva({
         base: rootBase$1,
         variants: {
             underline: rootUnderline,
@@ -299,7 +297,7 @@ const link = {
         defaultVariants: {
             underline: true,
         },
-    }),
+    })),
 };
 
 const rootBase = ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'];
@@ -424,4 +422,4 @@ const text = {
     }),
 };
 
-export { button, card, link, text };
+export { button, canFocus, card, link, text };

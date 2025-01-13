@@ -1,7 +1,7 @@
-import { disabled, focus, cva, type VariantProps } from '../shared';
+import { cva, compose, type VariantProps } from '../shared';
+import { canFocus } from './states/canFocus';
 
 const rootBase = [
-  ...focus,
   'text-blue-700',
   'hover:text-blue-800',
   'inline-flex',
@@ -18,15 +18,18 @@ const rootUnderline = {
 } as const;
 
 export const link = {
-  root: cva({
-    base: rootBase,
-    variants: {
-      underline: rootUnderline,
-    },
-    defaultVariants: {
-      underline: true,
-    },
-  }),
+  root: compose(
+    canFocus,
+    cva({
+      base: rootBase,
+      variants: {
+        underline: rootUnderline,
+      },
+      defaultVariants: {
+        underline: true,
+      },
+    }),
+  ),
 };
 
 export type LinkRootVariants = VariantProps<typeof link.root>;

@@ -1,8 +1,8 @@
-import { disabled, focus, cva, type VariantProps } from '../shared';
+import { cva, compose, type VariantProps } from '../shared';
+import { canFocus } from './states/canFocus';
+import { canDisable } from './states/canDisable';
 
 const rootBase = [
-  ...focus,
-  ...disabled,
   'inline-flex',
   'items-center',
   'justify-center',
@@ -29,17 +29,21 @@ const rootSizes = {
 } as const;
 
 export const button = {
-  root: cva({
-    base: rootBase,
-    variants: {
-      surface: rootSurfaces,
-      size: rootSizes,
-    },
-    defaultVariants: {
-      surface: 'solid',
-      size: 'base',
-    },
-  }),
+  root: compose(
+    canFocus,
+    canDisable,
+    cva({
+      base: rootBase,
+      variants: {
+        surface: rootSurfaces,
+        size: rootSizes,
+      },
+      defaultVariants: {
+        surface: 'solid',
+        size: 'base',
+      },
+    }),
+  ),
 };
 
 export type ButtonRootVariants = VariantProps<typeof button.root>;
