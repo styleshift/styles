@@ -99,3 +99,4 @@ text.root({ align: 'center' });
 | align   | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
 | strike  | `none` `under` `over` `through`                                                               | `none`    |
 | weight  | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
+| case    | `default` `upper` `lower` `caps` `normal`                                                     | `default` |

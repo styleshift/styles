@@ -139,6 +139,13 @@ const rootWeights = {
     extrabold: 'font-extrabold',
     black: 'font-black',
 };
+const rootCases = {
+    default: '',
+    upper: 'uppercase',
+    lower: 'lowercase',
+    caps: 'capitalize',
+    normal: 'normal-case',
+};
 const text = {
     root: cva(rootBase, {
         variants: {
@@ -146,12 +153,14 @@ const text = {
             align: rootAlign,
             strike: rootStrikes,
             weight: rootWeights,
+            case: rootCases,
         },
         defaultVariants: {
             size: 'default',
             align: 'left',
             strike: 'none',
             weight: 'default',
+            case: 'default',
         },
     }),
 };

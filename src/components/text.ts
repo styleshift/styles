@@ -39,6 +39,14 @@ const rootWeights = {
   black: 'font-black',
 } as const;
 
+const rootCases = {
+  default: '',
+  upper: 'uppercase',
+  lower: 'lowercase',
+  caps: 'capitalize',
+  normal: 'normal-case',
+} as const;
+
 export const text = {
   root: cva(rootBase, {
     variants: {
@@ -46,12 +54,14 @@ export const text = {
       align: rootAlign,
       strike: rootStrikes,
       weight: rootWeights,
+      case: rootCases,
     },
     defaultVariants: {
       size: 'default',
       align: 'left',
       strike: 'none',
       weight: 'default',
+      case: 'default',
     },
   }),
 };
