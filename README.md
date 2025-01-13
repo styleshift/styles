@@ -26,10 +26,10 @@ import { button } from '@styleshift/styles';
 - [x] [Button](#button)
 - [x] [Card](#card)
 - [ ] Checkbox
-- [x] [Separator](#separator)
 - [ ] Header
 - [ ] Input
 - [x] [Link](#link)
+- [x] [Separator](#separator)
 - [x] [Text](#text)
 
 ### Alert
@@ -107,6 +107,16 @@ import { button } from '@styleshift/styles';
 | --------- | -------------- | ------- |
 | underline | `true` `false` | `true`  |
 
+### Separator
+
+```jsx
+<div className={separator.root()} />
+```
+
+| Root        | Type                    | Default      |
+| ----------- | ----------------------- | ------------ |
+| orientation | `horizontal` `vertical` | `horizontal` |
+
 ### Text
 
 ```jsx
@@ -126,13 +136,3 @@ import { button } from '@styleshift/styles';
 | weight     | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
 | whitespace | `default` `normal` `nowrap` `pre` `preline` `prewrap` `break`                                 | `default` |
 | wrap       | `default` `wrap` `nowrap` `balance` `pretty`                                                  | `default` |
-
-### Separator
-
-```jsx
-<div className={separator.root()} />
-```
-
-| Root        | Type                    | Default      |
-| ----------- | ----------------------- | ------------ |
-| orientation | `horizontal` `vertical` | `horizontal` |
