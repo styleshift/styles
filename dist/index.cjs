@@ -69,7 +69,7 @@ const button = {
     }),
 };
 
-const rootBase$2 = ['transition-all'];
+const rootBase$2 = ['transition-all border'];
 const headBase = ['border-b'];
 const bodyBase = [''];
 const footBase = ['border-t'];
@@ -78,22 +78,22 @@ const rootShadow = {
     false: '',
 };
 const rootBorder = {
-    true: 'border',
-    false: '',
+    true: 'border-slate-200',
+    false: 'border-transparent',
 };
 const rootRounded = {
     true: 'rounded-md',
     false: '',
 };
 const HeadBorder = {
-    true: 'border-b',
-    false: '',
+    true: 'border-slate-200',
+    false: 'border-transparent',
 };
 const FootBorder = {
-    true: 'border-t',
-    false: '',
+    true: 'border-slate-200',
+    false: 'border-transparent',
 };
-const spaces = {
+const rootSpaces = {
     default: '',
     xs: 'p-2',
     sm: 'p-4',
@@ -101,13 +101,37 @@ const spaces = {
     lg: 'p-16',
     xl: 'p-24',
 };
+const headSpaces = {
+    default: '',
+    xs: 'px-2 pt-2',
+    sm: 'px-4 pt-4',
+    md: 'px-8 pt-8',
+    lg: 'px-16 pt-16',
+    xl: 'px-24 pt-24',
+};
+const bodySpaces = {
+    default: '',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
+};
+const footSpaces = {
+    default: '',
+    xs: 'px-2 pb-2',
+    sm: 'px-4 pb-4',
+    md: 'px-8 pb-8',
+    lg: 'px-16 pb-16',
+    xl: 'px-24 pb-24',
+};
 const card = {
     root: cva(rootBase$2, {
         variants: {
             shadow: rootShadow,
             border: rootBorder,
             rounded: rootRounded,
-            space: spaces,
+            space: rootSpaces,
         },
         defaultVariants: {
             shadow: true,
@@ -118,17 +142,44 @@ const card = {
     }),
     head: cva(headBase, {
         variants: {
-            space: spaces,
+            space: headSpaces,
             border: HeadBorder,
         },
         defaultVariants: {
             space: 'sm',
             border: true,
         },
+        compoundVariants: [
+            {
+                border: true,
+                space: 'default',
+                class: '',
+            },
+            {
+                border: true,
+                space: 'xs',
+                class: 'pb-2',
+            },
+            {
+                border: true,
+                space: 'sm',
+                class: 'pb-4',
+            },
+            {
+                border: true,
+                space: 'lg',
+                class: 'pb-16',
+            },
+            {
+                border: true,
+                space: 'xl',
+                class: 'pb-24',
+            },
+        ],
     }),
     body: cva(bodyBase, {
         variants: {
-            space: spaces,
+            space: bodySpaces,
         },
         defaultVariants: {
             space: 'sm',
@@ -136,13 +187,40 @@ const card = {
     }),
     foot: cva(footBase, {
         variants: {
-            space: spaces,
+            space: footSpaces,
             border: FootBorder,
         },
         defaultVariants: {
             space: 'sm',
-            border: false,
+            border: true,
         },
+        compoundVariants: [
+            {
+                border: true,
+                space: 'default',
+                class: '',
+            },
+            {
+                border: true,
+                space: 'xs',
+                class: 'pt-2',
+            },
+            {
+                border: true,
+                space: 'sm',
+                class: 'pt-4',
+            },
+            {
+                border: true,
+                space: 'lg',
+                class: 'pt-16',
+            },
+            {
+                border: true,
+                space: 'xl',
+                class: 'pt-24',
+            },
+        ],
     }),
 };
 
