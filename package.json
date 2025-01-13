@@ -1,6 +1,6 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.54",
+  "version": "0.0.55",
   "type": "module",
   "types": "./dist/index.d.ts",
   "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
@@ -36,6 +36,7 @@
     "url": "https://github.com/styleshift/styles.git"
   },
   "homepage": "https://www.npmjs.com/package/@styleshift/styles",
+  "docs": "https://styleshift.github.io/styles/",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
