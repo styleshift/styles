@@ -116,6 +116,25 @@ const canDisable = styleshift.define({
  *
  * @type {import('../styleshift').StyleshiftComponent}
  *
+ * @example
+ * ```tsx
+ * // Basic button
+ * <button className={button.root()}>
+ *   Click me
+ * </button>
+ *
+ * // Large outline button with icon
+ * <button className={button.root({ size: "lg", surface: "outline" })}>
+ *   <Icon name="save" />
+ *   Save Changes
+ * </button>
+ *
+ * // Small ghost button
+ * <button className={button.root({ size: "sm", surface: "ghost" })}>
+ *   Cancel
+ * </button>
+ * ```
+ *
  * @variant surface
  * - solid: White text on background with hover state
  * - outline: Border and text with hover state
@@ -169,6 +188,35 @@ const button = {
 /**
  * A flexible card component with customizable styling variants.
  *
+ * @example
+ * ```tsx
+ * // Basic card with all sections
+ * <div className={card.root()}>
+ *   <div className={card.head()}>
+ *     <h3>Card Title</h3>
+ *     <button>Close</button>
+ *   </div>
+ *   <div className={card.body()}>
+ *     Card content goes here
+ *   </div>
+ *   <div className={card.foot()}>
+ *     <button>Cancel</button>
+ *     <button>Save</button>
+ *   </div>
+ * </div>
+ *
+ * // Custom styled card
+ * <div className={card.root({
+ *   shadow: true,
+ *   rounded: true,
+ *   space: "lg"
+ * })}>
+ *   <div className={card.body({ space: "md" })}>
+ *     Simplified card with custom spacing
+ *   </div>
+ * </div>
+ * ```
+ *
  * @variant root
  * - shadow {boolean} - Enables box shadow
  * - border {boolean} - Shows border
@@ -195,6 +243,24 @@ const card = {
      * @property {boolean} variants.border - Controls border visibility
      * @property {boolean} variants.rounded - Controls border radius
      * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+     *
+     * @example
+     * ```tsx
+     * // Basic card
+     * <div className={card.root()}>
+     *   Basic card content
+     * </div>
+     *
+     * // Styled card with all options
+     * <div className={card.root({
+     *   shadow: true,
+     *   border: true,
+     *   rounded: true,
+     *   space: "lg"
+     * })}>
+     *   Custom styled card
+     * </div>
+     * ```
      *
      * @returns {string} Combined Tailwind CSS classes
      */
@@ -231,6 +297,25 @@ const card = {
     }),
     /**
      * Card header with optional bottom border and spacing
+     *
+     * @example
+     * ```tsx
+     * // Basic header
+     * <div className={card.head()}>
+     *   <h3>Card Title</h3>
+     *   <button>×</button>
+     * </div>
+     *
+     * // Custom header with large spacing
+     * <div className={card.head({
+     *   space: "lg",
+     *   border: false
+     * })}>
+     *   <h2>Large Header</h2>
+     *   <div>Actions</div>
+     * </div>
+     * ```
+     *
      * @returns {string} Tailwind classes
      */
     head: styleshift.define({
@@ -288,6 +373,20 @@ const card = {
     }),
     /**
      * Card body with configurable padding
+     *
+     * @example
+     * ```tsx
+     * // Basic body
+     * <div className={card.body()}>
+     *   <p>Card content</p>
+     * </div>
+     *
+     * // Body with custom spacing
+     * <div className={card.body({ space: "md" })}>
+     *   <div>Content with more padding</div>
+     * </div>
+     * ```
+     *
      * @returns {string} Tailwind classes
      */
     body: styleshift.define({
@@ -308,6 +407,25 @@ const card = {
     }),
     /**
      * Card footer with optional top border and spacing
+     *
+     * @example
+     * ```tsx
+     * // Basic footer
+     * <div className={card.foot()}>
+     *   <button>Cancel</button>
+     *   <button>Submit</button>
+     * </div>
+     *
+     * // Custom footer with small spacing
+     * <div className={card.foot({
+     *   space: "sm",
+     *   border: true
+     * })}>
+     *   <div>Status: Active</div>
+     *   <button>Update</button>
+     * </div>
+     * ```
+     *
      * @returns {string} Tailwind classes
      */
     foot: styleshift.define({
@@ -372,6 +490,19 @@ const card = {
  * @param {boolean} [options.underline=true] - Controls text decoration
  * @returns {string} Tailwind CSS class string
  *
+ * @example
+ * ```tsx
+ * // Basic link
+ * <a href="#" className={link.root()}>
+ *   Learn more
+ * </a>
+ *
+ * // Link without underline and icon
+ * <a href="#" className={link.root({ underline: false })}>
+ *   Documentation <Icon name="external-link" />
+ * </a>
+ * ```
+ *
  * @variant underline
  * - true: Adds underline decoration
  * - false: Removes underline decoration
@@ -382,6 +513,19 @@ const link = {
      *
      * @property {Object} variants - Style variants configuration
      * @property {boolean} variants.underline - Controls text decoration
+     *
+     * @example
+     * ```tsx
+     * // Basic navigation link
+     * <a href="/about" className={link.root()}>
+     *   About us
+     * </a>
+     *
+     * // Action link with icon
+     * <a href="/settings" className={link.root({ underline: false })}>
+     *   Settings <Icon name="gear" />
+     * </a>
+     * ```
      *
      * @returns {string} Combined Tailwind CSS classes
      */
@@ -414,6 +558,24 @@ const link = {
  * @param {object} options - Style configuration
  * @returns {string} Tailwind CSS classes
  *
+ * @example
+ * ```tsx
+ * // Basic usage
+ * <p className={text.root({ size: "lg" })}>
+ *   Large text
+ * </p>
+ *
+ * // Complex styling
+ * <h1 className={text.root({
+ *   size: "2xl",
+ *   weight: "bold",
+ *   tracking: "wide",
+ *   align: "center"
+ * })}>
+ *   Heading Text
+ * </h1>
+ * ```
+ *
  * Variants:
  * - size: xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
  * - align: left | center | right | justify | start | end
@@ -443,6 +605,32 @@ const text = {
      * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} variants.tracking - Letter spacing
      * @property {boolean} variants.truncate - Enable text truncation
      * @property {boolean} variants.dimmed - Apply reduced opacity
+     *
+     * @example
+     * ```tsx
+     * // Basic paragraph
+     * <p className={text.root()}>
+     *   Default text
+     * </p>
+     *
+     * // Styled heading
+     * <h2 className={text.root({
+     *   size: "xl",
+     *   weight: "bold",
+     *   leading: "tight"
+     * })}>
+     *   Bold Heading
+     * </h2>
+     *
+     * // Truncated text
+     * <p className={text.root({
+     *   truncate: true,
+     *   size: "sm",
+     *   dimmed: true
+     * })}>
+     *   This is a very long text that will be truncated...
+     * </p>
+     * ```
      *
      * @returns {string} Combined Tailwind CSS classes
      */

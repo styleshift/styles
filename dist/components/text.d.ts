@@ -4,6 +4,24 @@
  * @param {object} options - Style configuration
  * @returns {string} Tailwind CSS classes
  *
+ * @example
+ * ```tsx
+ * // Basic usage
+ * <p className={text.root({ size: "lg" })}>
+ *   Large text
+ * </p>
+ *
+ * // Complex styling
+ * <h1 className={text.root({
+ *   size: "2xl",
+ *   weight: "bold",
+ *   tracking: "wide",
+ *   align: "center"
+ * })}>
+ *   Heading Text
+ * </h1>
+ * ```
+ *
  * Variants:
  * - size: xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
  * - align: left | center | right | justify | start | end
@@ -33,6 +51,32 @@ export declare const text: {
      * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} variants.tracking - Letter spacing
      * @property {boolean} variants.truncate - Enable text truncation
      * @property {boolean} variants.dimmed - Apply reduced opacity
+     *
+     * @example
+     * ```tsx
+     * // Basic paragraph
+     * <p className={text.root()}>
+     *   Default text
+     * </p>
+     *
+     * // Styled heading
+     * <h2 className={text.root({
+     *   size: "xl",
+     *   weight: "bold",
+     *   leading: "tight"
+     * })}>
+     *   Bold Heading
+     * </h2>
+     *
+     * // Truncated text
+     * <p className={text.root({
+     *   truncate: true,
+     *   size: "sm",
+     *   dimmed: true
+     * })}>
+     *   This is a very long text that will be truncated...
+     * </p>
+     * ```
      *
      * @returns {string} Combined Tailwind CSS classes
      */

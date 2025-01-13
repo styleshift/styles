@@ -7,6 +7,25 @@ import { canDisable } from './partials/canDisable';
  *
  * @type {import('../styleshift').StyleshiftComponent}
  *
+ * @example
+ * ```tsx
+ * // Basic button
+ * <button className={button.root()}>
+ *   Click me
+ * </button>
+ *
+ * // Large outline button with icon
+ * <button className={button.root({ size: "lg", surface: "outline" })}>
+ *   <Icon name="save" />
+ *   Save Changes
+ * </button>
+ *
+ * // Small ghost button
+ * <button className={button.root({ size: "sm", surface: "ghost" })}>
+ *   Cancel
+ * </button>
+ * ```
+ *
  * @variant surface
  * - solid: White text on background with hover state
  * - outline: Border and text with hover state
