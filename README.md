@@ -68,7 +68,7 @@ card.root({ space: 'md' });
 card.head({ space: 'md' });
 ```
 
-| Root  | Type                               | Default   |
+| Head  | Type                               | Default   |
 | ----- | ---------------------------------- | --------- |
 | space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
@@ -76,7 +76,7 @@ card.head({ space: 'md' });
 card.body({ space: 'md' });
 ```
 
-| Root  | Type                               | Default   |
+| Body  | Type                               | Default   |
 | ----- | ---------------------------------- | --------- |
 | space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
@@ -84,7 +84,7 @@ card.body({ space: 'md' });
 card.foot({ space: 'md' });
 ```
 
-| Root  | Type                               | Default   |
+| Foot  | Type                               | Default   |
 | ----- | ---------------------------------- | --------- |
 | space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
