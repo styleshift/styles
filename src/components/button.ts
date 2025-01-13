@@ -32,17 +32,19 @@ const rootDisabled = {
   false: [],
 };
 
-export const button = cva(rootBase, {
-  variants: {
-    surface: rootSurfaces,
-    size: rootSizes,
-    isDisabled: rootDisabled,
-  },
-  defaultVariants: {
-    surface: 'solid',
-    size: 'md',
-    isDisabled: false,
-  },
-});
+export const button = {
+  root: cva(rootBase, {
+    variants: {
+      surface: rootSurfaces,
+      size: rootSizes,
+      isDisabled: rootDisabled,
+    },
+    defaultVariants: {
+      surface: 'solid',
+      size: 'md',
+      isDisabled: false,
+    },
+  }),
+};
 
-export type ButtonVariants = VariantProps<typeof button>;
+export type ButtonRootVariants = VariantProps<typeof button.root>;
