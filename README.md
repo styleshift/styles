@@ -1,9 +1,9 @@
 # StyleShift Style
 
-A plain and simple UI library for Tailwind CSS using Class Variance Authority
+A plain UI library for Tailwind CSS using Class Variance Authority
 
-- 🎨 Pre-built Tailwind CSS classes using CVA
-- 🎯 Framework agnostic (just the classes)
+- 🎨 Tailwind CSS Component library — *written in CVA*
+- 🎯 Framework agnostic — *just the classes*
 
 [![npm version](https://badge.fury.io/js/@styleshift%2Fstyles.svg)](https://www.npmjs.com/package/@styleshift/styles)
 
