@@ -21,6 +21,16 @@ const rootRounded = {
   false: '',
 } as const;
 
+const HeadBorder = {
+  true: 'border-b',
+  false: '',
+} as const;
+
+const FootBorder = {
+  true: 'border-t',
+  false: '',
+} as const;
+
 const spaces = {
   default: '',
   xs: 'p-2',
@@ -48,9 +58,11 @@ export const card = {
   head: cva(headBase, {
     variants: {
       space: spaces,
+      border: HeadBorder,
     },
     defaultVariants: {
       space: 'sm',
+      border: true,
     },
   }),
   body: cva(bodyBase, {
@@ -64,9 +76,11 @@ export const card = {
   foot: cva(footBase, {
     variants: {
       space: spaces,
+      border: FootBorder,
     },
     defaultVariants: {
       space: 'sm',
+      border: false,
     },
   }),
 };

@@ -8,12 +8,14 @@ export declare const card: {
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
     head: (props?: ({
         space?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
+        border?: boolean | null | undefined;
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
     body: (props?: ({
         space?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
     foot: (props?: ({
         space?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
+        border?: boolean | null | undefined;
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
 };
 export type CardRootVariants = VariantProps<typeof card.root>;
