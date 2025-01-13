@@ -1,5 +1,4 @@
-import { cva, type VariantProps } from 'class-variance-authority';
-import { disabled, focus } from '../shared';
+import { disabled, focus, cva, type VariantProps } from '../shared';
 
 const rootBase = [
   ...focus,

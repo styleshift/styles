@@ -1,9 +1,35 @@
 'use strict';
 
-var classVarianceAuthority = require('class-variance-authority');
+var cvaRoot = require('class-variance-authority');
 
+function _interopNamespaceDefault(e) {
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
+        });
+    }
+    n.default = e;
+    return Object.freeze(n);
+}
+
+var cvaRoot__namespace = /*#__PURE__*/_interopNamespaceDefault(cvaRoot);
+
+/**
+ * Shared styles
+ */
 const focus = ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'];
 const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'];
+/**
+ * Helpers
+ */
+const cva = cvaRoot__namespace.cva;
 
 const rootBase$2 = [
     ...focus,
@@ -35,7 +61,7 @@ const rootDisabled = {
     false: [],
 };
 const button = {
-    root: classVarianceAuthority.cva(rootBase$2, {
+    root: cva(rootBase$2, {
         variants: {
             surface: rootSurfaces,
             size: rootSizes$2,
@@ -69,7 +95,7 @@ const rootSizes$1 = {
     lg: 'text-lg',
 };
 const link = {
-    root: classVarianceAuthority.cva(rootBase$1, {
+    root: cva(rootBase$1, {
         variants: {
             size: rootSizes$1,
         },
@@ -114,7 +140,7 @@ const rootWeights = {
     black: 'font-black',
 };
 const text = {
-    root: classVarianceAuthority.cva(rootBase, {
+    root: cva(rootBase, {
         variants: {
             size: rootSizes,
             align: rootAlign,

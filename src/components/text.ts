@@ -1,4 +1,4 @@
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva, type VariantProps } from '../shared';
 
 const rootBase = ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'] as const;
 

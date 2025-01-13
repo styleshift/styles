@@ -1,4 +1,4 @@
-import { type VariantProps } from 'class-variance-authority';
+import { type VariantProps } from '../shared';
 export declare const button: {
     root: (props?: ({
         surface?: "solid" | "outline" | "ghost" | "soft" | null | undefined;

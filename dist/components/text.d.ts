@@ -1,4 +1,4 @@
-import { type VariantProps } from 'class-variance-authority';
+import { type VariantProps } from '../shared';
 export declare const text: {
     root: (props?: ({
         size?: "default" | "base" | "sm" | "md" | "lg" | null | undefined;

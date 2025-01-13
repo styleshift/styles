@@ -1,7 +1,14 @@
-import { cva } from 'class-variance-authority';
+import * as cvaRoot from 'class-variance-authority';
 
+/**
+ * Shared styles
+ */
 const focus = ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'];
 const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'];
+/**
+ * Helpers
+ */
+const cva = cvaRoot.cva;
 
 const rootBase$2 = [
     ...focus,
