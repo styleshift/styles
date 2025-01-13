@@ -8,7 +8,7 @@ A plain UI library for Tailwind CSS using Class Variance Authority
 ## Installation
 
 ```bash
-pnpm add @styleshift/styles
+npm install @styleshift/styles
 ```
 
 ## Usage
