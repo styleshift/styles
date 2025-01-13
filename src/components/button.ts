@@ -1,14 +1,9 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import { focus } from '../shared';
-
-const rootDefaultVariants = {
-  surface: 'solid',
-  size: 'md',
-  isDisabled: false,
-} as const;
+import { disabled, focus } from '../shared';
 
 const rootBase = [
   ...focus,
+  ...disabled,
   'inline-flex',
   'items-center',
   'justify-center',
@@ -17,9 +12,6 @@ const rootBase = [
   'rounded',
   'whitespace-nowrap',
   'transition-all',
-  'disabled:opacity-50',
-  'disabled:cursor-not-allowed',
-  'disabled:pointer-events-none',
 ] as const;
 
 const rootSurfaces = {
@@ -35,14 +27,22 @@ const rootSizes = {
   lg: 'text-lg h-12 px-4',
 } as const;
 
-const rootVariants = {
-  surface:rootSurfaces,
-  size: rootSizes,
-} as const;
+const rootDisabled = {
+  true: [],
+  false: [],
+};
 
 export const button = cva(rootBase, {
-  variants: rootVariants,
-  defaultVariants: rootDefaultVariants,
+  variants: {
+    surface: rootSurfaces,
+    size: rootSizes,
+    isDisabled: rootDisabled,
+  },
+  defaultVariants: {
+    surface: 'solid',
+    size: 'md',
+    isDisabled: false,
+  },
 });
 
 export type ButtonVariants = VariantProps<typeof button>;

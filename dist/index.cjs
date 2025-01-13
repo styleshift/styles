@@ -3,14 +3,11 @@
 var classVarianceAuthority = require('class-variance-authority');
 
 const focus = ['shared-visible:outline-none', 'shared-visible:ring-2', 'shared-visible:ring-offset-2'];
+const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'];
 
-const rootDefaultVariants = {
-    surface: 'solid',
-    size: 'md',
-    isDisabled: false,
-};
 const rootBase = [
     ...focus,
+    ...disabled,
     'inline-flex',
     'items-center',
     'justify-center',
@@ -19,9 +16,6 @@ const rootBase = [
     'rounded',
     'whitespace-nowrap',
     'transition-all',
-    'disabled:opacity-50',
-    'disabled:cursor-not-allowed',
-    'disabled:pointer-events-none',
 ];
 const rootSurfaces = {
     solid: ['bg-slate-800', 'text-white', 'hover:bg-slate-700', 'shared-visible:ring-slate-800'],
@@ -34,13 +28,21 @@ const rootSizes = {
     md: 'text-base h-10 px-4',
     lg: 'text-lg h-12 px-4',
 };
-const rootVariants = {
-    surface: rootSurfaces,
-    size: rootSizes,
+const rootDisabled = {
+    true: [],
+    false: [],
 };
 const button = classVarianceAuthority.cva(rootBase, {
-    variants: rootVariants,
-    defaultVariants: rootDefaultVariants,
+    variants: {
+        surface: rootSurfaces,
+        size: rootSizes,
+        isDisabled: rootDisabled,
+    },
+    defaultVariants: {
+        surface: 'solid',
+        size: 'md',
+        isDisabled: false,
+    },
 });
 
 exports.button = button;
