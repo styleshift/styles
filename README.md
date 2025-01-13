@@ -90,9 +90,12 @@ link.root({ size: 'sm' });
 #### Root
 
 ```js
-text.root({ size: 'sm' });
+text.root({ align: 'center' });
 ```
 
-| Variant | Type                            | Default   |
-| ------- | ------------------------------- | --------- |
-| size    | `default` `sm` `base` `md` `lg` | `default` |
+| Variant | Type                                                                                          | Default   |
+| ------- | --------------------------------------------------------------------------------------------- | --------- |
+| size    | `default` `sm` `base` `md` `lg`                                                               | `default` |
+| align   | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
+| strike  | `none` `under` `over` `through`                                                               | `none`    |
+| weight  | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |

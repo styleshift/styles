@@ -77,7 +77,7 @@ const link = {
     }),
 };
 
-const rootBase = ['text-slate-800', 'transition-all'];
+const rootBase = ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'];
 const rootSizes = {
     default: '',
     sm: 'text-sm',
@@ -85,13 +85,45 @@ const rootSizes = {
     md: 'text-md',
     lg: 'text-lg',
 };
+const rootAlign = {
+    left: 'text-left',
+    center: 'text-center',
+    right: 'text-right',
+    justify: 'text-justify',
+    start: 'text-start',
+    end: 'text-end',
+};
+const rootStrikes = {
+    none: '',
+    under: 'underline',
+    over: 'overline',
+    through: 'line-through',
+};
+const rootWeights = {
+    default: '',
+    thin: 'font-thin',
+    extralight: 'font-extralight',
+    light: 'font-light',
+    normal: 'font-normal',
+    medium: 'font-medium',
+    semibold: 'font-semibold',
+    bold: 'font-bold',
+    extrabold: 'font-extrabold',
+    black: 'font-black',
+};
 const text = {
     root: cva(rootBase, {
         variants: {
             size: rootSizes,
+            align: rootAlign,
+            strike: rootStrikes,
+            weight: rootWeights,
         },
         defaultVariants: {
             size: 'default',
+            align: 'left',
+            strike: 'none',
+            weight: 'default',
         },
     }),
 };
