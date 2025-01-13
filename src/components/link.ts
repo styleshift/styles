@@ -2,28 +2,15 @@ import styleshift from '../styleshift';
 import { canFocus } from './partials/canFocus';
 
 /**
- * Link component style configuration using Styleshift
+ * Configurable link component with focus management and styling options
  *
- * Provides styles for interactive link elements with focus states and
- * customizable text decoration. Combines focus management with link-specific styling.
+ * @param {Object} options
+ * @param {boolean} [options.underline=true] - Controls text decoration
+ * @returns {string} Tailwind CSS class string
  *
- * @since 0.0.53
- *
- * @example
- * ```typescript
- * import { link } from '@styleshift/components';
- *
- * // Basic link with underline
- * const className = link.root({ underline: true });
- *
- * // Link with focus state and no underline
- * const className = link.root({
- *   underline: false,
- *   isFocused: true
- * });
- * ```
- *
- * @see {@link canFocus} for focus state handling
+ * @variant underline
+ * - true: Adds underline decoration
+ * - false: Removes underline decoration
  */
 export const link = {
   /**
@@ -31,7 +18,6 @@ export const link = {
    *
    * @property {Object} variants - Style variants configuration
    * @property {boolean} variants.underline - Controls text decoration
-   * @property {boolean} [isFocused] - Focus state from canFocus
    *
    * @returns {string} Combined Tailwind CSS classes
    */

@@ -1,26 +1,22 @@
 /**
- * Card component style configuration using Styleshift
+ * A flexible card component with customizable styling variants.
  *
- * Provides a flexible card component with customizable borders, shadows, spacing,
- * and subcomponents (header, body, footer) for building consistent card layouts.
+ * @variant root
+ * - shadow {boolean} - Enables box shadow
+ * - border {boolean} - Shows border
+ * - rounded {boolean} - Applies medium border radius
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
- * @since 0.0.53
+ * @variant head
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
+ * - border {boolean} - Shows bottom border
  *
- * @example
- * ```typescript
- * import { card } from '@styleshift/components';
+ * @variant body
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
- * // Basic card with default variants
- * const cardClass = card.root({});
- *
- * // Customized card with header and footer
- * const classes = {
- *   root: card.root({ shadow: true, border: true, space: 'md' }),
- *   header: card.head({ space: 'sm', border: true }),
- *   body: card.body({ space: 'md' }),
- *   footer: card.foot({ space: 'sm', border: true })
- * };
- * ```
+ * @variant foot
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
+ * - border {boolean} - Shows top border
  */
 export declare const card: {
     /**
@@ -40,7 +36,7 @@ export declare const card: {
         rounded?: boolean | undefined;
         space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
     } & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -65,10 +61,10 @@ export declare const card: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -95,19 +91,14 @@ export declare const card: {
         } | null | undefined;
     })) | undefined) => string;
     /**
-     * Card header styles
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-     * @property {boolean} variants.border - Controls bottom border visibility
-     *
-     * @returns {string} Combined Tailwind CSS classes
+     * Card header with optional bottom border and spacing
+     * @returns {string} Tailwind classes
      */
     head: (props?: ({
         space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
         border?: boolean | undefined;
     } & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -132,10 +123,10 @@ export declare const card: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -162,17 +153,13 @@ export declare const card: {
         } | null | undefined;
     })) | undefined) => string;
     /**
-     * Card body styles
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-     *
-     * @returns {string} Combined Tailwind CSS classes
+     * Card body with configurable padding
+     * @returns {string} Tailwind classes
      */
     body: (props?: ({
         space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
     } & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -197,10 +184,10 @@ export declare const card: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -227,19 +214,14 @@ export declare const card: {
         } | null | undefined;
     })) | undefined) => string;
     /**
-     * Card footer styles
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-     * @property {boolean} variants.border - Controls top border visibility
-     *
-     * @returns {string} Combined Tailwind CSS classes
+     * Card footer with optional top border and spacing
+     * @returns {string} Tailwind classes
      */
     foot: (props?: ({
         space?: "sm" | "md" | "lg" | "default" | "xs" | "xl" | undefined;
         border?: boolean | undefined;
     } & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -264,10 +246,10 @@ export declare const card: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;

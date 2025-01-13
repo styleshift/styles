@@ -67,64 +67,73 @@ const defineConfig = (options)=>{
 };
 const { compose, cva, cx } = defineConfig();
 
+/**
+ * Utility wrapper around class-variance-authority for type-safe className generation
+ * @typedef {Object} StyleShift
+ * @property {function} define - Creates variant-based className generators
+ * @property {function} compose - Combines multiple variant definitions
+ * @property {function} merge - Merges multiple className strings
+ *
+ * @example
+ * const button = styleshift.define({
+ *   base: "px-4 py-2 rounded",
+ *   variants: {
+ *     intent: {
+ *       primary: "bg-blue-500 text-white",
+ *       secondary: "bg-gray-200 text-gray-800"
+ *     },
+ *     size: {
+ *       sm: "text-sm",
+ *       lg: "text-lg"
+ *     }
+ *   }
+ * });
+ */
 const styleshift = {
     define: cva,
     compose: compose,
     merge: cx,
 };
 
+/**
+ * Base focus styles for interactive elements using Tailwind classes.
+ * @variant base - Applies focus ring with offset and slate color
+ */
 const canFocus = styleshift.define({
     base: ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'],
 });
 
+/**
+ * Applies standard disabled state styles to elements
+ * @variant base - Reduces opacity, shows not-allowed cursor, and prevents pointer events
+ */
 const canDisable = styleshift.define({
     base: ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'],
 });
 
 /**
- * Button component style configuration using Styleshift
+ * Configurable button component with surface and size variants.
  *
- * Provides a comprehensive set of styles and variants for button components,
- * including different surfaces, sizes, and states (focus, disabled).
+ * @type {import('../styleshift').StyleshiftComponent}
  *
- * @since 0.0.53
+ * @variant surface
+ * - solid: White text on background with hover state
+ * - outline: Border and text with hover state
+ * - ghost: Transparent with hover background
+ * - soft: Light background with darker text and hover state
  *
- * @example
- * ```typescript
- * import { button } from '@styleshift/components';
+ * @variant size
+ * - sm: Small
+ * - base: Default
+ * - md: Medium
+ * - lg: Large
  *
- * // Basic usage
- * const className = button.root({ surface: 'solid', size: 'md' });
- *
- * // With focus and disabled states
- * const className = button.root({
- *   surface: 'outline',
- *   size: 'base',
- *   isFocused: true,
- *   isDisabled: false
- * });
- * ```
- *
- * @see {@link canFocus} for focus state handling
- * @see {@link canDisable} for disabled state handling
+ * @default
+ * - surface: "solid"
+ * - size: "base"
  */
 const button = {
-    /**
-     * Root styles for the button component
-     * Composes focus and disable states with core button styles
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('solid'|'outline'|'ghost'|'soft')} variants.surface - Button appearance variant
-     * @property {('sm'|'base'|'md'|'lg')} variants.size - Button size variant
-     * @property {boolean} [isFocused] - Focus state from canFocus
-     * @property {boolean} [isDisabled] - Disabled state from canDisable
-     *
-     * @returns {string} Combined Tailwind CSS classes
-     */
     root: styleshift.compose(canFocus, canDisable, styleshift.define({
-        /**
-         * Base styles applied to all button variants
-         */
         base: [
             'inline-flex',
             'items-center',
@@ -136,26 +145,13 @@ const button = {
             'transition-all',
             'border-2',
         ],
-        /**
-         * Style variants for different button appearances
-         */
         variants: {
-            /**
-             * Surface variants define the button's visual style
-             * - solid: Filled background with white text
-             * - outline: Bordered button with transparent background
-             * - ghost: Text-only button with hover background
-             * - soft: Light background with dark text
-             */
             surface: {
                 solid: ['border-transparent bg-slate-800', 'text-white', 'hover:bg-slate-700'],
                 outline: ['border-slate-800', 'text-slate-800', 'hover:border-slate-700'],
                 ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
                 soft: ['border-transparent', 'bg-slate-100', 'text-slate-800', 'hover:bg-slate-200'],
             },
-            /**
-             * Size variants define the button's dimensions and text size
-             */
             size: {
                 sm: 'text-sm h-8 px-4',
                 base: 'text-base h-10 px-4',
@@ -163,9 +159,6 @@ const button = {
                 lg: 'text-lg h-14 px-5',
             },
         },
-        /**
-         * Default variant values if none are specified
-         */
         defaultVariants: {
             surface: 'solid',
             size: 'base',
@@ -174,28 +167,24 @@ const button = {
 };
 
 /**
- * Card component style configuration using Styleshift
+ * A flexible card component with customizable styling variants.
  *
- * Provides a flexible card component with customizable borders, shadows, spacing,
- * and subcomponents (header, body, footer) for building consistent card layouts.
+ * @variant root
+ * - shadow {boolean} - Enables box shadow
+ * - border {boolean} - Shows border
+ * - rounded {boolean} - Applies medium border radius
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
- * @since 0.0.53
+ * @variant head
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
+ * - border {boolean} - Shows bottom border
  *
- * @example
- * ```typescript
- * import { card } from '@styleshift/components';
+ * @variant body
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
- * // Basic card with default variants
- * const cardClass = card.root({});
- *
- * // Customized card with header and footer
- * const classes = {
- *   root: card.root({ shadow: true, border: true, space: 'md' }),
- *   header: card.head({ space: 'sm', border: true }),
- *   body: card.body({ space: 'md' }),
- *   footer: card.foot({ space: 'sm', border: true })
- * };
- * ```
+ * @variant foot
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
+ * - border {boolean} - Shows top border
  */
 const card = {
     /**
@@ -241,13 +230,8 @@ const card = {
         },
     }),
     /**
-     * Card header styles
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-     * @property {boolean} variants.border - Controls bottom border visibility
-     *
-     * @returns {string} Combined Tailwind CSS classes
+     * Card header with optional bottom border and spacing
+     * @returns {string} Tailwind classes
      */
     head: styleshift.define({
         base: ['border-b flex justify-between items-center'],
@@ -303,12 +287,8 @@ const card = {
         ],
     }),
     /**
-     * Card body styles
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-     *
-     * @returns {string} Combined Tailwind CSS classes
+     * Card body with configurable padding
+     * @returns {string} Tailwind classes
      */
     body: styleshift.define({
         base: [''],
@@ -327,13 +307,8 @@ const card = {
         },
     }),
     /**
-     * Card footer styles
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-     * @property {boolean} variants.border - Controls top border visibility
-     *
-     * @returns {string} Combined Tailwind CSS classes
+     * Card footer with optional top border and spacing
+     * @returns {string} Tailwind classes
      */
     foot: styleshift.define({
         base: ['border-t flex justify-between items-center'],
@@ -391,28 +366,15 @@ const card = {
 };
 
 /**
- * Link component style configuration using Styleshift
+ * Configurable link component with focus management and styling options
  *
- * Provides styles for interactive link elements with focus states and
- * customizable text decoration. Combines focus management with link-specific styling.
+ * @param {Object} options
+ * @param {boolean} [options.underline=true] - Controls text decoration
+ * @returns {string} Tailwind CSS class string
  *
- * @since 0.0.53
- *
- * @example
- * ```typescript
- * import { link } from '@styleshift/components';
- *
- * // Basic link with underline
- * const className = link.root({ underline: true });
- *
- * // Link with focus state and no underline
- * const className = link.root({
- *   underline: false,
- *   isFocused: true
- * });
- * ```
- *
- * @see {@link canFocus} for focus state handling
+ * @variant underline
+ * - true: Adds underline decoration
+ * - false: Removes underline decoration
  */
 const link = {
     /**
@@ -420,7 +382,6 @@ const link = {
      *
      * @property {Object} variants - Style variants configuration
      * @property {boolean} variants.underline - Controls text decoration
-     * @property {boolean} [isFocused] - Focus state from canFocus
      *
      * @returns {string} Combined Tailwind CSS classes
      */
@@ -448,34 +409,23 @@ const link = {
 };
 
 /**
- * Text component style configuration using Styleshift
+ * Configurable typography utility for consistent text styling
  *
- * Provides a comprehensive set of typography utilities for styling text elements,
- * including size, alignment, decoration, weight, case, wrapping, whitespace,
- * line height, letter spacing, and more.
+ * @param {object} options - Style configuration
+ * @returns {string} Tailwind CSS classes
  *
- * @since 0.0.53
- *
- * @example
- * ```typescript
- * import { text } from '@styleshift/components';
- *
- * // Basic text styling
- * const className = text.root({
- *   size: 'lg',
- *   weight: 'bold'
- * });
- *
- * // Complex text formatting
- * const className = text.root({
- *   size: '2xl',
- *   align: 'center',
- *   weight: 'semibold',
- *   tracking: 'wide',
- *   leading: 'relaxed',
- *   truncate: true
- * });
- * ```
+ * Variants:
+ * - size: xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
+ * - align: left | center | right | justify | start | end
+ * - strike: none | under | over | through
+ * - weight: thin | extralight | light | normal | medium | semibold | bold | extrabold | black
+ * - case: upper | lower | caps | normal
+ * - wrap: wrap | nowrap | balance | pretty
+ * - whitespace: normal | nowrap | pre | preline | prewrap | break
+ * - leading: none | tight | snug | normal | relaxed | loose
+ * - tracking: tighter | tight | normal | wide | wider | widest
+ * - truncate: boolean
+ * - dimmed: boolean
  */
 const text = {
     /**

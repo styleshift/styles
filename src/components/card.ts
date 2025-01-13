@@ -1,28 +1,24 @@
 import styleshift from '../styleshift';
 
 /**
- * Card component style configuration using Styleshift
+ * A flexible card component with customizable styling variants.
  *
- * Provides a flexible card component with customizable borders, shadows, spacing,
- * and subcomponents (header, body, footer) for building consistent card layouts.
+ * @variant root
+ * - shadow {boolean} - Enables box shadow
+ * - border {boolean} - Shows border
+ * - rounded {boolean} - Applies medium border radius
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
- * @since 0.0.53
+ * @variant head
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
+ * - border {boolean} - Shows bottom border
  *
- * @example
- * ```typescript
- * import { card } from '@styleshift/components';
+ * @variant body
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
  *
- * // Basic card with default variants
- * const cardClass = card.root({});
- *
- * // Customized card with header and footer
- * const classes = {
- *   root: card.root({ shadow: true, border: true, space: 'md' }),
- *   header: card.head({ space: 'sm', border: true }),
- *   body: card.body({ space: 'md' }),
- *   footer: card.foot({ space: 'sm', border: true })
- * };
- * ```
+ * @variant foot
+ * - space {'default'|'xs'|'sm'|'md'|'lg'|'xl'} - Controls padding
+ * - border {boolean} - Shows top border
  */
 export const card = {
   /**
@@ -69,13 +65,8 @@ export const card = {
   }),
 
   /**
-   * Card header styles
-   *
-   * @property {Object} variants - Style variants configuration
-   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-   * @property {boolean} variants.border - Controls bottom border visibility
-   *
-   * @returns {string} Combined Tailwind CSS classes
+   * Card header with optional bottom border and spacing
+   * @returns {string} Tailwind classes
    */
   head: styleshift.define({
     base: ['border-b flex justify-between items-center'],
@@ -132,12 +123,8 @@ export const card = {
   }),
 
   /**
-   * Card body styles
-   *
-   * @property {Object} variants - Style variants configuration
-   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-   *
-   * @returns {string} Combined Tailwind CSS classes
+   * Card body with configurable padding
+   * @returns {string} Tailwind classes
    */
   body: styleshift.define({
     base: [''],
@@ -157,13 +144,8 @@ export const card = {
   }),
 
   /**
-   * Card footer styles
-   *
-   * @property {Object} variants - Style variants configuration
-   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
-   * @property {boolean} variants.border - Controls top border visibility
-   *
-   * @returns {string} Combined Tailwind CSS classes
+   * Card footer with optional top border and spacing
+   * @returns {string} Tailwind classes
    */
   foot: styleshift.define({
     base: ['border-t flex justify-between items-center'],

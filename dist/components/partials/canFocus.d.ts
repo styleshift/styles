@@ -1,5 +1,5 @@
 export declare const canFocus: (props?: ({
-    class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+    class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
         [x: string]: any;
     } | null | undefined)[] | {
         [x: string]: any;
@@ -24,10 +24,10 @@ export declare const canFocus: (props?: ({
     } | null | undefined)[] | {
         [x: string]: any;
     } | null | undefined;
-    className?: never;
+    className?: undefined;
 } | {
-    class?: never;
-    className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+    class?: undefined;
+    className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
         [x: string]: any;
     } | null | undefined)[] | {
         [x: string]: any;

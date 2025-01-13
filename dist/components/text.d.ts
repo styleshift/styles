@@ -1,32 +1,21 @@
 /**
- * Text component style configuration using Styleshift
+ * Configurable typography utility for consistent text styling
  *
- * Provides a comprehensive set of typography utilities for styling text elements,
- * including size, alignment, decoration, weight, case, wrapping, whitespace,
- * line height, letter spacing, and more.
+ * @param {object} options - Style configuration
+ * @returns {string} Tailwind CSS classes
  *
- * @since 0.0.53
- *
- * @example
- * ```typescript
- * import { text } from '@styleshift/components';
- *
- * // Basic text styling
- * const className = text.root({
- *   size: 'lg',
- *   weight: 'bold'
- * });
- *
- * // Complex text formatting
- * const className = text.root({
- *   size: '2xl',
- *   align: 'center',
- *   weight: 'semibold',
- *   tracking: 'wide',
- *   leading: 'relaxed',
- *   truncate: true
- * });
- * ```
+ * Variants:
+ * - size: xs | sm | base | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
+ * - align: left | center | right | justify | start | end
+ * - strike: none | under | over | through
+ * - weight: thin | extralight | light | normal | medium | semibold | bold | extrabold | black
+ * - case: upper | lower | caps | normal
+ * - wrap: wrap | nowrap | balance | pretty
+ * - whitespace: normal | nowrap | pre | preline | prewrap | break
+ * - leading: none | tight | snug | normal | relaxed | loose
+ * - tracking: tighter | tight | normal | wide | wider | widest
+ * - truncate: boolean
+ * - dimmed: boolean
  */
 export declare const text: {
     /**
@@ -60,7 +49,7 @@ export declare const text: {
         truncate?: boolean | undefined;
         dimmed?: boolean | undefined;
     } & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -85,10 +74,10 @@ export declare const text: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;

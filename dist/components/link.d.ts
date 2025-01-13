@@ -1,26 +1,13 @@
 /**
- * Link component style configuration using Styleshift
+ * Configurable link component with focus management and styling options
  *
- * Provides styles for interactive link elements with focus states and
- * customizable text decoration. Combines focus management with link-specific styling.
+ * @param {Object} options
+ * @param {boolean} [options.underline=true] - Controls text decoration
+ * @returns {string} Tailwind CSS class string
  *
- * @since 0.0.53
- *
- * @example
- * ```typescript
- * import { link } from '@styleshift/components';
- *
- * // Basic link with underline
- * const className = link.root({ underline: true });
- *
- * // Link with focus state and no underline
- * const className = link.root({
- *   underline: false,
- *   isFocused: true
- * });
- * ```
- *
- * @see {@link canFocus} for focus state handling
+ * @variant underline
+ * - true: Adds underline decoration
+ * - false: Removes underline decoration
  */
 export declare const link: {
     /**
@@ -28,12 +15,11 @@ export declare const link: {
      *
      * @property {Object} variants - Style variants configuration
      * @property {boolean} variants.underline - Controls text decoration
-     * @property {boolean} [isFocused] - Focus state from canFocus
      *
      * @returns {string} Combined Tailwind CSS classes
      */
     root: (props?: (((import("cva").VariantProps<(props?: ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -58,10 +44,10 @@ export declare const link: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -89,7 +75,7 @@ export declare const link: {
     }) | undefined) => string> & import("cva").VariantProps<(props?: ({
         underline?: boolean | undefined;
     } & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -114,10 +100,10 @@ export declare const link: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -143,7 +129,7 @@ export declare const link: {
             [x: string]: any;
         } | null | undefined;
     })) | undefined) => string>) | undefined) & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
@@ -168,10 +154,10 @@ export declare const link: {
         } | null | undefined)[] | {
             [x: string]: any;
         } | null | undefined;
-        className?: never;
+        className?: undefined;
     } | {
-        class?: never;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | /*elided*/ any | {
+        class?: undefined;
+        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
             [x: string]: any;
         } | null | undefined)[] | {
             [x: string]: any;
