@@ -1,16 +1,40 @@
 import styleshift from '../styleshift';
 
 /**
- * Card component styling configuration using CVA (Class Variance Authority)
- * Provides consistent styling for card components with customizable variants
+ * Card component style configuration using Styleshift
+ *
+ * Provides a flexible card component with customizable borders, shadows, spacing,
+ * and subcomponents (header, body, footer) for building consistent card layouts.
+ *
+ * @since 0.0.53
+ *
+ * @example
+ * ```typescript
+ * import { card } from '@styleshift/components';
+ *
+ * // Basic card with default variants
+ * const cardClass = card.root({});
+ *
+ * // Customized card with header and footer
+ * const classes = {
+ *   root: card.root({ shadow: true, border: true, space: 'md' }),
+ *   header: card.head({ space: 'sm', border: true }),
+ *   body: card.body({ space: 'md' }),
+ *   footer: card.foot({ space: 'sm', border: true })
+ * };
+ * ```
  */
 export const card = {
   /**
    * Root card container styles
-   * @property {boolean} shadow - Enables/disables card shadow
-   * @property {boolean} border - Controls border visibility
-   * @property {boolean} rounded - Controls border radius
-   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+   *
+   * @property {Object} variants - Style variants configuration
+   * @property {boolean} variants.shadow - Enables/disables card shadow
+   * @property {boolean} variants.border - Controls border visibility
+   * @property {boolean} variants.rounded - Controls border radius
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+   *
+   * @returns {string} Combined Tailwind CSS classes
    */
   root: styleshift.define({
     base: ['transition-all border'],
@@ -43,10 +67,15 @@ export const card = {
       space: 'default',
     },
   }),
+
   /**
    * Card header styles
-   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
-   * @property {boolean} border - Controls bottom border visibility
+   *
+   * @property {Object} variants - Style variants configuration
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+   * @property {boolean} variants.border - Controls bottom border visibility
+   *
+   * @returns {string} Combined Tailwind CSS classes
    */
   head: styleshift.define({
     base: ['border-b flex justify-between items-center'],
@@ -101,9 +130,14 @@ export const card = {
       },
     ],
   }),
+
   /**
    * Card body styles
-   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+   *
+   * @property {Object} variants - Style variants configuration
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+   *
+   * @returns {string} Combined Tailwind CSS classes
    */
   body: styleshift.define({
     base: [''],
@@ -121,10 +155,15 @@ export const card = {
       space: 'sm',
     },
   }),
+
   /**
    * Card footer styles
-   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
-   * @property {boolean} border - Controls top border visibility
+   *
+   * @property {Object} variants - Style variants configuration
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+   * @property {boolean} variants.border - Controls top border visibility
+   *
+   * @returns {string} Combined Tailwind CSS classes
    */
   foot: styleshift.define({
     base: ['border-t flex justify-between items-center'],

@@ -82,13 +82,44 @@ const canDisable = styleshift.define({
 });
 
 /**
- * Button component style configuration
- * @description Defines the styling variants and composition for the button component
+ * Button component style configuration using Styleshift
+ *
+ * Provides a comprehensive set of styles and variants for button components,
+ * including different surfaces, sizes, and states (focus, disabled).
+ *
+ * @since 0.0.53
+ *
+ * @example
+ * ```typescript
+ * import { button } from '@styleshift/components';
+ *
+ * // Basic usage
+ * const className = button.root({ surface: 'solid', size: 'md' });
+ *
+ * // With focus and disabled states
+ * const className = button.root({
+ *   surface: 'outline',
+ *   size: 'base',
+ *   isFocused: true,
+ *   isDisabled: false
+ * });
+ * ```
+ *
+ * @see {@link canFocus} for focus state handling
+ * @see {@link canDisable} for disabled state handling
  */
 const button = {
     /**
      * Root styles for the button component
      * Composes focus and disable states with core button styles
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {('solid'|'outline'|'ghost'|'soft')} variants.surface - Button appearance variant
+     * @property {('sm'|'base'|'md'|'lg')} variants.size - Button size variant
+     * @property {boolean} [isFocused] - Focus state from canFocus
+     * @property {boolean} [isDisabled] - Disabled state from canDisable
+     *
+     * @returns {string} Combined Tailwind CSS classes
      */
     root: styleshift.compose(canFocus, canDisable, styleshift.define({
         /**
@@ -143,16 +174,40 @@ const button = {
 };
 
 /**
- * Card component styling configuration using CVA (Class Variance Authority)
- * Provides consistent styling for card components with customizable variants
+ * Card component style configuration using Styleshift
+ *
+ * Provides a flexible card component with customizable borders, shadows, spacing,
+ * and subcomponents (header, body, footer) for building consistent card layouts.
+ *
+ * @since 0.0.53
+ *
+ * @example
+ * ```typescript
+ * import { card } from '@styleshift/components';
+ *
+ * // Basic card with default variants
+ * const cardClass = card.root({});
+ *
+ * // Customized card with header and footer
+ * const classes = {
+ *   root: card.root({ shadow: true, border: true, space: 'md' }),
+ *   header: card.head({ space: 'sm', border: true }),
+ *   body: card.body({ space: 'md' }),
+ *   footer: card.foot({ space: 'sm', border: true })
+ * };
+ * ```
  */
 const card = {
     /**
      * Root card container styles
-     * @property {boolean} shadow - Enables/disables card shadow
-     * @property {boolean} border - Controls border visibility
-     * @property {boolean} rounded - Controls border radius
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {boolean} variants.shadow - Enables/disables card shadow
+     * @property {boolean} variants.border - Controls border visibility
+     * @property {boolean} variants.rounded - Controls border radius
+     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+     *
+     * @returns {string} Combined Tailwind CSS classes
      */
     root: styleshift.define({
         base: ['transition-all border'],
@@ -187,8 +242,12 @@ const card = {
     }),
     /**
      * Card header styles
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
-     * @property {boolean} border - Controls bottom border visibility
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+     * @property {boolean} variants.border - Controls bottom border visibility
+     *
+     * @returns {string} Combined Tailwind CSS classes
      */
     head: styleshift.define({
         base: ['border-b flex justify-between items-center'],
@@ -245,7 +304,11 @@ const card = {
     }),
     /**
      * Card body styles
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+     *
+     * @returns {string} Combined Tailwind CSS classes
      */
     body: styleshift.define({
         base: [''],
@@ -265,8 +328,12 @@ const card = {
     }),
     /**
      * Card footer styles
-     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
-     * @property {boolean} border - Controls top border visibility
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} variants.space - Controls padding size
+     * @property {boolean} variants.border - Controls top border visibility
+     *
+     * @returns {string} Combined Tailwind CSS classes
      */
     foot: styleshift.define({
         base: ['border-t flex justify-between items-center'],
@@ -324,16 +391,38 @@ const card = {
 };
 
 /**
- * Link component styling configuration using CVA (Class Variance Authority)
- * Combines focus styles with customizable link appearance
+ * Link component style configuration using Styleshift
+ *
+ * Provides styles for interactive link elements with focus states and
+ * customizable text decoration. Combines focus management with link-specific styling.
+ *
+ * @since 0.0.53
+ *
+ * @example
+ * ```typescript
+ * import { link } from '@styleshift/components';
+ *
+ * // Basic link with underline
+ * const className = link.root({ underline: true });
+ *
+ * // Link with focus state and no underline
+ * const className = link.root({
+ *   underline: false,
+ *   isFocused: true
+ * });
+ * ```
+ *
+ * @see {@link canFocus} for focus state handling
  */
 const link = {
     /**
      * Root styles for the link component
-     * Composed of focus management and base link styles
-     * @property {Object} variants - Available style variants
-     * @property {Object} variants.underline - Controls text decoration
-     * @property {boolean} defaultVariants.underline - Default is underlined (true)
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {boolean} variants.underline - Controls text decoration
+     * @property {boolean} [isFocused] - Focus state from canFocus
+     *
+     * @returns {string} Combined Tailwind CSS classes
      */
     root: styleshift.compose(canFocus, styleshift.define({
         base: [
@@ -359,21 +448,57 @@ const link = {
 };
 
 /**
- * The `text` object provides a set of utility classes for styling text elements.
- * It uses the `cva` function to create a variant-based styling system.
+ * Text component style configuration using Styleshift
+ *
+ * Provides a comprehensive set of typography utilities for styling text elements,
+ * including size, alignment, decoration, weight, case, wrapping, whitespace,
+ * line height, letter spacing, and more.
+ *
+ * @since 0.0.53
+ *
+ * @example
+ * ```typescript
+ * import { text } from '@styleshift/components';
+ *
+ * // Basic text styling
+ * const className = text.root({
+ *   size: 'lg',
+ *   weight: 'bold'
+ * });
+ *
+ * // Complex text formatting
+ * const className = text.root({
+ *   size: '2xl',
+ *   align: 'center',
+ *   weight: 'semibold',
+ *   tracking: 'wide',
+ *   leading: 'relaxed',
+ *   truncate: true
+ * });
+ * ```
  */
 const text = {
     /**
-     * The root style configuration for text elements.
-     * It includes base styles and various variants for customization.
+     * Root styles for text elements with extensive customization options
+     *
+     * @property {Object} variants - Style variants configuration
+     * @property {('default'|'xs'|'sm'|'base'|'md'|'lg'|'xl'|'2xl'|'3xl'|'4xl'|'5xl'|'6xl')} variants.size - Text size
+     * @property {('left'|'center'|'right'|'justify'|'start'|'end')} variants.align - Text alignment
+     * @property {('none'|'under'|'over'|'through')} variants.strike - Text decoration
+     * @property {('default'|'thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} variants.weight - Font weight
+     * @property {('default'|'upper'|'lower'|'caps'|'normal')} variants.case - Text transform
+     * @property {('default'|'wrap'|'nowrap'|'balance'|'pretty')} variants.wrap - Text wrapping
+     * @property {('default'|'normal'|'nowrap'|'pre'|'preline'|'prewrap'|'break')} variants.whitespace - Whitespace handling
+     * @property {('default'|'none'|'tight'|'snug'|'normal'|'relaxed'|'loose')} variants.leading - Line height
+     * @property {('default'|'tighter'|'tight'|'normal'|'wide'|'wider'|'widest')} variants.tracking - Letter spacing
+     * @property {boolean} variants.truncate - Enable text truncation
+     * @property {boolean} variants.dimmed - Apply reduced opacity
+     *
+     * @returns {string} Combined Tailwind CSS classes
      */
     root: styleshift.define({
         base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
         variants: {
-            /**
-             * Size variants for text elements.
-             * Options range from 'xs' to '6xl'.
-             */
             size: {
                 default: '',
                 xs: 'text-xs',
@@ -388,10 +513,6 @@ const text = {
                 '5xl': 'text-5xl',
                 '6xl': 'text-6xl',
             },
-            /**
-             * Alignment variants for text elements.
-             * Options include 'left', 'center', 'right', 'justify', 'start', and 'end'.
-             */
             align: {
                 left: 'text-left',
                 center: 'text-center',
@@ -400,20 +521,12 @@ const text = {
                 start: 'text-start',
                 end: 'text-end',
             },
-            /**
-             * Text decoration variants.
-             * Options include 'none', 'under', 'over', and 'through'.
-             */
             strike: {
                 none: '',
                 under: 'underline',
                 over: 'overline',
                 through: 'line-through',
             },
-            /**
-             * Font weight variants.
-             * Options range from 'thin' to 'black'.
-             */
             weight: {
                 default: '',
                 thin: 'font-thin',
@@ -426,10 +539,6 @@ const text = {
                 extrabold: 'font-extrabold',
                 black: 'font-black',
             },
-            /**
-             * Text case variants.
-             * Options include 'upper', 'lower', 'caps', and 'normal'.
-             */
             case: {
                 default: '',
                 upper: 'uppercase',
@@ -437,10 +546,6 @@ const text = {
                 caps: 'capitalize',
                 normal: 'normal-case',
             },
-            /**
-             * Text wrapping variants.
-             * Options include 'wrap', 'nowrap', 'balance', and 'pretty'.
-             */
             wrap: {
                 default: '',
                 wrap: 'text-wrap',
@@ -448,10 +553,6 @@ const text = {
                 balance: 'text-balance',
                 pretty: 'text-pretty',
             },
-            /**
-             * Whitespace handling variants.
-             * Options include 'normal', 'nowrap', 'pre', 'preline', 'prewrap', and 'break'.
-             */
             whitespace: {
                 default: '',
                 normal: 'whitespace-normal',
@@ -461,10 +562,6 @@ const text = {
                 prewrap: 'whitespace-pre-wrap',
                 break: 'whitespace-break-spaces',
             },
-            /**
-             * Line height variants.
-             * Options include 'none', 'tight', 'snug', 'normal', 'relaxed', and 'loose'.
-             */
             leading: {
                 default: '',
                 none: 'leading-none',
@@ -474,10 +571,6 @@ const text = {
                 relaxed: 'leading-relaxed',
                 loose: 'leading-loose',
             },
-            /**
-             * Letter spacing variants.
-             * Options include 'tighter', 'tight', 'normal', 'wide', 'wider', and 'widest'.
-             */
             tracking: {
                 default: '',
                 tighter: 'tracking-tighter',
@@ -487,18 +580,10 @@ const text = {
                 wider: 'tracking-wider',
                 widest: 'tracking-widest',
             },
-            /**
-             * Truncation option for text elements.
-             * Boolean value to enable or disable text truncation.
-             */
             truncate: {
                 true: ['truncate'],
                 false: [''],
             },
-            /**
-             * Dimmed option for text elements.
-             * Boolean value to apply dimmed opacity.
-             */
             dimmed: {
                 true: ['opacity-65'],
                 false: ['opacity-100'],
