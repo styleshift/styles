@@ -36,7 +36,6 @@
     "url": "https://github.com/styleshift/styles.git"
   },
   "homepage": "https://www.npmjs.com/package/@styleshift/styles",
-  "packageManager": "pnpm@9.15.3",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
