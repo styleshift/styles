@@ -5,9 +5,9 @@ export const alert = {
     base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
     variants: {
       surface: {
-        default: ['bg-background', 'text-foreground', 'border-border'],
-        negative: ['border-red-200', 'text-red-500'],
-        positive: ['border-green-200', 'text-green-700'],
+        default: ['border-slate-500', 'text-slate-800'],
+        negative: ['border-red-500', 'text-red-800'],
+        positive: ['border-green-500', 'text-green-800'],
       },
     },
     defaultVariants: {

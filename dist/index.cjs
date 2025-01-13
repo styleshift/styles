@@ -190,7 +190,7 @@ const card = {
         false: '',
       },
       border: {
-        true: 'border-slate-200',
+        true: 'border-slate-300',
         false: 'border-transparent',
       },
       rounded: {
@@ -225,7 +225,7 @@ const card = {
         xl: 'px-24 pt-16',
       },
       border: {
-        true: 'border-slate-200',
+        true: 'border-slate-300',
         false: 'border-transparent',
       },
     },
@@ -294,7 +294,7 @@ const card = {
         xl: 'px-24 pb-16',
       },
       border: {
-        true: 'border-slate-200',
+        true: 'border-slate-300',
         false: 'border-transparent',
       },
     },
@@ -491,37 +491,12 @@ const separator = {
 
 const alert = {
   root: styleshift.define({
-    base: [
-      'relative',
-      'w-full',
-      'rounded-lg',
-      'border',
-      'p-4',
-      'transition-all',
-      '[&>svg~*]:pl-7',
-      '[&>svg+div]:translate-y-[-3px]',
-      '[&>svg]:absolute',
-      '[&>svg]:left-4',
-      '[&>svg]:top-4',
-      '[&>svg]:text-foreground',
-    ],
+    base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
     variants: {
       surface: {
-        default: ['bg-background', 'text-foreground', 'border-border'],
-        negative: [
-          'border-red-200',
-          'text-red-500',
-          'dark:border-red-400',
-          '[&>svg]:text-red-500',
-          'dark:[&>svg]:text-red-400',
-        ],
-        positive: [
-          'border-green-200',
-          'text-green-700',
-          'dark:text-green-400',
-          '[&>svg]:text-green-700',
-          'dark:[&>svg]:text-green-400',
-        ],
+        default: ['border-slate-500', 'text-slate-800'],
+        negative: ['border-red-500', 'text-red-800'],
+        positive: ['border-green-500', 'text-green-800'],
       },
     },
     defaultVariants: {
