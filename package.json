@@ -1,6 +1,6 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.71",
+  "version": "0.0.72",
   "type": "module",
   "types": "./dist/index.d.ts",
   "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
