@@ -4,11 +4,6 @@ var classVarianceAuthority = require('class-variance-authority');
 
 const focus = ['shared-visible:outline-none', 'shared-visible:ring-2', 'shared-visible:ring-offset-2'];
 
-/**
- * @typedef {Object} ButtonVariants
- * @property {'solid' | 'outline' | 'ghost' | 'soft'} [surface]
- * @property {'sm' | 'md' | 'lg'} [size]
- */
 const rootDefaultVariants = {
     surface: 'solid',
     size: 'md',
