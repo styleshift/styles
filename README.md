@@ -54,7 +54,11 @@ button.root({ surface: 'outline' });
 ### Card
 
 ```js
-card.root({ space: 'md' });
+card.root({ rounded: false' });
+card.head({ space: 'md' });
+card.body({ space: 'lg' });
+card.foot({ space: 'md' });
+
 ```
 
 | Root    | Type                               | Default   |
@@ -64,25 +68,13 @@ card.root({ space: 'md' });
 | shadow  | `true` `false`                     | `true`    |
 | space   | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
-```js
-card.head({ space: 'md' });
-```
-
 | Head  | Type                               | Default   |
 | ----- | ---------------------------------- | --------- |
 | space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
-```js
-card.body({ space: 'md' });
-```
-
 | Body  | Type                               | Default   |
 | ----- | ---------------------------------- | --------- |
 | space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
-
-```js
-card.foot({ space: 'md' });
-```
 
 | Foot  | Type                               | Default   |
 | ----- | ---------------------------------- | --------- |
