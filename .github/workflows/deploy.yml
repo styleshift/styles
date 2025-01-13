@@ -13,6 +13,8 @@ jobs:
       # If you need to build your docs first, add build steps here
 
       - name: Deploy to GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: docs # The folder to deploy
