@@ -24,7 +24,7 @@ import { button } from '@styleshift/styles';
 - [ ] Alert
 - [ ] Avatar
 - [x] [Button](#button)
-- [x] [Card](#card)
+- [ ] Card
 - [ ] Checkbox
 - [ ] Divider
 - [ ] Header
@@ -57,11 +57,12 @@ button.root({ surface: 'outline' });
 card.root({ shadow: false });
 ```
 
-| Root    | Type           | Default |
-| ------- | -------------- | ------- |
-| shadow  | `true` `false` | `true`  |
-| border  | `true` `false` | `true`  |
-| rounded | `true` `false` | `true`  |
+| Root    | Type                               | Default   |
+| ------- | ---------------------------------- | --------- |
+| border  | `true` `false`                     | `true`    |
+| rounded | `true` `false`                     | `true`    |
+| shadow  | `true` `false`                     | `true`    |
+| size    | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
 ### Checkbox
 

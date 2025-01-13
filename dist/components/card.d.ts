@@ -4,6 +4,7 @@ export declare const card: {
         shadow?: boolean | null | undefined;
         border?: boolean | null | undefined;
         rounded?: boolean | null | undefined;
+        size?: "default" | "sm" | "md" | "lg" | "xs" | "xl" | null | undefined;
     } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
 };
 export type CardRootVariants = VariantProps<typeof card.root>;
