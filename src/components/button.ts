@@ -36,17 +36,8 @@ const rootSizes = {
 } as const;
 
 const rootVariants = {
-  surface: {
-    solid: rootSurfaces.solid,
-    outline: rootSurfaces.outline,
-    ghost: rootSurfaces.ghost,
-    soft: rootSurfaces.soft,
-  },
-  size: {
-    sm: rootSizes.sm,
-    md: rootSizes.md,
-    lg: rootSizes.lg,
-  },
+  surface:rootSurfaces,
+  size: rootSizes,
 } as const;
 
 /**
