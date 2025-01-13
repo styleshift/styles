@@ -67,11 +67,8 @@ const defineConfig = (options)=>{
         cx
     };
 };
-const { compose: compose$1, cva: cva$1, cx: cx$1 } = defineConfig();
+const { compose, cva, cx } = defineConfig();
 
-const cva = cva$1;
-const cx = cx$1;
-const compose = compose$1;
 const styleshift = {
     define: cva,
     compose: compose,
