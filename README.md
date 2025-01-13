@@ -13,6 +13,13 @@ A plain and simple UI library for Tailwind CSS using Class Variance Authority
 pnpm add @styleshift/styles
 ```
 
+## Usage
+
+```js
+import { button } from '@styleshift/styles';
+button.root({ variant: 'outline', size: 'sm' });
+```
+
 ## Components
 
 - [Button](#button)
@@ -20,10 +27,6 @@ pnpm add @styleshift/styles
 - [Text](#text)
 
 ### Button
-
-```js
-import { button } from '@styleshift/styles';
-```
 
 #### Root
 
@@ -39,10 +42,6 @@ button.root({ variant: 'outline', size: 'sm' });
 
 ### Link
 
-```js
-import { link } from '@styleshift/styles';
-```
-
 #### Root
 
 ```js
@@ -54,10 +53,6 @@ link.root({ size: 'sm' });
 | size    | `sm` `md` `lg` | `md`    |
 
 ### Text
-
-```js
-import { text } from '@styleshift/styles';
-```
 
 #### Root
 
