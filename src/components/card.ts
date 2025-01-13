@@ -1,4 +1,4 @@
-import { cva, styleshift } from '../shared';
+import styleshift from '../styleshift';
 
 /**
  * Card component styling configuration using CVA (Class Variance Authority)

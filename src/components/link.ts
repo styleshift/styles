@@ -1,4 +1,4 @@
-import { styleshift } from '../shared';
+import styleshift from '../styleshift';
 import { canFocus } from './partials/canFocus';
 
 /**

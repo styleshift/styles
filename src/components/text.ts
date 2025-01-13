@@ -1,4 +1,4 @@
-import { styleshift } from '../shared';
+import styleshift from '../styleshift';
 
 /**
  * The `text` object provides a set of utility classes for styling text elements.

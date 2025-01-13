@@ -76,11 +76,11 @@ const styleshift = {
     merge: cx,
 };
 
-const canFocus = cva({
+const canFocus = styleshift.define({
     base: ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'],
 });
 
-const canDisable = cva({
+const canDisable = styleshift.define({
     base: ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'],
 });
 
@@ -513,4 +513,4 @@ const text = {
     }),
 };
 
-export { button, canDisable, canFocus, card, link, text };
+export { button, card, link, text };
