@@ -13,9 +13,10 @@ pnpm add @styleshift/styles
 
 ## Usage
 
-```js
+```jsx
 import { button } from '@styleshift/styles';
-button.root({ variant: 'outline', size: 'sm' });
+
+<button className={button.root({ surface: 'ghost' })}>Click Me!</button>;
 ```
 
 ## Components
