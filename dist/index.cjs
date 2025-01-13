@@ -50,7 +50,7 @@ const rootSurfaces = {
     ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
     soft: ['border-transparent', 'bg-slate-100', 'text-slate-800', 'hover:bg-slate-200'],
 };
-const rootSizes$3 = {
+const rootSizes$2 = {
     sm: 'text-sm h-8 px-4',
     base: 'text-base h-10 px-4',
     md: 'text-md h-12 px-5',
@@ -60,7 +60,7 @@ const button = {
     root: cva(rootBase$3, {
         variants: {
             surface: rootSurfaces,
-            size: rootSizes$3,
+            size: rootSizes$2,
         },
         defaultVariants: {
             surface: 'solid',
@@ -70,6 +70,9 @@ const button = {
 };
 
 const rootBase$2 = ['transition-all'];
+const headBase = ['border-b'];
+const bodyBase = [''];
+const footBase = ['border-t'];
 const rootShadow = {
     true: 'shadow',
     false: '',
@@ -82,7 +85,7 @@ const rootRounded = {
     true: 'rounded-md',
     false: '',
 };
-const rootSizes$2 = {
+const spaces = {
     default: '',
     xs: 'p-2',
     sm: 'p-4',
@@ -96,13 +99,37 @@ const card = {
             shadow: rootShadow,
             border: rootBorder,
             rounded: rootRounded,
-            size: rootSizes$2,
+            space: spaces,
         },
         defaultVariants: {
             shadow: true,
             border: true,
             rounded: true,
-            size: 'sm',
+            space: 'default',
+        },
+    }),
+    head: cva(headBase, {
+        variants: {
+            space: spaces,
+        },
+        defaultVariants: {
+            space: 'sm',
+        },
+    }),
+    body: cva(bodyBase, {
+        variants: {
+            space: spaces,
+        },
+        defaultVariants: {
+            space: 'sm',
+        },
+    }),
+    foot: cva(footBase, {
+        variants: {
+            space: spaces,
+        },
+        defaultVariants: {
+            space: 'sm',
         },
     }),
 };

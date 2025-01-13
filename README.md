@@ -54,7 +54,7 @@ button.root({ surface: 'outline' });
 ### Card
 
 ```js
-card.root({ size: 'md' });
+card.root({ space: 'md' });
 ```
 
 | Root    | Type                               | Default   |
@@ -62,7 +62,31 @@ card.root({ size: 'md' });
 | border  | `true` `false`                     | `true`    |
 | rounded | `true` `false`                     | `true`    |
 | shadow  | `true` `false`                     | `true`    |
-| size    | `default` `xs` `sm` `md` `lg` `xl` | `default` |
+| space   | `default` `xs` `sm` `md` `lg` `xl` | `default` |
+
+```js
+card.head({ space: 'md' });
+```
+
+| Root  | Type                               | Default   |
+| ----- | ---------------------------------- | --------- |
+| space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
+
+```js
+card.body({ space: 'md' });
+```
+
+| Root  | Type                               | Default   |
+| ----- | ---------------------------------- | --------- |
+| space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
+
+```js
+card.foot({ space: 'md' });
+```
+
+| Root  | Type                               | Default   |
+| ----- | ---------------------------------- | --------- |
+| space | `default` `xs` `sm` `md` `lg` `xl` | `default` |
 
 ### Checkbox
 

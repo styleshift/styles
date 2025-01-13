@@ -2,6 +2,10 @@ import { cva, type VariantProps } from '../shared';
 
 const rootBase = ['transition-all'] as const;
 
+const headBase = ['border-b'] as const;
+const bodyBase = [''] as const;
+const footBase = ['border-t'] as const;
+
 const rootShadow = {
   true: 'shadow',
   false: '',
@@ -17,7 +21,7 @@ const rootRounded = {
   false: '',
 } as const;
 
-const rootSizes = {
+const spaces = {
   default: '',
   xs: 'p-2',
   sm: 'p-4',
@@ -32,15 +36,42 @@ export const card = {
       shadow: rootShadow,
       border: rootBorder,
       rounded: rootRounded,
-      size: rootSizes,
+      space: spaces,
     },
     defaultVariants: {
       shadow: true,
       border: true,
       rounded: true,
-      size: 'sm',
+      space: 'default',
+    },
+  }),
+  head: cva(headBase, {
+    variants: {
+      space: spaces,
+    },
+    defaultVariants: {
+      space: 'sm',
+    },
+  }),
+  body: cva(bodyBase, {
+    variants: {
+      space: spaces,
+    },
+    defaultVariants: {
+      space: 'sm',
+    },
+  }),
+  foot: cva(footBase, {
+    variants: {
+      space: spaces,
+    },
+    defaultVariants: {
+      space: 'sm',
     },
   }),
 };
 
 export type CardRootVariants = VariantProps<typeof card.root>;
+export type CardHeadVariants = VariantProps<typeof card.head>;
+export type CardBodyVariants = VariantProps<typeof card.body>;
+export type CardFootVariants = VariantProps<typeof card.foot>;
