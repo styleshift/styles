@@ -1,4 +1,4 @@
-import * as cvaRoot from 'class-variance-authority';
+import * as classVarianceAuthority from 'class-variance-authority';
 
 /**
  * Shared styles
@@ -8,7 +8,7 @@ const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disable
 /**
  * Helpers
  */
-const cva = cvaRoot.cva;
+const cva = classVarianceAuthority.cva;
 
 const rootBase$3 = [
     ...focus,

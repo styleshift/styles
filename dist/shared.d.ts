@@ -1,4 +1,4 @@
-import * as cvaRoot from 'class-variance-authority';
+import * as classVarianceAuthority from 'class-variance-authority';
 /**
  * Shared styles
  */
@@ -18,4 +18,5 @@ export declare const cva: <T>(base?: import("class-variance-authority/dist/types
 } : never) => (props?: T extends {
     [x: string]: Record<string, import("clsx").ClassValue>;
 } ? { [Variant in keyof T]?: import("class-variance-authority/dist/types").StringToBoolean<keyof T[Variant]> | null | undefined; } & import("class-variance-authority/dist/types").ClassProp : import("class-variance-authority/dist/types").ClassProp) => string;
-export type VariantProps<T extends (...args: any) => any> = cvaRoot.VariantProps<T>;
+export declare const cx: typeof import("clsx").clsx;
+export type VariantProps<T extends (...args: any) => any> = classVarianceAuthority.VariantProps<T>;

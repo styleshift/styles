@@ -1,4 +1,4 @@
-import * as cvaRoot from 'class-variance-authority';
+import * as classVarianceAuthority from 'class-variance-authority';
 
 /**
  * Shared styles
@@ -10,5 +10,8 @@ export const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', '
  * Helpers
  */
 
-export const cva = cvaRoot.cva;
-export type VariantProps<T extends (...args: any) => any> = cvaRoot.VariantProps<T>;
+export const cva = classVarianceAuthority.cva;
+
+export const cx = classVarianceAuthority.cx;
+
+export type VariantProps<T extends (...args: any) => any> = classVarianceAuthority.VariantProps<T>;

@@ -1,6 +1,6 @@
 'use strict';
 
-var cvaRoot = require('class-variance-authority');
+var classVarianceAuthority = require('class-variance-authority');
 
 function _interopNamespaceDefault(e) {
     var n = Object.create(null);
@@ -19,7 +19,7 @@ function _interopNamespaceDefault(e) {
     return Object.freeze(n);
 }
 
-var cvaRoot__namespace = /*#__PURE__*/_interopNamespaceDefault(cvaRoot);
+var classVarianceAuthority__namespace = /*#__PURE__*/_interopNamespaceDefault(classVarianceAuthority);
 
 /**
  * Shared styles
@@ -29,7 +29,7 @@ const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disable
 /**
  * Helpers
  */
-const cva = cvaRoot__namespace.cva;
+const cva = classVarianceAuthority__namespace.cva;
 
 const rootBase$3 = [
     ...focus,
