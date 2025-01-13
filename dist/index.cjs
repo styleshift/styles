@@ -31,7 +31,7 @@ const disabled = ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disable
  */
 const cva = cvaRoot__namespace.cva;
 
-const rootBase$2 = [
+const rootBase$3 = [
     ...focus,
     ...disabled,
     'inline-flex',
@@ -57,7 +57,7 @@ const rootSizes$2 = {
     lg: 'text-lg h-14 px-5',
 };
 const button = {
-    root: cva(rootBase$2, {
+    root: cva(rootBase$3, {
         variants: {
             surface: rootSurfaces,
             size: rootSizes$2,
@@ -65,6 +65,31 @@ const button = {
         defaultVariants: {
             surface: 'solid',
             size: 'base',
+        },
+    }),
+};
+
+const rootBase$2 = ['p-4', 'transition-all'];
+const card = {
+    root: cva(rootBase$2, {
+        variants: {
+            shadow: {
+                true: 'shadow',
+                false: '',
+            },
+            border: {
+                true: 'border',
+                false: '',
+            },
+            rounded: {
+                true: 'rounded-md',
+                false: '',
+            },
+        },
+        defaultVariants: {
+            shadow: true,
+            border: true,
+            rounded: true,
         },
     }),
 };
@@ -214,5 +239,6 @@ const text = {
 };
 
 exports.button = button;
+exports.card = card;
 exports.link = link;
 exports.text = text;

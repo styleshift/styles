@@ -53,7 +53,15 @@ button.root({ surface: 'outline' });
 
 ### Card
 
-- TODO
+```js
+card.root({ shadow: false });
+```
+
+| Root    | Type           | Default |
+| ------- | -------------- | ------- |
+| shadow  | `true` `false` | `true`  |
+| border  | `true` `false` | `true`  |
+| rounded | `true` `false` | `true`  |
 
 ### Checkbox
 
