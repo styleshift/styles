@@ -26,7 +26,7 @@ import { button } from '@styleshift/styles';
 - [x] [Button](#button)
 - [x] [Card](#card)
 - [ ] Checkbox
-- [ ] Divider
+- [x] [Separator](#separator)
 - [ ] Header
 - [ ] Input
 - [x] [Link](#link)
@@ -87,10 +87,6 @@ import { button } from '@styleshift/styles';
 
 - TODO
 
-### Divider
-
-- TODO
-
 ### Header
 
 - TODO
@@ -130,3 +126,13 @@ import { button } from '@styleshift/styles';
 | weight     | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
 | whitespace | `default` `normal` `nowrap` `pre` `preline` `prewrap` `break`                                 | `default` |
 | wrap       | `default` `wrap` `nowrap` `balance` `pretty`                                                  | `default` |
+
+### Separator
+
+```jsx
+<div className={separator.root()} />
+```
+
+| Root        | Type                    | Default      |
+| ----------- | ----------------------- | ------------ |
+| orientation | `horizontal` `vertical` | `horizontal` |
