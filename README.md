@@ -47,7 +47,7 @@ button.root({ variant: 'outline', size: 'sm' });
 button.root({ surface: 'outline' });
 ```
 
-| Variant    | Type                             | Default   |
+| Root       | Type                             | Default   |
 | ---------- | -------------------------------- | --------- |
 | surface    | `solid` `ghost` `outline` `soft` | `solid`   |
 | size       | `default` `sm` `base` `md` `lg`  | `default` |
@@ -81,9 +81,9 @@ button.root({ surface: 'outline' });
 link.root({ size: 'sm' });
 ```
 
-| Variant | Type                            | Default   |
-| ------- | ------------------------------- | --------- |
-| size    | `default` `sm` `base` `md` `lg` | `default` |
+| Root | Type                            | Default   |
+| ---- | ------------------------------- | --------- |
+| size | `default` `sm` `base` `md` `lg` | `default` |
 
 ### Text
 
@@ -93,10 +93,10 @@ link.root({ size: 'sm' });
 text.root({ align: 'center' });
 ```
 
-| Variant | Type                                                                                          | Default   |
-| ------- | --------------------------------------------------------------------------------------------- | --------- |
-| size    | `default` `sm` `base` `md` `lg`                                                               | `default` |
-| align   | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
-| strike  | `none` `under` `over` `through`                                                               | `none`    |
-| weight  | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
-| case    | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
+| Root   | Type                                                                                          | Default   |
+| ------ | --------------------------------------------------------------------------------------------- | --------- |
+| size   | `default` `sm` `base` `md` `lg`                                                               | `default` |
+| align  | `left` `center` `right` `justify` `start` `end`                                               | `left`    |
+| strike | `none` `under` `over` `through`                                                               | `none`    |
+| weight | `default` `thin` `extralight` `light` `normal` `medium` `semibold` `bold` `extrabold` `black` | `default` |
+| case   | `default` `upper` `lower` `caps` `normal`                                                     | `default` |
