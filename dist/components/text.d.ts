@@ -1,4 +1,12 @@
+/**
+ * The `text` object provides a set of utility classes for styling text elements.
+ * It uses the `cva` function to create a variant-based styling system.
+ */
 export declare const text: {
+    /**
+     * The root style configuration for text elements.
+     * It includes base styles and various variants for customization.
+     */
     root: (props?: ({
         size?: "sm" | "base" | "md" | "lg" | "default" | "xs" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | undefined;
         align?: "left" | "center" | "right" | "justify" | "start" | "end" | undefined;

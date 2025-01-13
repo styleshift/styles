@@ -1,6 +1,17 @@
 import { cva } from '../shared';
 
+/**
+ * Card component styling configuration using CVA (Class Variance Authority)
+ * Provides consistent styling for card components with customizable variants
+ */
 export const card = {
+  /**
+   * Root card container styles
+   * @property {boolean} shadow - Enables/disables card shadow
+   * @property {boolean} border - Controls border visibility
+   * @property {boolean} rounded - Controls border radius
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+   */
   root: cva({
     base: ['transition-all border'],
     variants: {
@@ -32,6 +43,11 @@ export const card = {
       space: 'default',
     },
   }),
+  /**
+   * Card header styles
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+   * @property {boolean} border - Controls bottom border visibility
+   */
   head: cva({
     base: ['border-b'],
     variants: {
@@ -80,6 +96,10 @@ export const card = {
       },
     ],
   }),
+  /**
+   * Card body styles
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+   */
   body: cva({
     base: [''],
     variants: {
@@ -96,6 +116,11 @@ export const card = {
       space: 'sm',
     },
   }),
+  /**
+   * Card footer styles
+   * @property {('default'|'xs'|'sm'|'md'|'lg'|'xl')} space - Controls padding size
+   * @property {boolean} border - Controls top border visibility
+   */
   foot: cva({
     base: ['border-t'],
     variants: {
