@@ -1,4 +1,4 @@
-import { cva, type VariantProps } from '../shared';
+import { cva } from '../shared';
 
 const rootBase = ['transition-all border'] as const;
 

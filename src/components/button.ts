@@ -1,4 +1,4 @@
-import { cva, compose, type VariantProps } from '../shared';
+import { cva, compose } from '../shared';
 import { canFocus } from './states/canFocus';
 import { canDisable } from './states/canDisable';
 
