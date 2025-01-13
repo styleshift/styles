@@ -7,7 +7,7 @@ A plain user interface component library for Tailwind CSS using Class Variance A
 
 ## Installation
 
-```shell
+```bash
 npm install @styleshift/styles
 ```
 
