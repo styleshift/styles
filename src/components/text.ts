@@ -1,16 +1,7 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import { disabled, focus } from '../shared';
 
 const rootBase = [
-  ...focus,
-  'text-blue-700',
-  'hover:text-blue-800',
-  'underline',
-  'inline-flex',
-  'items-center',
-  'justify-center',
-  'gap-2',
-  'rounded',
+  'text-slate-800',
   'transition-all',
 ] as const;
 
@@ -22,7 +13,7 @@ const rootSizes = {
   lg: 'text-lg',
 } as const;
 
-export const link = {
+export const text = {
   root: cva(rootBase, {
     variants: {
       size: rootSizes,
@@ -33,4 +24,4 @@ export const link = {
   }),
 };
 
-export type LinkRootVariants = VariantProps<typeof link.root>;
+export type TextRootVariants = VariantProps<typeof text.root>;

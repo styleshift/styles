@@ -17,6 +17,7 @@ pnpm add @styleshift/styles
 
 - [Button](#button)
 - [Link](#link)
+- [Text](#text)
 
 ### Button
 
@@ -46,6 +47,23 @@ import { link } from '@styleshift/styles';
 
 ```js
 link.root({ size: 'sm' });
+```
+
+| Variant | Type           | Default |
+|---------|----------------|---------|
+| size    | `sm` `md` `lg` | `md`    |
+
+
+#### Text
+
+```js
+import { Text } from '@styleshift/styles';
+```
+
+#### Root
+
+```js
+text.root({ size: 'sm' });
 ```
 
 | Variant | Type           | Default |
