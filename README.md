@@ -16,7 +16,7 @@ pnpm add @styleshift/styles
 ## Components
 
 - [Button](#button)
-- ...
+- [Link](#link)
 
 ### Button
 
