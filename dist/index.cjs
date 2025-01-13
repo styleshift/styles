@@ -425,6 +425,7 @@ const text = {
 };
 
 exports.button = button;
+exports.canDisable = canDisable;
 exports.canFocus = canFocus;
 exports.card = card;
 exports.link = link;

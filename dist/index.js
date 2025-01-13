@@ -422,4 +422,4 @@ const text = {
     }),
 };
 
-export { button, canFocus, card, link, text };
+export { button, canDisable, canFocus, card, link, text };
