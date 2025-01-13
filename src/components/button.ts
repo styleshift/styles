@@ -1,6 +1,6 @@
 import { cva, compose } from '../shared';
-import { canFocus } from './states/canFocus';
-import { canDisable } from './states/canDisable';
+import { canFocus } from './partials/canFocus';
+import { canDisable } from './partials/canDisable';
 
 export const button = {
   root: compose(

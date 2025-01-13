@@ -1,5 +1,5 @@
 import { cva, compose } from '../shared';
-import { canFocus } from './states/canFocus';
+import { canFocus } from './partials/canFocus';
 
 export const link = {
   root: compose(
