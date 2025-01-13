@@ -193,7 +193,7 @@ const card = {
      * @property {boolean} border - Controls bottom border visibility
      */
     head: styleshift.define({
-        base: ['border-b justify-between items-center'],
+        base: ['border-b flex justify-between items-center'],
         variants: {
             space: {
                 default: '',
@@ -266,7 +266,7 @@ const card = {
      * @property {boolean} border - Controls top border visibility
      */
     foot: styleshift.define({
-        base: ['border-t justify-between items-center'],
+        base: ['border-t flex justify-between items-center'],
         variants: {
             space: {
                 default: '',
