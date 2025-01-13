@@ -5,8 +5,6 @@ A plain UI library for Tailwind CSS using Class Variance Authority
 - 🎨 Tailwind CSS Component library — _written in CVA_
 - 🎯 Framework agnostic — _just the classes_
 
-[![npm version](https://badge.fury.io/js/@styleshift%2Fstyles.svg)](https://www.npmjs.com/package/@styleshift/styles)
-
 ## Installation
 
 ```bash
