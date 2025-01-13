@@ -1,6 +1,6 @@
 {
   "name": "@styleshift/styles",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "type": "module",
   "types": "./dist/index.d.ts",
   "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
@@ -22,7 +22,7 @@
     "docs:deploy": "gh-pages -d docs",
     "docs:publish": "npm run docs:build && npm run docs:deploy",
     "prepublish": "npm run build && npm run docs:build",
-    "publish": "npm run format && git add -A && git commit -am 'wip publish' && git push && npm run docs:deploy && npm publish"
+    "release": "npm run format && git add -A && git commit -am 'wip publish' && git push && npm run docs:deploy && npm publish"
   },
   "files": [
     "dist",
