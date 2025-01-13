@@ -51,190 +51,790 @@
  * @type {import('../styleshift').StyleshiftComponent<LinkVariants>}
  */
 export declare const link: {
-    /**
-     * Root styles for the link component
-     *
-     * @property {Object} variants - Style variants configuration
-     * @property {boolean} variants.underline - Controls text decoration
-     *
-     * @example
-     * ```tsx
-     * // Basic navigation link
-     * <a href="/about" className={link.root()}>
-     *   About us
-     * </a>
-     *
-     * // Action link with icon
-     * <a href="/settings" className={link.root({ underline: false })}>
-     *   Settings <Icon name="gear" />
-     * </a>
-     * ```
-     *
-     * @returns {string} Combined Tailwind CSS classes
-     */
-    root: (props?: (((import("cva").VariantProps<(props?: ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined;
-        className?: undefined;
-    } | {
-        class?: undefined;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined;
-    }) | undefined) => string> & import("cva").VariantProps<(props?: ({
-        underline?: boolean | undefined;
-    } & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined;
-        className?: undefined;
-    } | {
-        class?: undefined;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined;
-    })) | undefined) => string>) | undefined) & ({
-        class?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined;
-        className?: undefined;
-    } | {
-        class?: undefined;
-        className?: string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | (string | number | boolean | any | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined)[] | {
-            [x: string]: any;
-        } | null | undefined;
-    })) | undefined) => string;
+  /**
+   * Root styles for the link component
+   *
+   * @property {Object} variants - Style variants configuration
+   * @property {boolean} variants.underline - Controls text decoration
+   *
+   * @example
+   * ```tsx
+   * // Basic navigation link
+   * <a href="/about" className={link.root()}>
+   *   About us
+   * </a>
+   *
+   * // Action link with icon
+   * <a href="/settings" className={link.root({ underline: false })}>
+   *   Settings <Icon name="gear" />
+   * </a>
+   * ```
+   *
+   * @returns {string} Combined Tailwind CSS classes
+   */
+  root: (
+    props?:
+      | ((
+          | (import('cva').VariantProps<
+              (
+                props?:
+                  | (
+                      | {
+                          class?:
+                            | string
+                            | number
+                            | boolean
+                            | (
+                                | string
+                                | number
+                                | boolean
+                                | (
+                                    | string
+                                    | number
+                                    | boolean
+                                    | (
+                                        | string
+                                        | number
+                                        | boolean
+                                        | (
+                                            | string
+                                            | number
+                                            | boolean
+                                            | (
+                                                | string
+                                                | number
+                                                | boolean
+                                                | (
+                                                    | string
+                                                    | number
+                                                    | boolean
+                                                    | (
+                                                        | string
+                                                        | number
+                                                        | boolean
+                                                        | (
+                                                            | string
+                                                            | number
+                                                            | boolean
+                                                            | (
+                                                                | string
+                                                                | number
+                                                                | boolean
+                                                                | (
+                                                                    | string
+                                                                    | number
+                                                                    | boolean
+                                                                    | (
+                                                                        | string
+                                                                        | number
+                                                                        | boolean
+                                                                        | any
+                                                                        | {
+                                                                            [x: string]: any;
+                                                                          }
+                                                                        | null
+                                                                        | undefined
+                                                                      )[]
+                                                                    | {
+                                                                        [x: string]: any;
+                                                                      }
+                                                                    | null
+                                                                    | undefined
+                                                                  )[]
+                                                                | {
+                                                                    [x: string]: any;
+                                                                  }
+                                                                | null
+                                                                | undefined
+                                                              )[]
+                                                            | {
+                                                                [x: string]: any;
+                                                              }
+                                                            | null
+                                                            | undefined
+                                                          )[]
+                                                        | {
+                                                            [x: string]: any;
+                                                          }
+                                                        | null
+                                                        | undefined
+                                                      )[]
+                                                    | {
+                                                        [x: string]: any;
+                                                      }
+                                                    | null
+                                                    | undefined
+                                                  )[]
+                                                | {
+                                                    [x: string]: any;
+                                                  }
+                                                | null
+                                                | undefined
+                                              )[]
+                                            | {
+                                                [x: string]: any;
+                                              }
+                                            | null
+                                            | undefined
+                                          )[]
+                                        | {
+                                            [x: string]: any;
+                                          }
+                                        | null
+                                        | undefined
+                                      )[]
+                                    | {
+                                        [x: string]: any;
+                                      }
+                                    | null
+                                    | undefined
+                                  )[]
+                                | {
+                                    [x: string]: any;
+                                  }
+                                | null
+                                | undefined
+                              )[]
+                            | {
+                                [x: string]: any;
+                              }
+                            | null
+                            | undefined;
+                          className?: undefined;
+                        }
+                      | {
+                          class?: undefined;
+                          className?:
+                            | string
+                            | number
+                            | boolean
+                            | (
+                                | string
+                                | number
+                                | boolean
+                                | (
+                                    | string
+                                    | number
+                                    | boolean
+                                    | (
+                                        | string
+                                        | number
+                                        | boolean
+                                        | (
+                                            | string
+                                            | number
+                                            | boolean
+                                            | (
+                                                | string
+                                                | number
+                                                | boolean
+                                                | (
+                                                    | string
+                                                    | number
+                                                    | boolean
+                                                    | (
+                                                        | string
+                                                        | number
+                                                        | boolean
+                                                        | (
+                                                            | string
+                                                            | number
+                                                            | boolean
+                                                            | (
+                                                                | string
+                                                                | number
+                                                                | boolean
+                                                                | (
+                                                                    | string
+                                                                    | number
+                                                                    | boolean
+                                                                    | (
+                                                                        | string
+                                                                        | number
+                                                                        | boolean
+                                                                        | any
+                                                                        | {
+                                                                            [x: string]: any;
+                                                                          }
+                                                                        | null
+                                                                        | undefined
+                                                                      )[]
+                                                                    | {
+                                                                        [x: string]: any;
+                                                                      }
+                                                                    | null
+                                                                    | undefined
+                                                                  )[]
+                                                                | {
+                                                                    [x: string]: any;
+                                                                  }
+                                                                | null
+                                                                | undefined
+                                                              )[]
+                                                            | {
+                                                                [x: string]: any;
+                                                              }
+                                                            | null
+                                                            | undefined
+                                                          )[]
+                                                        | {
+                                                            [x: string]: any;
+                                                          }
+                                                        | null
+                                                        | undefined
+                                                      )[]
+                                                    | {
+                                                        [x: string]: any;
+                                                      }
+                                                    | null
+                                                    | undefined
+                                                  )[]
+                                                | {
+                                                    [x: string]: any;
+                                                  }
+                                                | null
+                                                | undefined
+                                              )[]
+                                            | {
+                                                [x: string]: any;
+                                              }
+                                            | null
+                                            | undefined
+                                          )[]
+                                        | {
+                                            [x: string]: any;
+                                          }
+                                        | null
+                                        | undefined
+                                      )[]
+                                    | {
+                                        [x: string]: any;
+                                      }
+                                    | null
+                                    | undefined
+                                  )[]
+                                | {
+                                    [x: string]: any;
+                                  }
+                                | null
+                                | undefined
+                              )[]
+                            | {
+                                [x: string]: any;
+                              }
+                            | null
+                            | undefined;
+                        }
+                    )
+                  | undefined,
+              ) => string
+            > &
+              import('cva').VariantProps<
+                (
+                  props?:
+                    | ({
+                        underline?: boolean | undefined;
+                      } & (
+                        | {
+                            class?:
+                              | string
+                              | number
+                              | boolean
+                              | (
+                                  | string
+                                  | number
+                                  | boolean
+                                  | (
+                                      | string
+                                      | number
+                                      | boolean
+                                      | (
+                                          | string
+                                          | number
+                                          | boolean
+                                          | (
+                                              | string
+                                              | number
+                                              | boolean
+                                              | (
+                                                  | string
+                                                  | number
+                                                  | boolean
+                                                  | (
+                                                      | string
+                                                      | number
+                                                      | boolean
+                                                      | (
+                                                          | string
+                                                          | number
+                                                          | boolean
+                                                          | (
+                                                              | string
+                                                              | number
+                                                              | boolean
+                                                              | (
+                                                                  | string
+                                                                  | number
+                                                                  | boolean
+                                                                  | (
+                                                                      | string
+                                                                      | number
+                                                                      | boolean
+                                                                      | (
+                                                                          | string
+                                                                          | number
+                                                                          | boolean
+                                                                          | any
+                                                                          | {
+                                                                              [x: string]: any;
+                                                                            }
+                                                                          | null
+                                                                          | undefined
+                                                                        )[]
+                                                                      | {
+                                                                          [x: string]: any;
+                                                                        }
+                                                                      | null
+                                                                      | undefined
+                                                                    )[]
+                                                                  | {
+                                                                      [x: string]: any;
+                                                                    }
+                                                                  | null
+                                                                  | undefined
+                                                                )[]
+                                                              | {
+                                                                  [x: string]: any;
+                                                                }
+                                                              | null
+                                                              | undefined
+                                                            )[]
+                                                          | {
+                                                              [x: string]: any;
+                                                            }
+                                                          | null
+                                                          | undefined
+                                                        )[]
+                                                      | {
+                                                          [x: string]: any;
+                                                        }
+                                                      | null
+                                                      | undefined
+                                                    )[]
+                                                  | {
+                                                      [x: string]: any;
+                                                    }
+                                                  | null
+                                                  | undefined
+                                                )[]
+                                              | {
+                                                  [x: string]: any;
+                                                }
+                                              | null
+                                              | undefined
+                                            )[]
+                                          | {
+                                              [x: string]: any;
+                                            }
+                                          | null
+                                          | undefined
+                                        )[]
+                                      | {
+                                          [x: string]: any;
+                                        }
+                                      | null
+                                      | undefined
+                                    )[]
+                                  | {
+                                      [x: string]: any;
+                                    }
+                                  | null
+                                  | undefined
+                                )[]
+                              | {
+                                  [x: string]: any;
+                                }
+                              | null
+                              | undefined;
+                            className?: undefined;
+                          }
+                        | {
+                            class?: undefined;
+                            className?:
+                              | string
+                              | number
+                              | boolean
+                              | (
+                                  | string
+                                  | number
+                                  | boolean
+                                  | (
+                                      | string
+                                      | number
+                                      | boolean
+                                      | (
+                                          | string
+                                          | number
+                                          | boolean
+                                          | (
+                                              | string
+                                              | number
+                                              | boolean
+                                              | (
+                                                  | string
+                                                  | number
+                                                  | boolean
+                                                  | (
+                                                      | string
+                                                      | number
+                                                      | boolean
+                                                      | (
+                                                          | string
+                                                          | number
+                                                          | boolean
+                                                          | (
+                                                              | string
+                                                              | number
+                                                              | boolean
+                                                              | (
+                                                                  | string
+                                                                  | number
+                                                                  | boolean
+                                                                  | (
+                                                                      | string
+                                                                      | number
+                                                                      | boolean
+                                                                      | (
+                                                                          | string
+                                                                          | number
+                                                                          | boolean
+                                                                          | any
+                                                                          | {
+                                                                              [x: string]: any;
+                                                                            }
+                                                                          | null
+                                                                          | undefined
+                                                                        )[]
+                                                                      | {
+                                                                          [x: string]: any;
+                                                                        }
+                                                                      | null
+                                                                      | undefined
+                                                                    )[]
+                                                                  | {
+                                                                      [x: string]: any;
+                                                                    }
+                                                                  | null
+                                                                  | undefined
+                                                                )[]
+                                                              | {
+                                                                  [x: string]: any;
+                                                                }
+                                                              | null
+                                                              | undefined
+                                                            )[]
+                                                          | {
+                                                              [x: string]: any;
+                                                            }
+                                                          | null
+                                                          | undefined
+                                                        )[]
+                                                      | {
+                                                          [x: string]: any;
+                                                        }
+                                                      | null
+                                                      | undefined
+                                                    )[]
+                                                  | {
+                                                      [x: string]: any;
+                                                    }
+                                                  | null
+                                                  | undefined
+                                                )[]
+                                              | {
+                                                  [x: string]: any;
+                                                }
+                                              | null
+                                              | undefined
+                                            )[]
+                                          | {
+                                              [x: string]: any;
+                                            }
+                                          | null
+                                          | undefined
+                                        )[]
+                                      | {
+                                          [x: string]: any;
+                                        }
+                                      | null
+                                      | undefined
+                                    )[]
+                                  | {
+                                      [x: string]: any;
+                                    }
+                                  | null
+                                  | undefined
+                                )[]
+                              | {
+                                  [x: string]: any;
+                                }
+                              | null
+                              | undefined;
+                          }
+                      ))
+                    | undefined,
+                ) => string
+              >)
+          | undefined
+        ) &
+          (
+            | {
+                class?:
+                  | string
+                  | number
+                  | boolean
+                  | (
+                      | string
+                      | number
+                      | boolean
+                      | (
+                          | string
+                          | number
+                          | boolean
+                          | (
+                              | string
+                              | number
+                              | boolean
+                              | (
+                                  | string
+                                  | number
+                                  | boolean
+                                  | (
+                                      | string
+                                      | number
+                                      | boolean
+                                      | (
+                                          | string
+                                          | number
+                                          | boolean
+                                          | (
+                                              | string
+                                              | number
+                                              | boolean
+                                              | (
+                                                  | string
+                                                  | number
+                                                  | boolean
+                                                  | (
+                                                      | string
+                                                      | number
+                                                      | boolean
+                                                      | (
+                                                          | string
+                                                          | number
+                                                          | boolean
+                                                          | (
+                                                              | string
+                                                              | number
+                                                              | boolean
+                                                              | any
+                                                              | {
+                                                                  [x: string]: any;
+                                                                }
+                                                              | null
+                                                              | undefined
+                                                            )[]
+                                                          | {
+                                                              [x: string]: any;
+                                                            }
+                                                          | null
+                                                          | undefined
+                                                        )[]
+                                                      | {
+                                                          [x: string]: any;
+                                                        }
+                                                      | null
+                                                      | undefined
+                                                    )[]
+                                                  | {
+                                                      [x: string]: any;
+                                                    }
+                                                  | null
+                                                  | undefined
+                                                )[]
+                                              | {
+                                                  [x: string]: any;
+                                                }
+                                              | null
+                                              | undefined
+                                            )[]
+                                          | {
+                                              [x: string]: any;
+                                            }
+                                          | null
+                                          | undefined
+                                        )[]
+                                      | {
+                                          [x: string]: any;
+                                        }
+                                      | null
+                                      | undefined
+                                    )[]
+                                  | {
+                                      [x: string]: any;
+                                    }
+                                  | null
+                                  | undefined
+                                )[]
+                              | {
+                                  [x: string]: any;
+                                }
+                              | null
+                              | undefined
+                            )[]
+                          | {
+                              [x: string]: any;
+                            }
+                          | null
+                          | undefined
+                        )[]
+                      | {
+                          [x: string]: any;
+                        }
+                      | null
+                      | undefined
+                    )[]
+                  | {
+                      [x: string]: any;
+                    }
+                  | null
+                  | undefined;
+                className?: undefined;
+              }
+            | {
+                class?: undefined;
+                className?:
+                  | string
+                  | number
+                  | boolean
+                  | (
+                      | string
+                      | number
+                      | boolean
+                      | (
+                          | string
+                          | number
+                          | boolean
+                          | (
+                              | string
+                              | number
+                              | boolean
+                              | (
+                                  | string
+                                  | number
+                                  | boolean
+                                  | (
+                                      | string
+                                      | number
+                                      | boolean
+                                      | (
+                                          | string
+                                          | number
+                                          | boolean
+                                          | (
+                                              | string
+                                              | number
+                                              | boolean
+                                              | (
+                                                  | string
+                                                  | number
+                                                  | boolean
+                                                  | (
+                                                      | string
+                                                      | number
+                                                      | boolean
+                                                      | (
+                                                          | string
+                                                          | number
+                                                          | boolean
+                                                          | (
+                                                              | string
+                                                              | number
+                                                              | boolean
+                                                              | any
+                                                              | {
+                                                                  [x: string]: any;
+                                                                }
+                                                              | null
+                                                              | undefined
+                                                            )[]
+                                                          | {
+                                                              [x: string]: any;
+                                                            }
+                                                          | null
+                                                          | undefined
+                                                        )[]
+                                                      | {
+                                                          [x: string]: any;
+                                                        }
+                                                      | null
+                                                      | undefined
+                                                    )[]
+                                                  | {
+                                                      [x: string]: any;
+                                                    }
+                                                  | null
+                                                  | undefined
+                                                )[]
+                                              | {
+                                                  [x: string]: any;
+                                                }
+                                              | null
+                                              | undefined
+                                            )[]
+                                          | {
+                                              [x: string]: any;
+                                            }
+                                          | null
+                                          | undefined
+                                        )[]
+                                      | {
+                                          [x: string]: any;
+                                        }
+                                      | null
+                                      | undefined
+                                    )[]
+                                  | {
+                                      [x: string]: any;
+                                    }
+                                  | null
+                                  | undefined
+                                )[]
+                              | {
+                                  [x: string]: any;
+                                }
+                              | null
+                              | undefined
+                            )[]
+                          | {
+                              [x: string]: any;
+                            }
+                          | null
+                          | undefined
+                        )[]
+                      | {
+                          [x: string]: any;
+                        }
+                      | null
+                      | undefined
+                    )[]
+                  | {
+                      [x: string]: any;
+                    }
+                  | null
+                  | undefined;
+              }
+          ))
+      | undefined,
+  ) => string;
 };
