@@ -24,7 +24,7 @@ import { button } from '@styleshift/styles';
 - [ ] Alert
 - [ ] Avatar
 - [x] [Button](#button)
-- [ ] Card
+- [x] [Card](#card)
 - [ ] Checkbox
 - [ ] Divider
 - [ ] Header
