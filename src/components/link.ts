@@ -15,7 +15,7 @@ const rootBase = [
 ] as const;
 
 const rootSizes = {
-  default: "",
+  default: '',
   sm: 'text-sm',
   base: 'text-base',
   md: 'text-md',

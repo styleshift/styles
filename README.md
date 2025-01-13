@@ -32,7 +32,7 @@ button.root({ variant: 'outline', size: 'sm' });
 ```
 
 | Variant    | Type                             | Default |
-|------------|----------------------------------|---------|
+| ---------- | -------------------------------- | ------- |
 | surface    | `solid` `ghost` `outline` `soft` | `solid` |
 | size       | `sm` `md` `lg`                   | `md`    |
 | isDisabled | `boolean`                        | `false` |
@@ -50,9 +50,8 @@ link.root({ size: 'sm' });
 ```
 
 | Variant | Type           | Default |
-|---------|----------------|---------|
+| ------- | -------------- | ------- |
 | size    | `sm` `md` `lg` | `md`    |
-
 
 #### Text
 
@@ -67,5 +66,5 @@ text.root({ size: 'sm' });
 ```
 
 | Variant | Type           | Default |
-|---------|----------------|---------|
+| ------- | -------------- | ------- |
 | size    | `sm` `md` `lg` | `md`    |

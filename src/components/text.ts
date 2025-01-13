@@ -1,12 +1,9 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const rootBase = [
-  'text-slate-800',
-  'transition-all',
-] as const;
+const rootBase = ['text-slate-800', 'transition-all'] as const;
 
 const rootSizes = {
-  default: "",
+  default: '',
   sm: 'text-sm',
   base: 'text-base',
   md: 'text-md',

@@ -62,7 +62,7 @@ const rootBase$1 = [
     'transition-all',
 ];
 const rootSizes$1 = {
-    default: "",
+    default: '',
     sm: 'text-sm',
     base: 'text-base',
     md: 'text-md',
@@ -79,12 +79,9 @@ const link = {
     }),
 };
 
-const rootBase = [
-    'text-slate-800',
-    'transition-all',
-];
+const rootBase = ['text-slate-800', 'transition-all'];
 const rootSizes = {
-    default: "",
+    default: '',
     sm: 'text-sm',
     base: 'text-base',
     md: 'text-md',
