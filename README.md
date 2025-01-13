@@ -37,7 +37,7 @@ button.root({ variant: 'outline', size: 'sm' });
 | size       | `sm` `md` `lg`                   | `md`    |
 | isDisabled | `boolean`                        | `false` |
 
-#### Link
+### Link
 
 ```js
 import { link } from '@styleshift/styles';
@@ -53,7 +53,7 @@ link.root({ size: 'sm' });
 | ------- | -------------- | ------- |
 | size    | `sm` `md` `lg` | `md`    |
 
-#### Text
+### Text
 
 ```js
 import { Text } from '@styleshift/styles';
