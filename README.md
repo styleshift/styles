@@ -44,7 +44,7 @@ button.root({ variant: 'outline', size: 'sm' });
 #### Root
 
 ```js
-button.root({ variant: 'outline', size: 'sm' });
+button.root({ surface: 'outline' });
 ```
 
 | Variant    | Type                             | Default   |
