@@ -1,9 +1,9 @@
 {
  "name": "@styleshift/styles",
- "version": "0.0.92",
+ "version": "0.0.93",
  "type": "module",
  "types": "./dist/index.d.ts",
- "description": "Vanilla CVA component objects for StyleShift",
+ "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
  "main": "dist/index.cjs",
  "module": "dist/index.js",
  "exports": {
