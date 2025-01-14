@@ -1,15 +1,5 @@
 import styleshift from '../styleshift';
 
-export const alertDocs = {
- root: {
-  variants: {
-   surface: ['default', 'negative', 'positive'],
-  },
- },
- title: {},
- description: {},
-} as const;
-
 export const alertStyles = {
  root: {
   base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],

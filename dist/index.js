@@ -583,15 +583,6 @@ const separator = {
     }),
 };
 
-const alertDocs = {
-    root: {
-        variants: {
-            surface: ['default', 'negative', 'positive'],
-        },
-    },
-    title: {},
-    description: {},
-};
 const alertStyles = {
     root: {
         base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
@@ -619,4 +610,4 @@ const alert = {
     description: styleshift.define(alertStyles.description),
 };
 
-export { alert, alertDocs, alertStyles, button, buttonDocs, card, cardDocs, link, linkDocs, separator, separatorDocs, text, textDocs };
+export { alert, alertStyles, button, buttonDocs, card, cardDocs, link, linkDocs, separator, separatorDocs, text, textDocs };

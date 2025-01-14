@@ -585,15 +585,6 @@ const separator = {
     }),
 };
 
-const alertDocs = {
-    root: {
-        variants: {
-            surface: ['default', 'negative', 'positive'],
-        },
-    },
-    title: {},
-    description: {},
-};
 const alertStyles = {
     root: {
         base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
@@ -622,7 +613,6 @@ const alert = {
 };
 
 exports.alert = alert;
-exports.alertDocs = alertDocs;
 exports.alertStyles = alertStyles;
 exports.button = button;
 exports.buttonDocs = buttonDocs;
