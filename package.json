@@ -1,6 +1,6 @@
 {
  "name": "@styleshift/styles",
- "version": "0.0.81",
+ "version": "0.0.82",
  "type": "module",
  "types": "./dist/index.d.ts",
  "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
@@ -19,7 +19,7 @@
   "format": "prettier . --write",
   "build": "rollup -c",
   "prepublish": "npm run build",
-  "release": "npm run format && git add -A && git commit -am 'wip publish' && git push && npm publish"
+  "release": "rm -rf dist && npm run format && git add -A && git commit -am 'wip publish' && git push && npm publish"
  },
  "files": [
   "dist",
