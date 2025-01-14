@@ -1,5 +1,5 @@
 import styleshift from '../styleshift';
-import alertStyles from './alert.styles';
+import alertStyles from './styles/alert.styles';
 const alertDocs = styleshift.docs(alertStyles);
 
 const alert = {

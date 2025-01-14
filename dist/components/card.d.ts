@@ -1,4 +1,4 @@
-import cardStyles from './card.styles';
+import cardStyles from './styles/card.styles';
 declare const card: {
  root: (
   props?:

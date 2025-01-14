@@ -1,7 +1,7 @@
 import styleshift from '../styleshift';
 import { canFocus } from './focus';
 import { canDisable } from './disable';
-import buttonStyles from './button.styles';
+import buttonStyles from './styles/button.styles';
 
 const button = {
  root: styleshift.compose(

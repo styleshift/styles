@@ -1,4 +1,4 @@
-import alertStyles from './alert.styles';
+import alertStyles from './styles/alert.styles';
 declare const alertDocs: Record<string, any>;
 declare const alert: {
  root: (

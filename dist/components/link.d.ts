@@ -1,4 +1,4 @@
-import linkStyles from './link.styles';
+import linkStyles from './styles/link.styles';
 declare const link: {
  root: (
   props?:
