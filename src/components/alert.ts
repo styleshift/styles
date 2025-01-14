@@ -12,7 +12,14 @@ export const alertDocs = {
 
 export const alertStyles = {
   root: {
-    base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
+    base: [
+      'relative',
+      'w-full',
+      'rounded-lg',
+      'border',
+      'p-4',
+      'transition-all',
+    ],
     variants: {
       surface: {
         default: ['border-slate-500', 'text-slate-800'],

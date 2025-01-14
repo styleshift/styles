@@ -29,10 +29,23 @@ export const button = {
       ],
       variants: {
         surface: {
-          solid: ['border-transparent bg-slate-800', 'text-white', 'hover:bg-slate-700'],
-          outline: ['border-slate-800', 'text-slate-800', 'hover:border-slate-700'],
+          solid: [
+            'border-transparent bg-slate-800',
+            'text-white',
+            'hover:bg-slate-700',
+          ],
+          outline: [
+            'border-slate-800',
+            'text-slate-800',
+            'hover:border-slate-700',
+          ],
           ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
-          soft: ['border-transparent', 'bg-slate-100', 'text-slate-800', 'hover:bg-slate-200'],
+          soft: [
+            'border-transparent',
+            'bg-slate-100',
+            'text-slate-800',
+            'hover:bg-slate-200',
+          ],
         },
         size: {
           sm: 'text-sm h-8 px-4',

@@ -74,11 +74,20 @@ const styleshift = {
 };
 
 const canFocus = styleshift.define({
-    base: ['focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-slate-600'],
+    base: [
+        'focus:outline-none',
+        'focus:ring-2',
+        'focus:ring-offset-2',
+        'focus:ring-slate-600',
+    ],
 });
 
 const canDisable = styleshift.define({
-    base: ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'],
+    base: [
+        'disabled:opacity-50',
+        'disabled:cursor-not-allowed',
+        'disabled:pointer-events-none',
+    ],
 });
 
 const buttonDocs = {
@@ -104,10 +113,23 @@ const button = {
         ],
         variants: {
             surface: {
-                solid: ['border-transparent bg-slate-800', 'text-white', 'hover:bg-slate-700'],
-                outline: ['border-slate-800', 'text-slate-800', 'hover:border-slate-700'],
+                solid: [
+                    'border-transparent bg-slate-800',
+                    'text-white',
+                    'hover:bg-slate-700',
+                ],
+                outline: [
+                    'border-slate-800',
+                    'text-slate-800',
+                    'hover:border-slate-700',
+                ],
                 ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
-                soft: ['border-transparent', 'bg-slate-100', 'text-slate-800', 'hover:bg-slate-200'],
+                soft: [
+                    'border-transparent',
+                    'bg-slate-100',
+                    'text-slate-800',
+                    'hover:bg-slate-200',
+                ],
             },
             size: {
                 sm: 'text-sm h-8 px-4',
@@ -343,10 +365,28 @@ const textDocs = {
             size: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
             align: ['left', 'center', 'right', 'justify', 'start', 'end'],
             strike: ['none', 'under', 'over', 'through'],
-            weight: ['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black'],
+            weight: [
+                'thin',
+                'extralight',
+                'light',
+                'normal',
+                'medium',
+                'semibold',
+                'bold',
+                'extrabold',
+                'black',
+            ],
             case: ['upper', 'lower', 'caps', 'normal'],
             wrap: ['default', 'wrap', 'nowrap', 'balance', 'pretty'],
-            whitespace: ['default', 'normal', 'nowrap', 'pre', 'preline', 'prewrap', 'break'],
+            whitespace: [
+                'default',
+                'normal',
+                'nowrap',
+                'pre',
+                'preline',
+                'prewrap',
+                'break',
+            ],
             leading: ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'],
             tracking: ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'],
             truncate: ['true', 'false'],
@@ -558,7 +598,14 @@ const alertDocs = {
 };
 const alertStyles = {
     root: {
-        base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
+        base: [
+            'relative',
+            'w-full',
+            'rounded-lg',
+            'border',
+            'p-4',
+            'transition-all',
+        ],
         variants: {
             surface: {
                 default: ['border-slate-500', 'text-slate-800'],
