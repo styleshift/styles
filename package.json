@@ -19,7 +19,7 @@
   "format": "prettier . --write",
   "build": "rollup -c",
   "prepublish": "npm run build",
-  "release": "rm -rf dist && npm run format && git add -A && git commit -am 'wip publish' && git push && npm publish"
+  "release": "rm -rf dist && npm run build && npm run format && git add -A && git commit -am 'wip publish' && git push && npm publish"
  },
  "files": [
   "dist",
