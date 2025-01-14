@@ -120,11 +120,11 @@ export const card = {
     variants: {
       space: {
         default: '',
-        xs: 'p-2',
-        sm: 'p-4',
-        md: 'p-8',
-        lg: 'p-1',
-        xl: 'p-2',
+        xs: 'p-1',
+        sm: 'p-2',
+        md: 'p-4',
+        lg: 'p-8',
+        xl: 'p-16',
       },
     },
     defaultVariants: {

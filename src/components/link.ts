@@ -6,9 +6,6 @@ export const linkDocs = {
     variants: {
       underline: ['true', 'false'],
     },
-    defaultVariants: {
-      underline: '  ',
-    },
   },
 };
 
