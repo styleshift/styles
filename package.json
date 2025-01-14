@@ -1,6 +1,6 @@
 {
  "name": "@styleshift/styles",
- "version": "0.0.99",
+ "version": "0.1.0",
  "type": "module",
  "types": "./dist/index.d.ts",
  "description": "A plain and simple UI library for Tailwind CSS using Class Variance Authority",
@@ -45,12 +45,5 @@
  },
  "peerDependencies": {
   "tailwindcss": "^3.0.0"
- },
- "keywords": [
-  "tailwind",
-  "ui",
-  "components",
-  "cva",
-  "typescript"
- ]
+ }
 }
