@@ -1,5 +1,5 @@
 import styleshift from '../../styleshift';
-import separatorStyles from './separator.styles';
+import separatorStyles from '../../separator.styles';
 
 const separator = {
  root: styleshift.define(separatorStyles.root as any),

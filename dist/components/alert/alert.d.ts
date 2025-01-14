@@ -1,4 +1,4 @@
-import alertStyles from './alert.styles';
+import alertStyles from '../../alert.styles';
 declare const alert: {
  root: (
   props?:

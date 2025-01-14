@@ -1,2 +1,2 @@
 export * from './disable';
-export { default as disableStyles } from './disable.styles';
+export { default as disableStyles } from '../../disable.styles';

@@ -1,4 +1,4 @@
-import buttonStyles from './button.styles';
+import buttonStyles from '../../button.styles';
 declare const button: {
  root: (
   props?:

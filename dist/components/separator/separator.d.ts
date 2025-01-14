@@ -1,4 +1,4 @@
-import separatorStyles from './separator.styles';
+import separatorStyles from '../../separator.styles';
 declare const separator: {
  root: (
   props?:

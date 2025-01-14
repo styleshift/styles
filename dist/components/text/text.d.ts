@@ -1,15 +1,15 @@
-import textStyles from './text.styles';
+import textStyles from '../../text.styles';
 declare const text: {
  root: (
   props?:
    | ({
       readonly size?:
+       | 'default'
        | 'base'
        | 'sm'
+       | 'xs'
        | 'md'
        | 'lg'
-       | 'default'
-       | 'xs'
        | 'xl'
        | '2xl'
        | '3xl'

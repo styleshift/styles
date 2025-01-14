@@ -1,5 +1,5 @@
 import styleshift from '../../styleshift';
-import buttonStyles from './button.styles';
+import buttonStyles from '../../button.styles';
 import { canFocus } from '../focus';
 import { canDisable } from '../disable';
 

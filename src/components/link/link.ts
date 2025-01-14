@@ -1,5 +1,5 @@
 import styleshift from '../../styleshift';
-import linkStyles from './link.styles';
+import linkStyles from '../../link.styles';
 import { canFocus } from '../focus';
 
 const link = {

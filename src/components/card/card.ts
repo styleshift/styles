@@ -1,5 +1,5 @@
 import styleshift from '../../styleshift';
-import cardStyles from './card.styles';
+import cardStyles from '../../card.styles';
 
 const card = {
  root: styleshift.define(cardStyles.root as any),
