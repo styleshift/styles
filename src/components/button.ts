@@ -2,6 +2,15 @@ import styleshift from '../styleshift';
 import { canFocus } from './partials/canFocus';
 import { canDisable } from './partials/canDisable';
 
+export const buttonDocs = {
+  root: {
+    variants: {
+      surface: ['solid', 'outline', 'ghost', 'soft'],
+      size: ['sm', 'base', 'md', 'lg'],
+    },
+  },
+};
+
 export const button = {
   root: styleshift.compose(
     canFocus,

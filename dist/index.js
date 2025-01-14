@@ -105,28 +105,6 @@ const defineConfig = (options) => {
 };
 const { compose, cva, cx } = defineConfig();
 
-/**
- * Utility wrapper around class-variance-authority for type-safe className generation
- * @typedef {Object} StyleShift
- * @property {function} define - Creates variant-based className generators
- * @property {function} compose - Combines multiple variant definitions
- * @property {function} merge - Merges multiple className strings
- *
- * @example
- * const button = styleshift.define({
- *   base: "px-4 py-2 rounded",
- *   variants: {
- *     intent: {
- *       primary: "bg-blue-500 text-white",
- *       secondary: "bg-gray-200 text-gray-800"
- *     },
- *     size: {
- *       sm: "text-sm",
- *       lg: "text-lg"
- *     }
- *   }
- * });
- */
 const styleshift = {
   define: cva,
   compose: compose,
@@ -141,6 +119,14 @@ const canDisable = styleshift.define({
   base: ['disabled:opacity-50', 'disabled:cursor-not-allowed', 'disabled:pointer-events-none'],
 });
 
+const buttonDocs = {
+  root: {
+    variants: {
+      surface: ['solid', 'outline', 'ghost', 'soft'],
+      size: ['sm', 'base', 'md', 'lg'],
+    },
+  },
+};
 const button = {
   root: styleshift.compose(
     canFocus,
@@ -179,6 +165,33 @@ const button = {
   ),
 };
 
+const cardDocs = {
+  root: {
+    variants: {
+      shadow: ['true', 'false'],
+      border: ['true', 'false'],
+      rounded: ['true', 'false'],
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+    },
+  },
+  head: {
+    variants: {
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+      border: ['true', 'false'],
+    },
+  },
+  body: {
+    variants: {
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+    },
+  },
+  foot: {
+    variants: {
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+      border: ['true', 'false'],
+    },
+  },
+};
 const card = {
   root: styleshift.define({
     base: ['transition-all border'],
@@ -335,6 +348,16 @@ const card = {
   }),
 };
 
+const linkDocs = {
+  root: {
+    variants: {
+      underline: ['true', 'false'],
+    },
+    defaultVariants: {
+      underline: '  ',
+    },
+  },
+};
 const link = {
   root: styleshift.compose(
     canFocus,
@@ -362,6 +385,23 @@ const link = {
   ),
 };
 
+const textDocs = {
+  root: {
+    variants: {
+      size: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
+      align: ['left', 'center', 'right', 'justify', 'start', 'end'],
+      strike: ['none', 'under', 'over', 'through'],
+      weight: ['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black'],
+      case: ['upper', 'lower', 'caps', 'normal'],
+      wrap: ['default', 'wrap', 'nowrap', 'balance', 'pretty'],
+      whitespace: ['default', 'normal', 'nowrap', 'pre', 'preline', 'prewrap', 'break'],
+      leading: ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'],
+      tracking: ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'],
+      truncate: ['true', 'false'],
+      dimmed: ['true', 'false'],
+    },
+  },
+};
 const text = {
   root: styleshift.define({
     base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
@@ -472,6 +512,14 @@ const text = {
   }),
 };
 
+const separatorDocs = {
+  root: {
+    variants: {
+      orientation: ['horizontal', 'vertical'],
+      size: ['xs', 'sm', 'md', 'lg', 'xl'],
+    },
+  },
+};
 const separator = {
   root: styleshift.define({
     base: ['shrink-0', 'border-0', 'transition-colors'],
@@ -547,8 +595,17 @@ const separator = {
   }),
 };
 
-const alert = {
-  root: styleshift.define({
+const alertDocs = {
+  root: {
+    variants: {
+      surface: ['default', 'negative', 'positive'],
+    },
+  },
+  title: {},
+  description: {},
+};
+const alertStyles = {
+  root: {
     base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
     variants: {
       surface: {
@@ -560,13 +617,32 @@ const alert = {
     defaultVariants: {
       surface: 'default',
     },
-  }),
-  title: styleshift.define({
+  },
+  title: {
     base: ['mb-1', 'font-medium', 'leading-none', 'tracking-tight'],
-  }),
-  description: styleshift.define({
+  },
+  description: {
     base: ['text-sm', 'opacity-90'],
-  }),
+  },
+};
+const alert = {
+  root: styleshift.define(alertStyles.root),
+  title: styleshift.define(alertStyles.title),
+  description: styleshift.define(alertStyles.description),
 };
 
-export { alert, button, card, link, separator, text };
+export {
+  alert,
+  alertDocs,
+  alertStyles,
+  button,
+  buttonDocs,
+  card,
+  cardDocs,
+  link,
+  linkDocs,
+  separator,
+  separatorDocs,
+  text,
+  textDocs,
+};

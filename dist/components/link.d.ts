@@ -1,3 +1,13 @@
+export declare const linkDocs: {
+  root: {
+    variants: {
+      underline: string[];
+    };
+    defaultVariants: {
+      underline: string;
+    };
+  };
+};
 export declare const link: {
   root: (
     props?:

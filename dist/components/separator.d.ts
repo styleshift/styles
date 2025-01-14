@@ -1,3 +1,11 @@
+export declare const separatorDocs: {
+  root: {
+    variants: {
+      orientation: string[];
+      size: string[];
+    };
+  };
+};
 export declare const separator: {
   root: (
     props?:

@@ -1,3 +1,30 @@
+export declare const cardDocs: {
+  root: {
+    variants: {
+      shadow: string[];
+      border: string[];
+      rounded: string[];
+      space: string[];
+    };
+  };
+  head: {
+    variants: {
+      space: string[];
+      border: string[];
+    };
+  };
+  body: {
+    variants: {
+      space: string[];
+    };
+  };
+  foot: {
+    variants: {
+      space: string[];
+      border: string[];
+    };
+  };
+};
 export declare const card: {
   root: (
     props?:

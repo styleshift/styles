@@ -1,6 +1,17 @@
 import styleshift from '../styleshift';
 import { canFocus } from './partials/canFocus';
 
+export const linkDocs = {
+  root: {
+    variants: {
+      underline: ['true', 'false'],
+    },
+    defaultVariants: {
+      underline: '  ',
+    },
+  },
+};
+
 export const link = {
   root: styleshift.compose(
     canFocus,

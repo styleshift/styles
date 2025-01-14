@@ -1,3 +1,4 @@
+export * from './styleshift';
 export * from './components/button';
 export * from './components/card';
 export * from './components/link';

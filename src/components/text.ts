@@ -1,5 +1,23 @@
 import styleshift from '../styleshift';
 
+export const textDocs = {
+  root: {
+    variants: {
+      size: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
+      align: ['left', 'center', 'right', 'justify', 'start', 'end'],
+      strike: ['none', 'under', 'over', 'through'],
+      weight: ['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black'],
+      case: ['upper', 'lower', 'caps', 'normal'],
+      wrap: ['default', 'wrap', 'nowrap', 'balance', 'pretty'],
+      whitespace: ['default', 'normal', 'nowrap', 'pre', 'preline', 'prewrap', 'break'],
+      leading: ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'],
+      tracking: ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'],
+      truncate: ['true', 'false'],
+      dimmed: ['true', 'false'],
+    },
+  },
+};
+
 export const text = {
   root: styleshift.define({
     base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],

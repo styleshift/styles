@@ -1,5 +1,14 @@
 import styleshift from '../styleshift';
 
+export const separatorDocs = {
+  root: {
+    variants: {
+      orientation: ['horizontal', 'vertical'],
+      size: ['xs', 'sm', 'md', 'lg', 'xl'],
+    },
+  },
+};
+
 export const separator = {
   root: styleshift.define({
     base: ['shrink-0', 'border-0', 'transition-colors'],

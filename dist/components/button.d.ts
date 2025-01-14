@@ -1,3 +1,11 @@
+export declare const buttonDocs: {
+  root: {
+    variants: {
+      surface: string[];
+      size: string[];
+    };
+  };
+};
 export declare const button: {
   root: (
     props?:

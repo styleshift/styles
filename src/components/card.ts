@@ -1,5 +1,33 @@
 import styleshift from '../styleshift';
 
+export const cardDocs = {
+  root: {
+    variants: {
+      shadow: ['true', 'false'],
+      border: ['true', 'false'],
+      rounded: ['true', 'false'],
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+    },
+  },
+  head: {
+    variants: {
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+      border: ['true', 'false'],
+    },
+  },
+  body: {
+    variants: {
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+    },
+  },
+  foot: {
+    variants: {
+      space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+      border: ['true', 'false'],
+    },
+  },
+};
+
 export const card = {
   root: styleshift.define({
     base: ['transition-all border'],

@@ -1,3 +1,20 @@
+export declare const textDocs: {
+  root: {
+    variants: {
+      size: string[];
+      align: string[];
+      strike: string[];
+      weight: string[];
+      case: string[];
+      wrap: string[];
+      whitespace: string[];
+      leading: string[];
+      tracking: string[];
+      truncate: string[];
+      dimmed: string[];
+    };
+  };
+};
 export declare const text: {
   root: (
     props?:
