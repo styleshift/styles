@@ -120,11 +120,7 @@ const button = {
                     'text-white',
                     'hover:bg-slate-700',
                 ],
-                outline: [
-                    'border-slate-800',
-                    'text-slate-800',
-                    'hover:border-slate-700',
-                ],
+                outline: ['border-slate-800', 'text-slate-800', 'hover:border-slate-700'],
                 ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
                 soft: [
                     'border-transparent',
@@ -600,14 +596,7 @@ const alertDocs = {
 };
 const alertStyles = {
     root: {
-        base: [
-            'relative',
-            'w-full',
-            'rounded-lg',
-            'border',
-            'p-4',
-            'transition-all',
-        ],
+        base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
         variants: {
             surface: {
                 default: ['border-slate-500', 'text-slate-800'],
