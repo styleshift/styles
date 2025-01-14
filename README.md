@@ -21,12 +21,12 @@ import { button } from '@styleshift/styles';
 
 ## Components
 
-- [x] [Alert](src/components/alert.ts)
+- [x] Alert
 - [ ] Avatar
-- [x] [Button](src/components/button.ts)
-- [x] [Card](src/components/card.ts)
+- [x] Button
+- [x] Card
 - [ ] Checkbox
 - [ ] Input
-- [x] [Link](src/components/link.ts)
-- [x] [Separator](src/components/separator.ts)
-- [x] [Text](src/components/text.ts)
+- [x] Link
+- [x] Separator
+- [x] Text
