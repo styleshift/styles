@@ -149,24 +149,28 @@ const styleshift = {
  docs: generateDocsFromStyles,
 };
 
-const canFocus = styleshift.define({
+var focusStyles = {
  base: [
   'focus:outline-none',
   'focus:ring-2',
   'focus:ring-offset-2',
   'focus:ring-slate-600',
  ],
-});
+};
 
-const canDisable = styleshift.define({
+const canFocus = styleshift.define(focusStyles);
+
+var disableStyles = {
  base: [
   'disabled:opacity-50',
   'disabled:cursor-not-allowed',
   'disabled:pointer-events-none',
  ],
-});
+};
 
-const buttonStyles = {
+const canDisable = styleshift.define(disableStyles);
+
+var buttonStyles = {
  root: {
   base: [
    'inline-flex',
@@ -208,6 +212,7 @@ const buttonStyles = {
   },
  },
 };
+
 const button = {
  root: styleshift.compose(
   canFocus,
@@ -217,7 +222,7 @@ const button = {
 };
 const buttonDocs = styleshift.docs(buttonStyles);
 
-const cardStyles = {
+var cardStyles = {
  root: {
   base: ['transition-all border'],
   variants: {
@@ -372,6 +377,7 @@ const cardStyles = {
   ],
  },
 };
+
 const card = {
  root: styleshift.define(cardStyles.root),
  head: styleshift.define(cardStyles.head),
@@ -380,7 +386,7 @@ const card = {
 };
 const cardDocs = styleshift.docs(cardStyles);
 
-const linkStyles = {
+var linkStyles = {
  root: {
   base: [
    'text-blue-700',
@@ -403,12 +409,13 @@ const linkStyles = {
   },
  },
 };
+
 const link = {
  root: styleshift.compose(canFocus, styleshift.define(linkStyles.root)),
 };
 const linkDocs = styleshift.docs(linkStyles);
 
-const textStyles = {
+var textStyles = {
  root: {
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {
@@ -517,12 +524,13 @@ const textStyles = {
   },
  },
 };
+
 const text = {
  root: styleshift.define(textStyles.root),
 };
 const textDocs = styleshift.docs(textStyles);
 
-const separatorStyles = {
+var separatorStyles = {
  root: {
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {
@@ -596,12 +604,13 @@ const separatorStyles = {
   },
  },
 };
+
 const separator = {
  root: styleshift.define(separatorStyles.root),
 };
 const separatorDocs = styleshift.docs(separatorStyles);
 
-const alertStyles = {
+var alertStyles = {
  root: {
   base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
   variants: {
@@ -622,6 +631,7 @@ const alertStyles = {
   base: ['text-sm', 'opacity-90'],
  },
 };
+
 const alertDocs = styleshift.docs(alertStyles);
 const alert = {
  root: styleshift.define(alertStyles.root),

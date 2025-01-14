@@ -1,10 +1,4 @@
 import styleshift from '../styleshift';
+import focusStyles from './focus.styles';
 
-export const canFocus = styleshift.define({
- base: [
-  'focus:outline-none',
-  'focus:ring-2',
-  'focus:ring-offset-2',
-  'focus:ring-slate-600',
- ],
-});
+export const canFocus = styleshift.define(focusStyles);
