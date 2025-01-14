@@ -1,4 +1,4 @@
-export default {
+const linkStyles = {
  root: {
   base: [
    'text-blue-700',
@@ -21,3 +21,5 @@ export default {
   },
  },
 } as const;
+
+export { linkStyles };

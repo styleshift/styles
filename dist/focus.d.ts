@@ -1,4 +1,4 @@
-declare const _default: {
+declare const focusStyles: {
  readonly base: readonly [
   'focus:outline-none',
   'focus:ring-2',
@@ -6,4 +6,4 @@ declare const _default: {
   'focus:ring-slate-600',
  ];
 };
-export default _default;
+export { focusStyles };

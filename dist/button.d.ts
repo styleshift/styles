@@ -1,4 +1,4 @@
-declare const _default: {
+declare const buttonStyles: {
  readonly root: {
   readonly base: readonly [
    'inline-flex',
@@ -48,4 +48,4 @@ declare const _default: {
   };
  };
 };
-export default _default;
+export { buttonStyles };

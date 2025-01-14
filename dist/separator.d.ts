@@ -1,4 +1,4 @@
-declare const _default: {
+declare const separatorStyles: {
  readonly root: {
   readonly base: readonly ['shrink-0', 'border-0', 'transition-colors'];
   readonly variants: {
@@ -72,4 +72,4 @@ declare const _default: {
   };
  };
 };
-export default _default;
+export { separatorStyles };

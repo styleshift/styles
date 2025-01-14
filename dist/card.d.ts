@@ -1,4 +1,4 @@
-declare const _default: {
+declare const cardStyles: {
  readonly root: {
   readonly base: readonly ['transition-all border'];
   readonly variants: {
@@ -153,4 +153,4 @@ declare const _default: {
   ];
  };
 };
-export default _default;
+export { cardStyles };

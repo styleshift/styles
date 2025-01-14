@@ -1,4 +1,4 @@
-declare const _default: {
+declare const alertStyles: {
  readonly root: {
   readonly base: readonly [
    'flex',
@@ -9,7 +9,7 @@ declare const _default: {
    'transition-colors',
   ];
   readonly variants: {
-   readonly variant: {
+   readonly surface: {
     readonly info: readonly ['bg-blue-50', 'border-blue-200', 'text-blue-800'];
     readonly success: readonly [
      'bg-green-50',
@@ -29,4 +29,4 @@ declare const _default: {
   };
  };
 };
-export default _default;
+export { alertStyles };

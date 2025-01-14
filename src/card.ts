@@ -1,4 +1,4 @@
-export default {
+const cardStyles = {
  root: {
   base: ['transition-all border'],
   variants: {
@@ -153,3 +153,5 @@ export default {
   ],
  },
 } as const;
+
+export { cardStyles };

@@ -1,4 +1,4 @@
-declare const _default: {
+declare const linkStyles: {
  readonly root: {
   readonly base: readonly [
    'text-blue-700',
@@ -21,4 +21,4 @@ declare const _default: {
   };
  };
 };
-export default _default;
+export { linkStyles };

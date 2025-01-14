@@ -1,4 +1,4 @@
-export default {
+const textStyles = {
  root: {
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {
@@ -107,3 +107,5 @@ export default {
   },
  },
 } as const;
+
+export { textStyles };

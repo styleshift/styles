@@ -1,4 +1,4 @@
-export default {
+const buttonStyles = {
  root: {
   base: [
    'inline-flex',
@@ -40,3 +40,5 @@ export default {
   },
  },
 } as const;
+
+export { buttonStyles };

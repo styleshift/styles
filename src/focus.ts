@@ -1,4 +1,4 @@
-export default {
+const focusStyles = {
  base: [
   'focus:outline-none',
   'focus:ring-2',
@@ -6,3 +6,5 @@ export default {
   'focus:ring-slate-600',
  ],
 } as const;
+
+export { focusStyles };

@@ -1,10 +1,10 @@
 'use strict';
 
-var alert = {
+const alertStyles = {
  root: {
   base: ['flex', 'gap-4', 'p-4', 'rounded-md', 'border', 'transition-colors'],
   variants: {
-   variant: {
+   surface: {
     info: ['bg-blue-50', 'border-blue-200', 'text-blue-800'],
     success: ['bg-green-50', 'border-green-200', 'text-green-800'],
     warning: ['bg-yellow-50', 'border-yellow-200', 'text-yellow-800'],
@@ -17,12 +17,7 @@ var alert = {
  },
 };
 
-var alert$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: alert,
-});
-
-var button = {
+const buttonStyles = {
  root: {
   base: [
    'inline-flex',
@@ -65,12 +60,7 @@ var button = {
  },
 };
 
-var button$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: button,
-});
-
-var card = {
+const cardStyles = {
  root: {
   base: ['transition-all border'],
   variants: {
@@ -226,12 +216,7 @@ var card = {
  },
 };
 
-var card$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: card,
-});
-
-var disable = {
+const disableStyles = {
  base: [
   'disabled:opacity-50',
   'disabled:cursor-not-allowed',
@@ -239,12 +224,7 @@ var disable = {
  ],
 };
 
-var disable$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: disable,
-});
-
-var focus = {
+const focusStyles = {
  base: [
   'focus:outline-none',
   'focus:ring-2',
@@ -253,12 +233,7 @@ var focus = {
  ],
 };
 
-var focus$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: focus,
-});
-
-var link = {
+const linkStyles = {
  root: {
   base: [
    'text-blue-700',
@@ -282,12 +257,7 @@ var link = {
  },
 };
 
-var link$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: link,
-});
-
-var separator = {
+const separatorStyles = {
  root: {
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {
@@ -362,12 +332,7 @@ var separator = {
  },
 };
 
-var separator$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: separator,
-});
-
-var text = {
+const textStyles = {
  root: {
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {
@@ -477,16 +442,11 @@ var text = {
  },
 };
 
-var text$1 = /*#__PURE__*/ Object.freeze({
- __proto__: null,
- default: text,
-});
-
-exports.alert = alert$1;
-exports.button = button$1;
-exports.card = card$1;
-exports.disable = disable$1;
-exports.focus = focus$1;
-exports.link = link$1;
-exports.separator = separator$1;
-exports.text = text$1;
+exports.alertStyles = alertStyles;
+exports.buttonStyles = buttonStyles;
+exports.cardStyles = cardStyles;
+exports.disableStyles = disableStyles;
+exports.focusStyles = focusStyles;
+exports.linkStyles = linkStyles;
+exports.separatorStyles = separatorStyles;
+exports.textStyles = textStyles;

@@ -1,4 +1,4 @@
-export default {
+const separatorStyles = {
  root: {
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {
@@ -72,3 +72,5 @@ export default {
   },
  },
 } as const;
+
+export { separatorStyles };

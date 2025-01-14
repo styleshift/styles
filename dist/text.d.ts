@@ -1,4 +1,4 @@
-declare const _default: {
+declare const textStyles: {
  readonly root: {
   readonly base: readonly [
    'text-slate-800',
@@ -112,4 +112,4 @@ declare const _default: {
   };
  };
 };
-export default _default;
+export { textStyles };
