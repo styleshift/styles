@@ -151,27 +151,6 @@ const styleshift = {
  docs: generateDocsFromStyles,
 };
 
-var focusStyles = {
- base: [
-  'focus:outline-none',
-  'focus:ring-2',
-  'focus:ring-offset-2',
-  'focus:ring-slate-600',
- ],
-};
-
-const canFocus = styleshift.define(focusStyles);
-
-var disableStyles = {
- base: [
-  'disabled:opacity-50',
-  'disabled:cursor-not-allowed',
-  'disabled:pointer-events-none',
- ],
-};
-
-const canDisable = styleshift.define(disableStyles);
-
 var buttonStyles = {
  root: {
   base: [
@@ -214,6 +193,27 @@ var buttonStyles = {
   },
  },
 };
+
+var focusStyles = {
+ base: [
+  'focus:outline-none',
+  'focus:ring-2',
+  'focus:ring-offset-2',
+  'focus:ring-slate-600',
+ ],
+};
+
+const canFocus = styleshift.define(focusStyles);
+
+var disableStyles = {
+ base: [
+  'disabled:opacity-50',
+  'disabled:cursor-not-allowed',
+  'disabled:pointer-events-none',
+ ],
+};
+
+const canDisable = styleshift.define(disableStyles);
 
 const button = {
  root: styleshift.compose(
@@ -634,12 +634,12 @@ var alertStyles = {
  },
 };
 
-const alertDocs = styleshift.docs(alertStyles);
 const alert = {
  root: styleshift.define(alertStyles.root),
  title: styleshift.define(alertStyles.title),
  description: styleshift.define(alertStyles.description),
 };
+const alertDocs = styleshift.docs(alertStyles);
 
 exports.alert = alert;
 exports.alertDocs = alertDocs;

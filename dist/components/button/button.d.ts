@@ -1,5 +1,5 @@
-import linkStyles from './styles/link.styles';
-declare const link: {
+import buttonStyles from './button.styles';
+declare const button: {
  root: (
   props?:
    | ((
@@ -261,7 +261,13 @@ declare const link: {
           (
            props?:
             | ({
-               readonly underline?: boolean | undefined;
+               readonly surface?:
+                | 'solid'
+                | 'outline'
+                | 'ghost'
+                | 'soft'
+                | undefined;
+               readonly size?: 'base' | 'sm' | 'md' | 'lg' | undefined;
               } & (
                | {
                   class?:
@@ -766,5 +772,5 @@ declare const link: {
    | undefined,
  ) => string;
 };
-declare const linkDocs: Record<string, any>;
-export { link, linkDocs, linkStyles };
+declare const buttonDocs: Record<string, any>;
+export { button, buttonDocs, buttonStyles };

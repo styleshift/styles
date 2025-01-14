@@ -1,6 +1,6 @@
-import styleshift from '../styleshift';
-import { canFocus } from './focus';
-import linkStyles from './styles/link.styles';
+import styleshift from '../../styleshift';
+import linkStyles from './link.styles';
+import { canFocus } from '../focus';
 
 const link = {
  root: styleshift.compose(canFocus, styleshift.define(linkStyles.root)),

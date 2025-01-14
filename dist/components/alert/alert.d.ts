@@ -1,8 +1,10 @@
-import cardStyles from './styles/card.styles';
-declare const card: {
+import alertStyles from './alert.styles';
+declare const alert: {
  root: (
   props?:
-   | (
+   | ({
+      readonly surface?: 'default' | 'negative' | 'positive' | undefined;
+     } & (
       | {
          class?:
           | string
@@ -249,10 +251,10 @@ declare const card: {
           | null
           | undefined;
         }
-     )
+     ))
    | undefined,
  ) => string;
- head: (
+ title: (
   props?:
    | (
       | {
@@ -504,259 +506,7 @@ declare const card: {
      )
    | undefined,
  ) => string;
- body: (
-  props?:
-   | (
-      | {
-         class?:
-          | string
-          | number
-          | boolean
-          | (
-             | string
-             | number
-             | boolean
-             | (
-                | string
-                | number
-                | boolean
-                | (
-                   | string
-                   | number
-                   | boolean
-                   | (
-                      | string
-                      | number
-                      | boolean
-                      | (
-                         | string
-                         | number
-                         | boolean
-                         | (
-                            | string
-                            | number
-                            | boolean
-                            | (
-                               | string
-                               | number
-                               | boolean
-                               | (
-                                  | string
-                                  | number
-                                  | boolean
-                                  | (
-                                     | string
-                                     | number
-                                     | boolean
-                                     | (
-                                        | string
-                                        | number
-                                        | boolean
-                                        | (
-                                           | string
-                                           | number
-                                           | boolean
-                                           | any
-                                           | {
-                                              [x: string]: any;
-                                             }
-                                           | null
-                                           | undefined
-                                          )[]
-                                        | {
-                                           [x: string]: any;
-                                          }
-                                        | null
-                                        | undefined
-                                       )[]
-                                     | {
-                                        [x: string]: any;
-                                       }
-                                     | null
-                                     | undefined
-                                    )[]
-                                  | {
-                                     [x: string]: any;
-                                    }
-                                  | null
-                                  | undefined
-                                 )[]
-                               | {
-                                  [x: string]: any;
-                                 }
-                               | null
-                               | undefined
-                              )[]
-                            | {
-                               [x: string]: any;
-                              }
-                            | null
-                            | undefined
-                           )[]
-                         | {
-                            [x: string]: any;
-                           }
-                         | null
-                         | undefined
-                        )[]
-                      | {
-                         [x: string]: any;
-                        }
-                      | null
-                      | undefined
-                     )[]
-                   | {
-                      [x: string]: any;
-                     }
-                   | null
-                   | undefined
-                  )[]
-                | {
-                   [x: string]: any;
-                  }
-                | null
-                | undefined
-               )[]
-             | {
-                [x: string]: any;
-               }
-             | null
-             | undefined
-            )[]
-          | {
-             [x: string]: any;
-            }
-          | null
-          | undefined;
-         className?: undefined;
-        }
-      | {
-         class?: undefined;
-         className?:
-          | string
-          | number
-          | boolean
-          | (
-             | string
-             | number
-             | boolean
-             | (
-                | string
-                | number
-                | boolean
-                | (
-                   | string
-                   | number
-                   | boolean
-                   | (
-                      | string
-                      | number
-                      | boolean
-                      | (
-                         | string
-                         | number
-                         | boolean
-                         | (
-                            | string
-                            | number
-                            | boolean
-                            | (
-                               | string
-                               | number
-                               | boolean
-                               | (
-                                  | string
-                                  | number
-                                  | boolean
-                                  | (
-                                     | string
-                                     | number
-                                     | boolean
-                                     | (
-                                        | string
-                                        | number
-                                        | boolean
-                                        | (
-                                           | string
-                                           | number
-                                           | boolean
-                                           | any
-                                           | {
-                                              [x: string]: any;
-                                             }
-                                           | null
-                                           | undefined
-                                          )[]
-                                        | {
-                                           [x: string]: any;
-                                          }
-                                        | null
-                                        | undefined
-                                       )[]
-                                     | {
-                                        [x: string]: any;
-                                       }
-                                     | null
-                                     | undefined
-                                    )[]
-                                  | {
-                                     [x: string]: any;
-                                    }
-                                  | null
-                                  | undefined
-                                 )[]
-                               | {
-                                  [x: string]: any;
-                                 }
-                               | null
-                               | undefined
-                              )[]
-                            | {
-                               [x: string]: any;
-                              }
-                            | null
-                            | undefined
-                           )[]
-                         | {
-                            [x: string]: any;
-                           }
-                         | null
-                         | undefined
-                        )[]
-                      | {
-                         [x: string]: any;
-                        }
-                      | null
-                      | undefined
-                     )[]
-                   | {
-                      [x: string]: any;
-                     }
-                   | null
-                   | undefined
-                  )[]
-                | {
-                   [x: string]: any;
-                  }
-                | null
-                | undefined
-               )[]
-             | {
-                [x: string]: any;
-               }
-             | null
-             | undefined
-            )[]
-          | {
-             [x: string]: any;
-            }
-          | null
-          | undefined;
-        }
-     )
-   | undefined,
- ) => string;
- foot: (
+ description: (
   props?:
    | (
       | {
@@ -1009,5 +759,5 @@ declare const card: {
    | undefined,
  ) => string;
 };
-declare const cardDocs: Record<string, any>;
-export { card, cardDocs, cardStyles };
+declare const alertDocs: Record<string, any>;
+export { alert, alertDocs, alertStyles };

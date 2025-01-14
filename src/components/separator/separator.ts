@@ -1,6 +1,5 @@
-import { VariantProps } from 'cva';
-import styleshift from '../styleshift';
-import separatorStyles from './styles/separator.styles';
+import styleshift from '../../styleshift';
+import separatorStyles from './separator.styles';
 
 const separator = {
  root: styleshift.define(separatorStyles.root as any),
