@@ -1,9 +1,254 @@
-declare const focusStyles: {
- readonly base: readonly [
-  'focus:outline-none',
-  'focus:ring-2',
-  'focus:ring-offset-2',
-  'focus:ring-slate-600',
- ];
+export declare const focusStyles: {
+ root: (
+  props?:
+   | (
+      | {
+         class?:
+          | string
+          | number
+          | boolean
+          | (
+             | string
+             | number
+             | boolean
+             | (
+                | string
+                | number
+                | boolean
+                | (
+                   | string
+                   | number
+                   | boolean
+                   | (
+                      | string
+                      | number
+                      | boolean
+                      | (
+                         | string
+                         | number
+                         | boolean
+                         | (
+                            | string
+                            | number
+                            | boolean
+                            | (
+                               | string
+                               | number
+                               | boolean
+                               | (
+                                  | string
+                                  | number
+                                  | boolean
+                                  | (
+                                     | string
+                                     | number
+                                     | boolean
+                                     | (
+                                        | string
+                                        | number
+                                        | boolean
+                                        | (
+                                           | string
+                                           | number
+                                           | boolean
+                                           | /*elided*/ any
+                                           | {
+                                              [x: string]: any;
+                                             }
+                                           | null
+                                           | undefined
+                                          )[]
+                                        | {
+                                           [x: string]: any;
+                                          }
+                                        | null
+                                        | undefined
+                                       )[]
+                                     | {
+                                        [x: string]: any;
+                                       }
+                                     | null
+                                     | undefined
+                                    )[]
+                                  | {
+                                     [x: string]: any;
+                                    }
+                                  | null
+                                  | undefined
+                                 )[]
+                               | {
+                                  [x: string]: any;
+                                 }
+                               | null
+                               | undefined
+                              )[]
+                            | {
+                               [x: string]: any;
+                              }
+                            | null
+                            | undefined
+                           )[]
+                         | {
+                            [x: string]: any;
+                           }
+                         | null
+                         | undefined
+                        )[]
+                      | {
+                         [x: string]: any;
+                        }
+                      | null
+                      | undefined
+                     )[]
+                   | {
+                      [x: string]: any;
+                     }
+                   | null
+                   | undefined
+                  )[]
+                | {
+                   [x: string]: any;
+                  }
+                | null
+                | undefined
+               )[]
+             | {
+                [x: string]: any;
+               }
+             | null
+             | undefined
+            )[]
+          | {
+             [x: string]: any;
+            }
+          | null
+          | undefined;
+         className?: never;
+        }
+      | {
+         class?: never;
+         className?:
+          | string
+          | number
+          | boolean
+          | (
+             | string
+             | number
+             | boolean
+             | (
+                | string
+                | number
+                | boolean
+                | (
+                   | string
+                   | number
+                   | boolean
+                   | (
+                      | string
+                      | number
+                      | boolean
+                      | (
+                         | string
+                         | number
+                         | boolean
+                         | (
+                            | string
+                            | number
+                            | boolean
+                            | (
+                               | string
+                               | number
+                               | boolean
+                               | (
+                                  | string
+                                  | number
+                                  | boolean
+                                  | (
+                                     | string
+                                     | number
+                                     | boolean
+                                     | (
+                                        | string
+                                        | number
+                                        | boolean
+                                        | (
+                                           | string
+                                           | number
+                                           | boolean
+                                           | /*elided*/ any
+                                           | {
+                                              [x: string]: any;
+                                             }
+                                           | null
+                                           | undefined
+                                          )[]
+                                        | {
+                                           [x: string]: any;
+                                          }
+                                        | null
+                                        | undefined
+                                       )[]
+                                     | {
+                                        [x: string]: any;
+                                       }
+                                     | null
+                                     | undefined
+                                    )[]
+                                  | {
+                                     [x: string]: any;
+                                    }
+                                  | null
+                                  | undefined
+                                 )[]
+                               | {
+                                  [x: string]: any;
+                                 }
+                               | null
+                               | undefined
+                              )[]
+                            | {
+                               [x: string]: any;
+                              }
+                            | null
+                            | undefined
+                           )[]
+                         | {
+                            [x: string]: any;
+                           }
+                         | null
+                         | undefined
+                        )[]
+                      | {
+                         [x: string]: any;
+                        }
+                      | null
+                      | undefined
+                     )[]
+                   | {
+                      [x: string]: any;
+                     }
+                   | null
+                   | undefined
+                  )[]
+                | {
+                   [x: string]: any;
+                  }
+                | null
+                | undefined
+               )[]
+             | {
+                [x: string]: any;
+               }
+             | null
+             | undefined
+            )[]
+          | {
+             [x: string]: any;
+            }
+          | null
+          | undefined;
+        }
+     )
+   | undefined,
+ ) => string;
 };
-export { focusStyles };

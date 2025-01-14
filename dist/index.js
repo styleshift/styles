@@ -1,5 +1,131 @@
+function r(e) {
+ var t,
+  f,
+  n = '';
+ if ('string' == typeof e || 'number' == typeof e) n += e;
+ else if ('object' == typeof e)
+  if (Array.isArray(e)) {
+   var o = e.length;
+   for (t = 0; t < o; t++) e[t] && (f = r(e[t])) && (n && (n += ' '), (n += f));
+  } else for (f in e) e[f] && (n && (n += ' '), (n += f));
+ return n;
+}
+function clsx() {
+ for (var e, t, f = 0, n = '', o = arguments.length; f < o; f++)
+  (e = arguments[f]) && (t = r(e)) && (n && (n += ' '), (n += t));
+ return n;
+}
+
+/* Exports
+  ============================================ */ const falsyToString = (
+ value,
+) => (typeof value === 'boolean' ? `${value}` : value === 0 ? '0' : value);
+const defineConfig = (options) => {
+ const cx = function () {
+  for (
+   var _len = arguments.length, inputs = new Array(_len), _key = 0;
+   _key < _len;
+   _key++
+  ) {
+   inputs[_key] = arguments[_key];
+  }
+  return clsx(inputs);
+ };
+ const cva = (config) => (props) => {
+  var _config_compoundVariants;
+  if (
+   (config === null || config === undefined ? undefined : config.variants) ==
+   null
+  )
+   return cx(
+    config === null || config === undefined ? undefined : config.base,
+    props === null || props === undefined ? undefined : props.class,
+    props === null || props === undefined ? undefined : props.className,
+   );
+  const { variants, defaultVariants } = config;
+  const getVariantClassNames = Object.keys(variants).map((variant) => {
+   const variantProp =
+    props === null || props === undefined ? undefined : props[variant];
+   const defaultVariantProp =
+    defaultVariants === null || defaultVariants === undefined
+     ? undefined
+     : defaultVariants[variant];
+   const variantKey =
+    falsyToString(variantProp) || falsyToString(defaultVariantProp);
+   return variants[variant][variantKey];
+  });
+  const defaultsAndProps = {
+   ...defaultVariants,
+   // remove `undefined` props
+   ...(props &&
+    Object.entries(props).reduce((acc, param) => {
+     let [key, value] = param;
+     return typeof value === 'undefined'
+      ? acc
+      : {
+         ...acc,
+         [key]: value,
+        };
+    }, {})),
+  };
+  const getCompoundVariantClassNames =
+   config === null || config === undefined
+    ? undefined
+    : (_config_compoundVariants = config.compoundVariants) === null ||
+        _config_compoundVariants === undefined
+      ? undefined
+      : _config_compoundVariants.reduce((acc, param) => {
+         let { class: cvClass, className: cvClassName, ...cvConfig } = param;
+         return Object.entries(cvConfig).every((param) => {
+          let [cvKey, cvSelector] = param;
+          const selector = defaultsAndProps[cvKey];
+          return Array.isArray(cvSelector)
+           ? cvSelector.includes(selector)
+           : selector === cvSelector;
+         })
+          ? [...acc, cvClass, cvClassName]
+          : acc;
+        }, []);
+  return cx(
+   config === null || config === undefined ? undefined : config.base,
+   getVariantClassNames,
+   getCompoundVariantClassNames,
+   props === null || props === undefined ? undefined : props.class,
+   props === null || props === undefined ? undefined : props.className,
+  );
+ };
+ const compose = function () {
+  for (
+   var _len = arguments.length, components = new Array(_len), _key = 0;
+   _key < _len;
+   _key++
+  ) {
+   components[_key] = arguments[_key];
+  }
+  return (props) => {
+   const propsWithoutClass = Object.fromEntries(
+    Object.entries(props || {}).filter((param) => {
+     let [key] = param;
+     return !['class', 'className'].includes(key);
+    }),
+   );
+   return cx(
+    components.map((component) => component(propsWithoutClass)),
+    props === null || props === undefined ? undefined : props.class,
+    props === null || props === undefined ? undefined : props.className,
+   );
+  };
+ };
+ return {
+  compose,
+  cva,
+  cx,
+ };
+};
+const { compose, cva, cx } = defineConfig();
+
 const alertStyles = {
- root: {
+ root: cva({
   base: ['flex', 'gap-4', 'p-4', 'rounded-md', 'border', 'transition-colors'],
   variants: {
    surface: {
@@ -10,13 +136,13 @@ const alertStyles = {
    },
   },
   defaultVariants: {
-   variant: 'info',
+   surface: 'info',
   },
- },
+ }),
 };
 
 const buttonStyles = {
- root: {
+ root: cva({
   base: [
    'inline-flex',
    'items-center',
@@ -55,184 +181,99 @@ const buttonStyles = {
    surface: 'solid',
    size: 'base',
   },
- },
+ }),
 };
 
 const cardStyles = {
- root: {
-  base: ['transition-all border'],
+ root: cva({
+  base: ['rounded-lg border bg-card text-card-foreground shadow-sm'],
   variants: {
-   shadow: {
-    true: 'shadow',
-    false: '',
-   },
-   border: {
-    true: 'border-slate-300',
-    false: 'border-transparent',
-   },
-   rounded: {
-    true: 'rounded-md',
-    false: '',
-   },
    space: {
     default: 'p-0',
-    xs: 'p-1',
-    sm: 'p-2',
-    md: 'p-4',
-    lg: 'p-8',
-    xl: 'p-16',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   shadow: true,
-   border: true,
-   rounded: true,
    space: 'default',
   },
- },
- head: {
-  base: ['border-b flex justify-between items-center'],
+ }),
+ head: cva({
+  base: [' flex justify-between items-center'],
   variants: {
    space: {
-    default: '',
-    xs: 'px-2 pt-1',
-    sm: 'px-4 pt-2',
-    md: 'px-8 pt-4',
-    lg: 'px-16 pt-8',
-    xl: 'px-24 pt-16',
-   },
-   border: {
-    true: 'border-slate-300',
-    false: 'border-transparent',
+    default: 'p-2',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   space: 'sm',
-   border: true,
+   space: 'default',
   },
-  compoundVariants: [
-   {
-    border: true,
-    space: 'default',
-    class: '',
-   },
-   {
-    border: true,
-    space: 'xs',
-    class: 'pb-1',
-   },
-   {
-    border: true,
-    space: 'sm',
-    class: 'pb-2',
-   },
-   {
-    border: true,
-    space: 'md',
-    class: 'pb-4',
-   },
-   {
-    border: true,
-    space: 'lg',
-    class: 'pb-8',
-   },
-   {
-    border: true,
-    space: 'xl',
-    class: 'pb-16',
-   },
-  ],
- },
- body: {
-  base: [''],
+ }),
+ body: cva({
+  base: [],
   variants: {
    space: {
-    default: '',
-    xs: 'p-1',
-    sm: 'p-2',
-    md: 'p-4',
-    lg: 'p-8',
-    xl: 'p-16',
+    default: 'p-2',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   space: 'sm',
+   space: 'default',
   },
- },
- foot: {
-  base: ['border-t flex justify-between items-center'],
+ }),
+ foot: cva({
+  base: ['flex justify-between items-center'],
   variants: {
    space: {
-    default: '',
-    xs: 'px-2 pb-1',
-    sm: 'px-4 pb-2',
-    md: 'px-8 pb-4',
-    lg: 'px-16 pb-8',
-    xl: 'px-24 pb-16',
-   },
-   border: {
-    true: 'border-slate-300',
-    false: 'border-transparent',
+    default: 'p-2',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   space: 'sm',
-   border: true,
+   space: 'default',
   },
-  compoundVariants: [
-   {
-    border: true,
-    space: 'default',
-    class: '  ',
-   },
-   {
-    border: true,
-    space: 'xs',
-    class: 'pt-1',
-   },
-   {
-    border: true,
-    space: 'sm',
-    class: 'pt-2',
-   },
-   {
-    border: true,
-    space: 'md',
-    class: 'pt-4',
-   },
-   {
-    border: true,
-    space: 'lg',
-    class: 'pt-8',
-   },
-   {
-    border: true,
-    space: 'xl',
-    class: 'pt-16',
-   },
-  ],
- },
+ }),
 };
 
 const disableStyles = {
- base: [
-  'disabled:opacity-50',
-  'disabled:cursor-not-allowed',
-  'disabled:pointer-events-none',
- ],
+ root: cva({
+  base: [
+   'disabled:opacity-50',
+   'disabled:cursor-not-allowed',
+   'disabled:pointer-events-none',
+  ],
+ }),
 };
 
 const focusStyles = {
- base: [
-  'focus:outline-none',
-  'focus:ring-2',
-  'focus:ring-offset-2',
-  'focus:ring-slate-600',
- ],
+ root: cva({
+  base: [
+   'focus:outline-none',
+   'focus:ring-2',
+   'focus:ring-offset-2',
+   'focus:ring-slate-600',
+  ],
+ }),
 };
 
 const linkStyles = {
- root: {
+ root: cva({
   base: [
    'text-blue-700',
    'hover:text-blue-800',
@@ -252,11 +293,11 @@ const linkStyles = {
   defaultVariants: {
    underline: true,
   },
- },
+ }),
 };
 
 const separatorStyles = {
- root: {
+ root: cva({
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {
    orientation: {
@@ -327,11 +368,11 @@ const separatorStyles = {
    orientation: 'horizontal',
    size: 'xs',
   },
- },
+ }),
 };
 
 const textStyles = {
- root: {
+ root: cva({
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {
    size: {
@@ -437,7 +478,7 @@ const textStyles = {
    truncate: false,
    dimmed: false,
   },
- },
+ }),
 };
 
 export {

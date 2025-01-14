@@ -1,157 +1,68 @@
-const cardStyles = {
- root: {
-  base: ['transition-all border'],
+import { cva } from 'cva';
+
+export const cardStyles = {
+ root: cva({
+  base: ['rounded-lg border bg-card text-card-foreground shadow-sm'],
   variants: {
-   shadow: {
-    true: 'shadow',
-    false: '',
-   },
-   border: {
-    true: 'border-slate-300',
-    false: 'border-transparent',
-   },
-   rounded: {
-    true: 'rounded-md',
-    false: '',
-   },
    space: {
     default: 'p-0',
-    xs: 'p-1',
-    sm: 'p-2',
-    md: 'p-4',
-    lg: 'p-8',
-    xl: 'p-16',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   shadow: true,
-   border: true,
-   rounded: true,
    space: 'default',
   },
- },
- head: {
-  base: ['border-b flex justify-between items-center'],
+ }),
+ head: cva({
+  base: [' flex justify-between items-center'],
   variants: {
    space: {
-    default: '',
-    xs: 'px-2 pt-1',
-    sm: 'px-4 pt-2',
-    md: 'px-8 pt-4',
-    lg: 'px-16 pt-8',
-    xl: 'px-24 pt-16',
-   },
-   border: {
-    true: 'border-slate-300',
-    false: 'border-transparent',
+    default: 'p-2',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   space: 'sm',
-   border: true,
+   space: 'default',
   },
-  compoundVariants: [
-   {
-    border: true,
-    space: 'default',
-    class: '',
-   },
-   {
-    border: true,
-    space: 'xs',
-    class: 'pb-1',
-   },
-   {
-    border: true,
-    space: 'sm',
-    class: 'pb-2',
-   },
-   {
-    border: true,
-    space: 'md',
-    class: 'pb-4',
-   },
-   {
-    border: true,
-    space: 'lg',
-    class: 'pb-8',
-   },
-   {
-    border: true,
-    space: 'xl',
-    class: 'pb-16',
-   },
-  ],
- },
- body: {
-  base: [''],
+ }),
+ body: cva({
+  base: [],
   variants: {
    space: {
-    default: '',
-    xs: 'p-1',
-    sm: 'p-2',
-    md: 'p-4',
-    lg: 'p-8',
-    xl: 'p-16',
+    default: 'p-2',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   space: 'sm',
+   space: 'default',
   },
- },
- foot: {
-  base: ['border-t flex justify-between items-center'],
+ }),
+ foot: cva({
+  base: ['flex justify-between items-center'],
   variants: {
    space: {
-    default: '',
-    xs: 'px-2 pb-1',
-    sm: 'px-4 pb-2',
-    md: 'px-8 pb-4',
-    lg: 'px-16 pb-8',
-    xl: 'px-24 pb-16',
-   },
-   border: {
-    true: 'border-slate-300',
-    false: 'border-transparent',
+    default: 'p-2',
+    xs: 'p-2',
+    sm: 'p-4',
+    md: 'p-8',
+    lg: 'p-16',
+    xl: 'p-24',
    },
   },
   defaultVariants: {
-   space: 'sm',
-   border: true,
+   space: 'default',
   },
-  compoundVariants: [
-   {
-    border: true,
-    space: 'default',
-    class: '  ',
-   },
-   {
-    border: true,
-    space: 'xs',
-    class: 'pt-1',
-   },
-   {
-    border: true,
-    space: 'sm',
-    class: 'pt-2',
-   },
-   {
-    border: true,
-    space: 'md',
-    class: 'pt-4',
-   },
-   {
-    border: true,
-    space: 'lg',
-    class: 'pt-8',
-   },
-   {
-    border: true,
-    space: 'xl',
-    class: 'pt-16',
-   },
-  ],
- },
-} as const;
-
-export { cardStyles };
+ }),
+};

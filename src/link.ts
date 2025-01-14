@@ -1,5 +1,7 @@
-const linkStyles = {
- root: {
+import { cva } from 'cva';
+
+export const linkStyles = {
+ root: cva({
   base: [
    'text-blue-700',
    'hover:text-blue-800',
@@ -19,7 +21,5 @@ const linkStyles = {
   defaultVariants: {
    underline: true,
   },
- },
+ }),
 } as const;
-
-export { linkStyles };

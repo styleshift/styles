@@ -1,9 +1,11 @@
-const disableStyles = {
- base: [
-  'disabled:opacity-50',
-  'disabled:cursor-not-allowed',
-  'disabled:pointer-events-none',
- ],
-} as const;
+import { cva } from 'cva';
 
-export { disableStyles };
+export const disableStyles = {
+ root: cva({
+  base: [
+   'disabled:opacity-50',
+   'disabled:cursor-not-allowed',
+   'disabled:pointer-events-none',
+  ],
+ }),
+};

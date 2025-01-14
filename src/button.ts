@@ -1,5 +1,7 @@
-const buttonStyles = {
- root: {
+import { cva } from 'cva';
+
+export const buttonStyles = {
+ root: cva({
   base: [
    'inline-flex',
    'items-center',
@@ -38,7 +40,5 @@ const buttonStyles = {
    surface: 'solid',
    size: 'base',
   },
- },
-} as const;
-
-export { buttonStyles };
+ }),
+};

@@ -1,5 +1,7 @@
-const textStyles = {
- root: {
+import { cva } from 'cva';
+
+export const textStyles = {
+ root: cva({
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {
    size: {
@@ -105,7 +107,5 @@ const textStyles = {
    truncate: false,
    dimmed: false,
   },
- },
-} as const;
-
-export { textStyles };
+ }),
+};

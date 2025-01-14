@@ -1,5 +1,7 @@
-const separatorStyles = {
- root: {
+import { cva } from 'cva';
+
+export const separatorStyles = {
+ root: cva({
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {
    orientation: {
@@ -70,7 +72,5 @@ const separatorStyles = {
    orientation: 'horizontal',
    size: 'xs',
   },
- },
-} as const;
-
-export { separatorStyles };
+ }),
+};

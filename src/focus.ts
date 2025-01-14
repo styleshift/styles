@@ -1,10 +1,12 @@
-const focusStyles = {
- base: [
-  'focus:outline-none',
-  'focus:ring-2',
-  'focus:ring-offset-2',
-  'focus:ring-slate-600',
- ],
-} as const;
+import { cva } from 'cva';
 
-export { focusStyles };
+export const focusStyles = {
+ root: cva({
+  base: [
+   'focus:outline-none',
+   'focus:ring-2',
+   'focus:ring-offset-2',
+   'focus:ring-slate-600',
+  ],
+ }),
+};
