@@ -19,6 +19,9 @@ export declare const alertStyles: {
         readonly base: readonly ["text-sm", "opacity-90"];
     };
 };
+export declare const alertDocs: () => {
+    [x: string]: string[];
+}[];
 export declare const alert: {
     root: (props?: ({
         readonly surface?: "default" | "negative" | "positive" | undefined;

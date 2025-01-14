@@ -604,10 +604,21 @@ const alertStyles = {
         base: ['text-sm', 'opacity-90'],
     },
 };
+const alertDocs = () => {
+    const slots = Object.keys(alertStyles);
+    const docs = slots.map((slot) => {
+        const slotConfig = alertStyles[slot];
+        const variants = Object.keys(slotConfig?.variants ?? {});
+        return {
+            [slot]: [...variants],
+        };
+    });
+    return docs;
+};
 const alert = {
     root: styleshift.define(alertStyles.root),
     title: styleshift.define(alertStyles.title),
     description: styleshift.define(alertStyles.description),
 };
 
-export { alert, alertStyles, button, buttonDocs, card, cardDocs, link, linkDocs, separator, separatorDocs, text, textDocs };
+export { alert, alertDocs, alertStyles, button, buttonDocs, card, cardDocs, link, linkDocs, separator, separatorDocs, text, textDocs };

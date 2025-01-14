@@ -22,6 +22,20 @@ export const alertStyles = {
  },
 } as const;
 
+export const alertDocs = () => {
+ const slots = Object.keys(alertStyles) as (keyof typeof alertStyles)[];
+ const docs = slots.map((slot) => {
+  const slotConfig = alertStyles[slot] as {
+   variants?: Record<string, unknown>;
+  };
+  const variants = Object.keys(slotConfig?.variants ?? {});
+  return {
+   [slot]: [...variants],
+  };
+ });
+ return docs;
+};
+
 export const alert = {
  root: styleshift.define(alertStyles.root),
  title: styleshift.define(alertStyles.title),
