@@ -1,14 +1,26 @@
 import styleshift from '../styleshift';
 
-const alertDocs = {
- root: {
-  variants: {
-   surface: ['default', 'negative', 'positive'],
-  },
- },
- title: {},
- description: {},
-} as const;
+// Helper function to generate docs from styles
+function generateDocsFromStyles(styles: Record<string, any>) {
+ const docs: Record<string, any> = {};
+
+ for (const [partName, partStyles] of Object.entries(styles)) {
+  docs[partName] = {
+   variants: partStyles.variants
+    ? Object.fromEntries(
+       Object.entries(partStyles.variants).map(
+        ([variantName, variantOptions]) => [
+         variantName,
+         Object.keys(variantOptions),
+        ],
+       ),
+      )
+    : {},
+  };
+ }
+
+ return docs;
+}
 
 const alertStyles = {
  root: {
@@ -31,6 +43,8 @@ const alertStyles = {
   base: ['text-sm', 'opacity-90'],
  },
 } as const;
+
+const alertDocs = generateDocsFromStyles(alertStyles);
 
 const alert = {
  root: styleshift.define(alertStyles.root),
