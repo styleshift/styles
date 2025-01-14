@@ -1,6 +1,16 @@
 import styleshift from '../styleshift';
 
-export const alertStyles = {
+const alertDocs = {
+ root: {
+  variants: {
+   surface: ['default', 'negative', 'positive'],
+  },
+ },
+ title: {},
+ description: {},
+} as const;
+
+const alertStyles = {
  root: {
   base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
   variants: {
@@ -22,22 +32,10 @@ export const alertStyles = {
  },
 } as const;
 
-export const alertDocs = () => {
- const slots = Object.keys(alertStyles) as (keyof typeof alertStyles)[];
- const docs = slots.map((slot) => {
-  const slotConfig = alertStyles[slot] as {
-   variants?: Record<string, unknown>;
-  };
-  const variants = Object.keys(slotConfig?.variants ?? {});
-  return {
-   [slot]: [...variants],
-  };
- });
- return docs;
-};
-
-export const alert = {
+const alert = {
  root: styleshift.define(alertStyles.root),
  title: styleshift.define(alertStyles.title),
  description: styleshift.define(alertStyles.description),
 };
+
+export { alert, alertDocs, alertStyles };

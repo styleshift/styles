@@ -1,6 +1,6 @@
 import styleshift from '../styleshift';
 
-export const textDocs = {
+const textDocs = {
  root: {
   variants: {
    size: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
@@ -34,10 +34,10 @@ export const textDocs = {
    dimmed: ['true', 'false'],
   },
  },
-};
+} as const;
 
-export const text = {
- root: styleshift.define({
+const textStyles = {
+ root: {
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {
    size: {
@@ -143,5 +143,11 @@ export const text = {
    truncate: false,
    dimmed: false,
   },
- }),
+ },
+} as const;
+
+const text = {
+ root: styleshift.define(textStyles.root),
 };
+
+export { text, textDocs, textStyles };

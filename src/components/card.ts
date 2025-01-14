@@ -1,6 +1,6 @@
 import styleshift from '../styleshift';
 
-export const cardDocs = {
+const cardDocs = {
  root: {
   variants: {
    shadow: ['true', 'false'],
@@ -26,10 +26,10 @@ export const cardDocs = {
    border: ['true', 'false'],
   },
  },
-};
+} as const;
 
-export const card = {
- root: styleshift.define({
+const cardStyles = {
+ root: {
   base: ['transition-all border'],
   variants: {
    shadow: {
@@ -59,9 +59,8 @@ export const card = {
    rounded: true,
    space: 'default',
   },
- }),
-
- head: styleshift.define({
+ },
+ head: {
   base: ['border-b flex justify-between items-center'],
   variants: {
    space: {
@@ -113,9 +112,8 @@ export const card = {
     class: 'pb-16',
    },
   ],
- }),
-
- body: styleshift.define({
+ },
+ body: {
   base: [''],
   variants: {
    space: {
@@ -130,9 +128,8 @@ export const card = {
   defaultVariants: {
    space: 'sm',
   },
- }),
-
- foot: styleshift.define({
+ },
+ foot: {
   base: ['border-t flex justify-between items-center'],
   variants: {
    space: {
@@ -184,5 +181,14 @@ export const card = {
     class: 'pt-16',
    },
   ],
- }),
+ },
+} as const;
+
+const card = {
+ root: styleshift.define(cardStyles.root as any),
+ head: styleshift.define(cardStyles.head as any),
+ body: styleshift.define(cardStyles.body as any),
+ foot: styleshift.define(cardStyles.foot as any),
 };
+
+export { card, cardDocs, cardStyles };

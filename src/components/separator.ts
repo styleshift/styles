@@ -1,16 +1,17 @@
+import { VariantProps } from 'cva';
 import styleshift from '../styleshift';
 
-export const separatorDocs = {
+const separatorDocs = {
  root: {
   variants: {
    orientation: ['horizontal', 'vertical'],
    size: ['xs', 'sm', 'md', 'lg', 'xl'],
   },
  },
-};
+} as const;
 
-export const separator = {
- root: styleshift.define({
+const separatorStyles = {
+ root: {
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {
    orientation: {
@@ -81,5 +82,11 @@ export const separator = {
    orientation: 'horizontal',
    size: 'xs',
   },
- }),
+ },
+} as const;
+
+const separator = {
+ root: styleshift.define(separatorStyles.root as any),
 };
+
+export { separator, separatorDocs, separatorStyles };

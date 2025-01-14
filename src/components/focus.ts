@@ -1,4 +1,4 @@
-import styleshift from '../../styleshift';
+import styleshift from '../styleshift';
 
 export const canFocus = styleshift.define({
  base: [
