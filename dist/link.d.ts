@@ -1,4 +1,4 @@
-export declare const linkStyles: {
+export declare const link: {
  readonly root: (
   props?:
    | ({

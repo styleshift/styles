@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-export const focusStyles = {
+export const focus = {
  root: cva({
   base: [
    'focus:outline-none',

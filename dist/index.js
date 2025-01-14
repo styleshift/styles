@@ -124,7 +124,7 @@ const defineConfig = (options) => {
 };
 const { compose, cva, cx } = defineConfig();
 
-const alertStyles = {
+const alert = {
  root: cva({
   base: ['flex', 'gap-4', 'p-4', 'rounded-md', 'border', 'transition-colors'],
   variants: {
@@ -141,50 +141,75 @@ const alertStyles = {
  }),
 };
 
-const buttonStyles = {
+const focus = {
  root: cva({
   base: [
-   'inline-flex',
-   'items-center',
-   'justify-center',
-   'gap-2',
-   'font-[500]',
-   'rounded',
-   'whitespace-nowrap',
-   'transition-all',
-   'border-2',
+   'focus:outline-none',
+   'focus:ring-2',
+   'focus:ring-offset-2',
+   'focus:ring-slate-600',
   ],
-  variants: {
-   surface: {
-    solid: [
-     'border-transparent bg-slate-800',
-     'text-white',
-     'hover:bg-slate-700',
-    ],
-    outline: ['border-slate-800', 'text-slate-800', 'hover:border-slate-700'],
-    ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
-    soft: [
-     'border-transparent',
-     'bg-slate-100',
-     'text-slate-800',
-     'hover:bg-slate-200',
-    ],
-   },
-   size: {
-    sm: 'text-sm h-8 px-4',
-    base: 'text-base h-10 px-4',
-    md: 'text-md h-12 px-5',
-    lg: 'text-lg h-14 px-5',
-   },
-  },
-  defaultVariants: {
-   surface: 'solid',
-   size: 'base',
-  },
  }),
 };
 
-const cardStyles = {
+const disable = {
+ root: cva({
+  base: [
+   'disabled:opacity-50',
+   'disabled:cursor-not-allowed',
+   'disabled:pointer-events-none',
+  ],
+ }),
+};
+
+const button = {
+ root: compose(
+  focus.root,
+  disable.root,
+  cva({
+   base: [
+    'inline-flex',
+    'items-center',
+    'justify-center',
+    'gap-2',
+    'font-[500]',
+    'rounded',
+    'whitespace-nowrap',
+    'transition-all',
+    'border-2',
+   ],
+   variants: {
+    surface: {
+     solid: [
+      'border-transparent bg-slate-800',
+      'text-white',
+      'hover:bg-slate-700',
+     ],
+     outline: ['border-slate-800', 'text-slate-800', 'hover:border-slate-700'],
+     ghost: ['border-transparent', 'text-slate-800', 'hover:bg-slate-100'],
+     soft: [
+      'border-transparent',
+      'bg-slate-100',
+      'text-slate-800',
+      'hover:bg-slate-200',
+     ],
+    },
+    size: {
+     sm: 'text-sm h-8 px-4',
+     base: 'text-base h-10 px-4',
+     md: 'text-md h-12 px-5',
+     lg: 'text-lg h-14 px-5',
+    },
+   },
+   defaultVariants: {
+    surface: 'solid',
+    size: 'base',
+   },
+  }),
+ ),
+};
+
+const card = {
  root: cva({
   base: ['rounded-lg border bg-card text-card-foreground shadow-sm'],
   variants: {
@@ -251,28 +276,7 @@ const cardStyles = {
  }),
 };
 
-const disableStyles = {
- root: cva({
-  base: [
-   'disabled:opacity-50',
-   'disabled:cursor-not-allowed',
-   'disabled:pointer-events-none',
-  ],
- }),
-};
-
-const focusStyles = {
- root: cva({
-  base: [
-   'focus:outline-none',
-   'focus:ring-2',
-   'focus:ring-offset-2',
-   'focus:ring-slate-600',
-  ],
- }),
-};
-
-const linkStyles = {
+const link = {
  root: cva({
   base: [
    'text-blue-700',
@@ -296,7 +300,7 @@ const linkStyles = {
  }),
 };
 
-const separatorStyles = {
+const separator = {
  root: cva({
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {
@@ -371,7 +375,7 @@ const separatorStyles = {
  }),
 };
 
-const textStyles = {
+const text = {
  root: cva({
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {
@@ -481,13 +485,4 @@ const textStyles = {
  }),
 };
 
-export {
- alertStyles,
- buttonStyles,
- cardStyles,
- disableStyles,
- focusStyles,
- linkStyles,
- separatorStyles,
- textStyles,
-};
+export { alert, button, card, disable, focus, link, separator, text };

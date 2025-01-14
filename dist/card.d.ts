@@ -1,4 +1,4 @@
-export declare const cardStyles: {
+export declare const card: {
  root: (
   props?:
    | ({

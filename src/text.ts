@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-export const textStyles = {
+export const text = {
  root: cva({
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
   variants: {

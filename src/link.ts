@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-export const linkStyles = {
+export const link = {
  root: cva({
   base: [
    'text-blue-700',

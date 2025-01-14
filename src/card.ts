@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-export const cardStyles = {
+export const card = {
  root: cva({
   base: ['rounded-lg border bg-card text-card-foreground shadow-sm'],
   variants: {

@@ -1,4 +1,4 @@
-export declare const disableStyles: {
+export declare const disable: {
  root: (
   props?:
    | (

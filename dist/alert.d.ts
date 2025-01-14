@@ -1,5 +1,5 @@
-export declare const alertStyles: {
- readonly root: (
+export declare const alert: {
+ root: (
   props?:
    | ({
       surface?: 'info' | 'success' | 'warning' | 'error' | undefined;

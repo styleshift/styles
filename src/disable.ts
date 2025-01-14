@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-export const disableStyles = {
+export const disable = {
  root: cva({
   base: [
    'disabled:opacity-50',

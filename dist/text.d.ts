@@ -1,4 +1,4 @@
-export declare const textStyles: {
+export declare const text: {
  root: (
   props?:
    | ({

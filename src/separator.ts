@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-export const separatorStyles = {
+export const separator = {
  root: cva({
   base: ['shrink-0', 'border-0', 'transition-colors'],
   variants: {

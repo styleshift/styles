@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-export const alertStyles = {
+export const alert = {
  root: cva({
   base: ['flex', 'gap-4', 'p-4', 'rounded-md', 'border', 'transition-colors'],
   variants: {
@@ -15,4 +15,4 @@ export const alertStyles = {
    surface: 'info',
   },
  }),
-} as const;
+};

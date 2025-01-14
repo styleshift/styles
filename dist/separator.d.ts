@@ -1,4 +1,4 @@
-export declare const separatorStyles: {
+export declare const separator: {
  root: (
   props?:
    | ({

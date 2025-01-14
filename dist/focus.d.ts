@@ -1,4 +1,4 @@
-export declare const focusStyles: {
+export declare const focus: {
  root: (
   props?:
    | (
