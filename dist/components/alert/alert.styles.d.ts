@@ -10,9 +10,21 @@ declare const _default: {
   ];
   readonly variants: {
    readonly surface: {
-    readonly default: readonly ['border-slate-500', 'text-slate-800'];
-    readonly negative: readonly ['border-red-500', 'text-red-800'];
-    readonly positive: readonly ['border-green-500', 'text-green-800'];
+    readonly default: readonly [
+     'border-slate-400',
+     'bg-slate-50/25',
+     'text-slate-700',
+    ];
+    readonly negative: readonly [
+     'border-red-400',
+     'bg-red-50/25',
+     'text-red-700',
+    ];
+    readonly positive: readonly [
+     'border-green-400',
+     'bg-green-50/25',
+     'text-green-700',
+    ];
    };
   };
   readonly defaultVariants: {
