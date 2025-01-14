@@ -5,23 +5,24 @@ declare const _default: {
    'w-full',
    'rounded-lg',
    'border',
-   'p-4',
+   'py-3',
+   'px-4',
    'transition-all',
   ];
   readonly variants: {
    readonly surface: {
     readonly default: readonly [
-     'border-slate-400',
+     'border-slate-300',
      'bg-slate-50/25',
      'text-slate-700',
     ];
     readonly negative: readonly [
-     'border-red-400',
+     'border-red-300',
      'bg-red-50/25',
      'text-red-700',
     ];
     readonly positive: readonly [
-     'border-green-400',
+     'border-green-300',
      'bg-green-50/25',
      'text-green-700',
     ];
@@ -40,7 +41,7 @@ declare const _default: {
   ];
  };
  readonly description: {
-  readonly base: readonly ['text-sm', 'opacity-90'];
+  readonly base: readonly ['opacity-80'];
  };
 };
 export default _default;
