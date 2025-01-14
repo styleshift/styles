@@ -1,27 +1,5 @@
 import styleshift from '../styleshift';
 
-// Helper function to generate docs from styles
-function generateDocsFromStyles(styles: Record<string, any>) {
- const docs: Record<string, any> = {};
-
- for (const [partName, partStyles] of Object.entries(styles)) {
-  docs[partName] = {
-   variants: partStyles.variants
-    ? Object.fromEntries(
-       Object.entries(partStyles.variants).map(
-        ([variantName, variantOptions]) => [
-         variantName,
-         Object.keys(variantOptions),
-        ],
-       ),
-      )
-    : {},
-  };
- }
-
- return docs;
-}
-
 const alertStyles = {
  root: {
   base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
@@ -44,7 +22,7 @@ const alertStyles = {
  },
 } as const;
 
-const alertDocs = generateDocsFromStyles(alertStyles);
+const alertDocs = styleshift.docs(alertStyles);
 
 const alert = {
  root: styleshift.define(alertStyles.root),

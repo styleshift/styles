@@ -124,10 +124,29 @@ const defineConfig = (options) => {
 };
 const { compose, cva, cx } = defineConfig();
 
+const generateDocsFromStyles = (styles) => {
+ const docs = {};
+ for (const [partName, partStyles] of Object.entries(styles)) {
+  docs[partName] = {
+   variants: partStyles.variants
+    ? Object.fromEntries(
+       Object.entries(partStyles.variants).map(
+        ([variantName, variantOptions]) => [
+         variantName,
+         Object.keys(variantOptions),
+        ],
+       ),
+      )
+    : {},
+  };
+ }
+ return docs;
+};
 const styleshift = {
  define: cva,
  compose: compose,
  merge: cx,
+ docs: generateDocsFromStyles,
 };
 
 const canFocus = styleshift.define({
@@ -147,14 +166,6 @@ const canDisable = styleshift.define({
  ],
 });
 
-const buttonDocs = {
- root: {
-  variants: {
-   surface: ['solid', 'outline', 'ghost', 'soft'],
-   size: ['sm', 'base', 'md', 'lg'],
-  },
- },
-};
 const buttonStyles = {
  root: {
   base: [
@@ -204,34 +215,8 @@ const button = {
   styleshift.define(buttonStyles.root),
  ),
 };
+const buttonDocs = styleshift.docs(buttonStyles);
 
-const cardDocs = {
- root: {
-  variants: {
-   shadow: ['true', 'false'],
-   border: ['true', 'false'],
-   rounded: ['true', 'false'],
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-  },
- },
- head: {
-  variants: {
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-   border: ['true', 'false'],
-  },
- },
- body: {
-  variants: {
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-  },
- },
- foot: {
-  variants: {
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-   border: ['true', 'false'],
-  },
- },
-};
 const cardStyles = {
  root: {
   base: ['transition-all border'],
@@ -393,14 +378,8 @@ const card = {
  body: styleshift.define(cardStyles.body),
  foot: styleshift.define(cardStyles.foot),
 };
+const cardDocs = styleshift.docs(cardStyles);
 
-const linkDocs = {
- root: {
-  variants: {
-   underline: ['true', 'false'],
-  },
- },
-};
 const linkStyles = {
  root: {
   base: [
@@ -427,42 +406,8 @@ const linkStyles = {
 const link = {
  root: styleshift.compose(canFocus, styleshift.define(linkStyles.root)),
 };
+const linkDocs = styleshift.docs(linkStyles);
 
-const textDocs = {
- root: {
-  variants: {
-   size: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
-   align: ['left', 'center', 'right', 'justify', 'start', 'end'],
-   strike: ['none', 'under', 'over', 'through'],
-   weight: [
-    'thin',
-    'extralight',
-    'light',
-    'normal',
-    'medium',
-    'semibold',
-    'bold',
-    'extrabold',
-    'black',
-   ],
-   case: ['upper', 'lower', 'caps', 'normal'],
-   wrap: ['default', 'wrap', 'nowrap', 'balance', 'pretty'],
-   whitespace: [
-    'default',
-    'normal',
-    'nowrap',
-    'pre',
-    'preline',
-    'prewrap',
-    'break',
-   ],
-   leading: ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'],
-   tracking: ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'],
-   truncate: ['true', 'false'],
-   dimmed: ['true', 'false'],
-  },
- },
-};
 const textStyles = {
  root: {
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
@@ -575,15 +520,8 @@ const textStyles = {
 const text = {
  root: styleshift.define(textStyles.root),
 };
+const textDocs = styleshift.docs(textStyles);
 
-const separatorDocs = {
- root: {
-  variants: {
-   orientation: ['horizontal', 'vertical'],
-   size: ['xs', 'sm', 'md', 'lg', 'xl'],
-  },
- },
-};
 const separatorStyles = {
  root: {
   base: ['shrink-0', 'border-0', 'transition-colors'],
@@ -661,16 +599,8 @@ const separatorStyles = {
 const separator = {
  root: styleshift.define(separatorStyles.root),
 };
+const separatorDocs = styleshift.docs(separatorStyles);
 
-const alertDocs = {
- root: {
-  variants: {
-   surface: ['default', 'negative', 'positive'],
-  },
- },
- title: {},
- description: {},
-};
 const alertStyles = {
  root: {
   base: ['relative', 'w-full', 'rounded-lg', 'border', 'p-4', 'transition-all'],
@@ -692,6 +622,7 @@ const alertStyles = {
   base: ['text-sm', 'opacity-90'],
  },
 };
+const alertDocs = styleshift.docs(alertStyles);
 const alert = {
  root: styleshift.define(alertStyles.root),
  title: styleshift.define(alertStyles.title),

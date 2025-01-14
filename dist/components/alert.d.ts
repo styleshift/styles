@@ -1,12 +1,3 @@
-declare const alertDocs: {
- readonly root: {
-  readonly variants: {
-   readonly surface: readonly ['default', 'negative', 'positive'];
-  };
- };
- readonly title: {};
- readonly description: {};
-};
 declare const alertStyles: {
  readonly root: {
   readonly base: readonly [
@@ -40,6 +31,7 @@ declare const alertStyles: {
   readonly base: readonly ['text-sm', 'opacity-90'];
  };
 };
+declare const alertDocs: Record<string, any>;
 declare const alert: {
  root: (
   props?:

@@ -1,33 +1,5 @@
 import styleshift from '../styleshift';
 
-const cardDocs = {
- root: {
-  variants: {
-   shadow: ['true', 'false'],
-   border: ['true', 'false'],
-   rounded: ['true', 'false'],
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-  },
- },
- head: {
-  variants: {
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-   border: ['true', 'false'],
-  },
- },
- body: {
-  variants: {
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-  },
- },
- foot: {
-  variants: {
-   space: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
-   border: ['true', 'false'],
-  },
- },
-} as const;
-
 const cardStyles = {
  root: {
   base: ['transition-all border'],
@@ -190,5 +162,7 @@ const card = {
  body: styleshift.define(cardStyles.body as any),
  foot: styleshift.define(cardStyles.foot as any),
 };
+
+const cardDocs = styleshift.docs(cardStyles);
 
 export { card, cardDocs, cardStyles };

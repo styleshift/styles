@@ -1,11 +1,3 @@
-declare const separatorDocs: {
- readonly root: {
-  readonly variants: {
-   readonly orientation: readonly ['horizontal', 'vertical'];
-   readonly size: readonly ['xs', 'sm', 'md', 'lg', 'xl'];
-  };
- };
-};
 declare const separatorStyles: {
  readonly root: {
   readonly base: readonly ['shrink-0', 'border-0', 'transition-colors'];
@@ -334,4 +326,5 @@ declare const separator: {
    | undefined,
  ) => string;
 };
+declare const separatorDocs: Record<string, any>;
 export { separator, separatorDocs, separatorStyles };

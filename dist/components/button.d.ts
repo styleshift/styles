@@ -1,11 +1,3 @@
-declare const buttonDocs: {
- readonly root: {
-  readonly variants: {
-   readonly surface: readonly ['solid', 'outline', 'ghost', 'soft'];
-   readonly size: readonly ['sm', 'base', 'md', 'lg'];
-  };
- };
-};
 declare const buttonStyles: {
  readonly root: {
   readonly base: readonly [
@@ -324,7 +316,7 @@ declare const button: {
                 | 'ghost'
                 | 'soft'
                 | undefined;
-               readonly size?: 'sm' | 'base' | 'md' | 'lg' | undefined;
+               readonly size?: 'base' | 'sm' | 'md' | 'lg' | undefined;
               } & (
                | {
                   class?:
@@ -829,4 +821,5 @@ declare const button: {
    | undefined,
  ) => string;
 };
+declare const buttonDocs: Record<string, any>;
 export { button, buttonDocs, buttonStyles };

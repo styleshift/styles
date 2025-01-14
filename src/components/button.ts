@@ -2,15 +2,6 @@ import styleshift from '../styleshift';
 import { canFocus } from './focus';
 import { canDisable } from './disable';
 
-const buttonDocs = {
- root: {
-  variants: {
-   surface: ['solid', 'outline', 'ghost', 'soft'],
-   size: ['sm', 'base', 'md', 'lg'],
-  },
- },
-} as const;
-
 const buttonStyles = {
  root: {
   base: [
@@ -61,5 +52,7 @@ const button = {
   styleshift.define(buttonStyles.root),
  ),
 };
+
+const buttonDocs = styleshift.docs(buttonStyles);
 
 export { button, buttonDocs, buttonStyles };

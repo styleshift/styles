@@ -1,10 +1,3 @@
-declare const linkDocs: {
- readonly root: {
-  readonly variants: {
-   readonly underline: readonly ['true', 'false'];
-  };
- };
-};
 declare const linkStyles: {
  readonly root: {
   readonly base: readonly [
@@ -795,4 +788,5 @@ declare const link: {
    | undefined,
  ) => string;
 };
+declare const linkDocs: Record<string, any>;
 export { link, linkDocs, linkStyles };

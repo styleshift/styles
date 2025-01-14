@@ -1,69 +1,3 @@
-declare const textDocs: {
- readonly root: {
-  readonly variants: {
-   readonly size: readonly [
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    '2xl',
-    '3xl',
-    '4xl',
-    '5xl',
-   ];
-   readonly align: readonly [
-    'left',
-    'center',
-    'right',
-    'justify',
-    'start',
-    'end',
-   ];
-   readonly strike: readonly ['none', 'under', 'over', 'through'];
-   readonly weight: readonly [
-    'thin',
-    'extralight',
-    'light',
-    'normal',
-    'medium',
-    'semibold',
-    'bold',
-    'extrabold',
-    'black',
-   ];
-   readonly case: readonly ['upper', 'lower', 'caps', 'normal'];
-   readonly wrap: readonly ['default', 'wrap', 'nowrap', 'balance', 'pretty'];
-   readonly whitespace: readonly [
-    'default',
-    'normal',
-    'nowrap',
-    'pre',
-    'preline',
-    'prewrap',
-    'break',
-   ];
-   readonly leading: readonly [
-    'none',
-    'tight',
-    'snug',
-    'normal',
-    'relaxed',
-    'loose',
-   ];
-   readonly tracking: readonly [
-    'tighter',
-    'tight',
-    'normal',
-    'wide',
-    'wider',
-    'widest',
-   ];
-   readonly truncate: readonly ['true', 'false'];
-   readonly dimmed: readonly ['true', 'false'];
-  };
- };
-};
 declare const textStyles: {
  readonly root: {
   readonly base: readonly [
@@ -183,8 +117,8 @@ declare const text: {
   props?:
    | ({
       readonly size?:
-       | 'sm'
        | 'base'
+       | 'sm'
        | 'md'
        | 'lg'
        | 'default'
@@ -511,4 +445,5 @@ declare const text: {
    | undefined,
  ) => string;
 };
+declare const textDocs: Record<string, any>;
 export { text, textDocs, textStyles };

@@ -1,30 +1,3 @@
-declare const cardDocs: {
- readonly root: {
-  readonly variants: {
-   readonly shadow: readonly ['true', 'false'];
-   readonly border: readonly ['true', 'false'];
-   readonly rounded: readonly ['true', 'false'];
-   readonly space: readonly ['default', 'xs', 'sm', 'md', 'lg', 'xl'];
-  };
- };
- readonly head: {
-  readonly variants: {
-   readonly space: readonly ['default', 'xs', 'sm', 'md', 'lg', 'xl'];
-   readonly border: readonly ['true', 'false'];
-  };
- };
- readonly body: {
-  readonly variants: {
-   readonly space: readonly ['default', 'xs', 'sm', 'md', 'lg', 'xl'];
-  };
- };
- readonly foot: {
-  readonly variants: {
-   readonly space: readonly ['default', 'xs', 'sm', 'md', 'lg', 'xl'];
-   readonly border: readonly ['true', 'false'];
-  };
- };
-};
 declare const cardStyles: {
  readonly root: {
   readonly base: readonly ['transition-all border'];
@@ -1190,4 +1163,5 @@ declare const card: {
    | undefined,
  ) => string;
 };
+declare const cardDocs: Record<string, any>;
 export { card, cardDocs, cardStyles };

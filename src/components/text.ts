@@ -1,41 +1,5 @@
 import styleshift from '../styleshift';
 
-const textDocs = {
- root: {
-  variants: {
-   size: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
-   align: ['left', 'center', 'right', 'justify', 'start', 'end'],
-   strike: ['none', 'under', 'over', 'through'],
-   weight: [
-    'thin',
-    'extralight',
-    'light',
-    'normal',
-    'medium',
-    'semibold',
-    'bold',
-    'extrabold',
-    'black',
-   ],
-   case: ['upper', 'lower', 'caps', 'normal'],
-   wrap: ['default', 'wrap', 'nowrap', 'balance', 'pretty'],
-   whitespace: [
-    'default',
-    'normal',
-    'nowrap',
-    'pre',
-    'preline',
-    'prewrap',
-    'break',
-   ],
-   leading: ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'],
-   tracking: ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'],
-   truncate: ['true', 'false'],
-   dimmed: ['true', 'false'],
-  },
- },
-} as const;
-
 const textStyles = {
  root: {
   base: ['text-slate-800', 'font-sans', 'antialiased', 'transition-all'],
@@ -149,5 +113,7 @@ const textStyles = {
 const text = {
  root: styleshift.define(textStyles.root),
 };
+
+const textDocs = styleshift.docs(textStyles);
 
 export { text, textDocs, textStyles };

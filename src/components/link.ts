@@ -1,14 +1,6 @@
 import styleshift from '../styleshift';
 import { canFocus } from './focus';
 
-const linkDocs = {
- root: {
-  variants: {
-   underline: ['true', 'false'],
-  },
- },
-} as const;
-
 const linkStyles = {
  root: {
   base: [
@@ -36,5 +28,7 @@ const linkStyles = {
 const link = {
  root: styleshift.compose(canFocus, styleshift.define(linkStyles.root)),
 };
+
+const linkDocs = styleshift.docs(linkStyles);
 
 export { link, linkDocs, linkStyles };
