@@ -3,6 +3,7 @@ export declare const separator: {
     props?:
       | ({
           orientation?: 'horizontal' | 'vertical' | undefined;
+          size?: 'sm' | 'md' | 'lg' | 'xs' | 'xl' | undefined;
         } & (
           | {
               class?:
