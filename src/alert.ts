@@ -2,7 +2,7 @@ import { cva } from 'cva';
 
 export const alert = {
  root: cva({
-  base: ['flex', 'gap-4', 'p-4', 'rounded-md', 'border', 'transition-colors'],
+  base: ['p-4', 'rounded-md', 'border', 'transition-colors'],
   variants: {
    surface: {
     info: ['bg-blue-50', 'border-blue-200', 'text-blue-800'],
@@ -14,5 +14,11 @@ export const alert = {
   defaultVariants: {
    surface: 'info',
   },
+ }),
+ title: cva({
+  base: ['font-bold', 'text-lg'],
+ }),
+ description: cva({
+  base: ['font-normal', 'text-base'],
  }),
 };
