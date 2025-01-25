@@ -84,11 +84,14 @@ const alert = {
             surface: 'info',
         },
     }),
+    head: cva({
+        base: ['flex', 'items-center', 'justify-between'],
+    }),
     title: cva({
         base: ['font-bold', 'text-lg'],
     }),
-    description: cva({
-        base: ['font-normal', 'text-base'],
+    content: cva({
+        base: [],
     }),
 };
 
